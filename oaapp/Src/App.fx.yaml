@@ -6,6 +6,7 @@ App As appinfo:
         Set(CurrenInitial,First(ForAll(Split(User().Email,"@"), {Result: ThisRecord.Value}).Result)),
         Set(CurrentUserName,User().FullName),
         
+        Set(IsBVAEdit,false),
         Set(IsManager,true),
         Set(IsAdmin,false),
         

@@ -22,9 +22,6 @@
          
         
         Set(
-        
-            
-        
                 BDRequestNo, "BDBV-" & Text(
         
                     Now(),
@@ -36,6 +33,8 @@
             
         
         );
+        
+        If(IsBVAEdit,EditForm(Form1_5),NewForm(Form1_5));
 
     ScreenContainer4_1 As groupContainer.verticalAutoLayoutContainer:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -352,7 +351,7 @@
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             Size: =10
-                            Text: =BDRequestNo
+                            Text: =If(IsBVAEdit,SelectedRecord.RequestNo,BDRequestNo)
                             ZIndex: =2
 
             Container52_1 As groupContainer.verticalAutoLayoutContainer:
@@ -417,6 +416,7 @@
                         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                         ChevronHoverFill: =RGBA(33, 33, 33, 1)
                         Color: =RGBA(51, 51, 51, 1)
+                        Default: =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_Type,"1")
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -534,6 +534,8 @@
                             BorderThickness: =1
                             CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             Color: =RGBA(51, 51, 51, 1)
+                            DefaultDate: |
+                                =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_Start,Today())
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -559,6 +561,8 @@
                             ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                             ChevronHoverFill: =RGBA(33, 33, 33, 1)
                             Color: =RGBA(51, 51, 51, 1)
+                            Default: |
+                                =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_StartTime,"1")
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -626,6 +630,8 @@
                             BorderThickness: =1
                             CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             Color: =RGBA(51, 51, 51, 1)
+                            DefaultDate: |
+                                =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_End,Today())
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -666,6 +672,8 @@
                             ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                             ChevronHoverFill: =RGBA(33, 33, 33, 1)
                             Color: =RGBA(51, 51, 51, 1)
+                            Default: |
+                                =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_EndTime,"1")
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -813,7 +821,7 @@
                 txt_ReasonBusiness_1 As text:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =
+                    Default: =If(IsBVAEdit, LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo).Leave_Reason)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -867,6 +875,7 @@
                     DefaultMode: =FormMode.New
                     FillPortions: =0
                     Height: =Parent.Height-50
+                    Item: =If(IsBVAEdit,LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo))
                     LayoutMinHeight: =200
                     LayoutMinWidth: =400
                     Width: =Parent.Width/2
@@ -1095,6 +1104,25 @@
                             true
                         );
                     
+                        If(IsBVAEdit,
+                         Patch(
+                            'OA_Leave_Application',
+                            Lookup('OA_Leave_Application',Title=SelectedRecord.RequestNo),
+                            {           
+                                Leave_Type:Drp_LevelType.Selected.Value,
+                                Leave_Start:DateTimeValue(Business_StartDate_1.SelectedDate),
+                                Leave_End:DateTimeValue(business_EndDate_1.SelectedDate),
+                                Leave_StartTime:drp_businessStartTime_1.SelectedText.Value,
+                                Leave_EndTime:Drp_businessEndTime_1.SelectedText.Value,
+                                Leave_Reason:txt_ReasonBusiness_1.Text,
+                                Leave_Duration:lbl_LeaveDurarion.Text,
+                                EmployeeCode:lbl_EmployeeCode.Text        
+                              
+                                
+                            },
+                            Form1_5.Updates
+                        ),
+                    
                           Patch(
                             OA_Leave_Application,
                             Defaults(OA_Leave_Application),
@@ -1114,7 +1142,7 @@
                             Form1_5.Updates
                         );
                     
-                    
+                        );
                     
                     
                     
@@ -1193,7 +1221,27 @@
         ShowContacts: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,false)
         X: =Parent.Width-260
         Y: =Parent.Height-300
-        ZIndex: =4
+        ZIndex: =2
+
+    Lbl_backGroud_33 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =Parent.Height
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Visible: =showMessage||ShowWaiting
+        Width: =Parent.Width
+        X: =0.00
+        ZIndex: =8
 
     Group_Showmessage_4 As group:
         Height: =5
@@ -1214,7 +1262,7 @@
             Visible: =isShowVarDialog
             Width: =Parent.Width
             X: =0.00
-            ZIndex: =5
+            ZIndex: =3
 
         Rectangle_MSG_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1229,7 +1277,7 @@
             Width: =Parent.Width*4/5
             X: =(Parent.Width - Self.Width) / 2
             Y: =(Parent.Height - Self.Height) / 2
-            ZIndex: =6
+            ZIndex: =4
 
         HtmlText1_4 As htmlViewer:
             Height: =Rectangle_MSG_4.Width*1/4
@@ -1251,7 +1299,7 @@
             Width: =Rectangle_MSG_4.Width-60
             X: =Rectangle_MSG_4.X+34
             Y: =Rectangle_MSG_4.Y+30
-            ZIndex: =7
+            ZIndex: =5
 
         btn_continue_4 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1281,7 +1329,7 @@
             Width: =150
             X: =Rectangle_MSG_4.X+Rectangle_MSG_4.Width*2/3-40
             Y: =Rectangle_MSG_4.Y+Rectangle_MSG_4.Height*4/5
-            ZIndex: =8
+            ZIndex: =6
 
         Button16_5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1309,7 +1357,7 @@
             Width: =150
             X: =btn_continue_4.X+200
             Y: =Rectangle_MSG_4.Y+Rectangle_MSG_4.Height*4/5
-            ZIndex: =10
+            ZIndex: =7
 
     Image16_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1328,5 +1376,95 @@
         Width: =500
         X: =(Parent.Width - Self.Width) / 2
         Y: =(Parent.Height - Self.Height) / 2
-        ZIndex: =11
+        ZIndex: =13
+
+    Group_Confirm_7 As group:
+        Height: =5
+        Width: =5
+        X: =483
+        Y: =284
+        ZIndex: =13
+
+        Rec_msg_54 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FocusedBorderThickness: =4
+            Height: =200
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =showMessage
+            Width: =400
+            X: =(Parent.Width - Rec_msg_54.Width) / 2
+            Y: =(Parent.Height - Rec_msg_54.Height) / 2
+            ZIndex: =9
+
+        Icon37_54 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showMessage,false); 
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showMessage
+            Width: =25
+            X: =Rec_msg_54.X+Rec_msg_54.Width-25
+            Y: =Rec_msg_54.Y
+            ZIndex: =10
+
+        HtmlText8_16 As htmlViewer:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Height: =104
+            HtmlText: ="<b><font color=black>Successfully submitted.</font></b>"
+            Size: =10
+            Visible: =showMessage
+            Width: =315
+            X: =Rec_msg_54.X+40
+            Y: =Rec_msg_54.Y+20
+            ZIndex: =11
+
+        btn_no_7 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(showMessage,false); 
+            PaddingRight: =4.01
+            PaddingTop: =4.01
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="Close"
+            Visible: =showMessage
+            Width: =100
+            X: =Rec_msg_54.X+Rec_msg_54.Width/2-50
+            Y: =Rec_msg_54.Y+Rec_msg_54.Height-50
+            ZIndex: =12
 

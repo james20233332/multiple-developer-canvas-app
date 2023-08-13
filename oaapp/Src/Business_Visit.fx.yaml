@@ -5,7 +5,6 @@
         Set(firstDayOfMonth, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
         // 获取当前记录的编号
         Set(num, CountRows(
-        
             Filter(
         
                 OA_Purchase_Execution_Process,
@@ -13,17 +12,11 @@
         
             )
         
-        ));
+        )); 
         
-         
+        Set(num, num + 1); 
         
-        Set(num, num + 1);
-        
-         
-        
-        Set(
-        
-            
+        Set(   
         
                 BDRequestNo, "BDBV-" & Text(
         
@@ -31,11 +24,11 @@
         
                     "yyyymmdd"
         
-                ) & "-" & num
-        
-            
+                ) & "-" & num    
         
         );
+        
+        If(IsBVAEdit,EditForm(BusinessAchemnt),NewForm(BusinessAchemnt));
 
     ScreenContainer4 As groupContainer.verticalAutoLayoutContainer:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -852,6 +845,7 @@
                     DefaultMode: =FormMode.New
                     FillPortions: =0
                     Height: =Parent.Height-50
+                    Item: =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo))
                     LayoutMinHeight: =200
                     LayoutMinWidth: =400
                     Width: =720
@@ -900,13 +894,14 @@
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             Color: =RGBA(51, 51, 51, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(230, 230, 230, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             DisplayMode: =Parent.DisplayMode
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             Height: =138
+                            HoverBorderColor: =RGBA(230, 230, 230, 1)
                             HoverColor: =RGBA(51, 51, 51, 1)
                             HoverFill: =RGBA(212, 212, 212, 1)
                             IsInDataCard: =true
@@ -922,7 +917,7 @@
                             PaddingRight: =5
                             PaddingTop: =5
                             PressedColor: =RGBA(255, 255, 255, 1)
-                            PressedFill: =RGBA(0, 120, 212, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
                             Tooltip: =Parent.DisplayName
                             Width: =Parent.Width - 60
                             X: =30
@@ -1082,17 +1077,17 @@
                     If(IsBVAEdit=true,
                     
                      Patch(
+                          'Business Visit Approval Process',
                            LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo),
-                            {
-                                Title:RequestNo,
+                            {           
                                 Business_BeginTime:drp_businessStartTime.SelectedText.Value,
                                 Business_DateBegin:Text(DateValue(Business_StartDate.SelectedDate)),
                                 Business_DateEnd:Text(DateValue(business_EndDate.SelectedDate)),
                                 Business_EndTime:Drp_businessEndTime.SelectedText.Value,
                                 ' Leave_Duration':lbl_leaveDuration.Text,
                                 'Reason_Business_Visit ':txt_ReasonBusiness.Text,
-                                Busniess_Type:drp_businessaType.SelectedText.Value
-                                
+                                Busniess_Type:drp_businessaType.SelectedText.Value,
+                                Business_Reson:txt_ReasonBusiness.Text   
                             },
                             BusinessAchemnt.Updates
                         ),
@@ -1109,7 +1104,8 @@
                                 Business_EndTime:Drp_businessEndTime.SelectedText.Value,
                                 ' Leave_Duration':lbl_leaveDuration.Text,
                                 'Reason_Business_Visit ':txt_ReasonBusiness.Text,
-                                Busniess_Type:drp_businessaType.SelectedText.Value
+                                Busniess_Type:drp_businessaType.SelectedText.Value,
+                                Business_Reson:txt_ReasonBusiness.Text       
                                 
                             },
                             BusinessAchemnt.Updates
@@ -1150,14 +1146,14 @@
                     
                         //Reset(txt_Department);
                         Notify(
-                            "Your azure resource information has been submitted.",
+                            "Your Business Visit information has been submitted.",
                             NotificationType.Success,2000
                         );
                         Set(
                             ShowWaiting,
                             false
                         );
-                         UpdateContext({ErrShowField: "Your azure resource information has been submitted."});
+                         UpdateContext({ErrShowField: "Your Business Visit information has been submitted."});
                          Set(showMessage,true);
                         
                     )

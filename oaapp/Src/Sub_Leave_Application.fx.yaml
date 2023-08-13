@@ -929,9 +929,10 @@
                 Form1_19 As form:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     DataSource: =OA_Leave_Application
-                    DefaultMode: =FormMode.New
+                    DefaultMode: =FormMode.View
                     FillPortions: =0
                     Height: =Parent.Height-50
+                    Item: =LookUp(OA_Leave_Application,Title=SelectedRecord.RequestNo)
                     LayoutMinHeight: =150
                     LayoutMinWidth: =400
                     Width: =Parent.Width/2
@@ -1199,7 +1200,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-                    OnSelect: =Set(ToConfirm,true);
+                    OnSelect: =Navigate(Leave_Application,ScreenTransition.None);Set(IsBVAEdit,true);
                     PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

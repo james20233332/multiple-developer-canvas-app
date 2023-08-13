@@ -844,7 +844,7 @@ Setting As screen:
         RadiusTopRight: =0
         Size: =15
         Text: ="按钮"
-        X: =40
-        Y: =40
+        X: =410
+        Y: =8
         ZIndex: =36
 

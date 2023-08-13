@@ -891,7 +891,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_no_5",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1644,7 +1644,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_yes_4",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2785,7 +2785,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container_detail1_3",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11946,7 +11946,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group_Purchase_Detail",
-      "ParentIndex": 8,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15992,7 +15992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText8_14",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16512,7 +16512,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon37_52",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21137,7 +21137,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Lbl_backGroud_31",
-      "ParentIndex": 3,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29490,7 +29490,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rec_msg_52",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

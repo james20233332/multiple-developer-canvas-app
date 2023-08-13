@@ -1,0 +1,1197 @@
+"Screen_Set As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =5
+            Fill: =RGBA(226, 226, 226, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =50
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Icon40_6 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Flow Center');
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =1
+
+            Icon31_7 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Refresh(AzureConfig);Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =2
+
+            Icon39_7 As icon.Alarm:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,true);
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1700
+                ZIndex: =3
+
+            Label33_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =4
+
+        MainSectionContainer3 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =10
+            ZIndex: =3
+
+            Container2 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Container20 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width*0.6
+                    ZIndex: =4
+
+                    Container25 As groupContainer.horizontalAutoLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Container26 As groupContainer.horizontalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =10
+                            PaddingTop: =10
+                            ZIndex: =1
+
+                            Container28 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =1
+
+                                Icon5_12 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AdminList/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =200
+                                    ZIndex: =1
+
+                                Label3_13 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AdminList/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Administrator configuration"
+                                    Tooltip: ="用于设置后台管理员的信息(可以查看后台数据,模拟用户,设置审批人员)"
+                                    Underline: =true
+                                    Width: =240.78
+                                    X: =80.25999999999999
+                                    Y: =200
+                                    ZIndex: =2
+
+                            Container28_1 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =2
+
+                                Icon5_14 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/ApprovalUser/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =300
+                                    ZIndex: =1
+
+                                Label3_15 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/ApprovalUser/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Role management"
+                                    Tooltip: ="查看后台审批人员信息(审批组,审批人)"
+                                    Underline: =true
+                                    Width: =240.78
+                                    X: =80.25999999999999
+                                    Y: =300
+                                    ZIndex: =2
+
+                            Container28_2 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =3
+
+                                Icon5_16 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AsureApplicationInfo/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =400
+                                    ZIndex: =1
+
+                                Label3_17 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AsureApplicationInfo/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Project details"
+                                    Tooltip: ="后台保存所有项目申请信息以及审批邮件附件,项目信息,联系人等后台数据"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =400
+                                    ZIndex: =2
+
+                            Container28_3 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width-50
+                                ZIndex: =4
+
+                                Icon5_18 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/Application/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =500
+                                    ZIndex: =1
+
+                                Label3_19 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/Application/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure application approval details"
+                                    Tooltip: ="用于保存审批信息包括(审批人,审批状态)"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =500
+                                    ZIndex: =2
+
+                            Container28_4 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.Width-50
+                                ZIndex: =5
+
+                                Icon5_20 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureAccount/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =600
+                                    ZIndex: =1
+
+                                Label3_21 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureAccount/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure account application details"
+                                    Tooltip: ="Azure账户的后台数据"
+                                    Underline: =true
+                                    Width: =321.03
+                                    X: =80.25999999999999
+                                    Y: =600
+                                    ZIndex: =2
+
+                            Container28_5 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =6
+
+                                Icon5_23 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureSSLCertification/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =192.62
+                                    Y: =700
+                                    ZIndex: =1
+
+                                Label3_24 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureSSLCertification/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure SSL application details"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =700
+                                    ZIndex: =2
+
+                        Container27 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =10
+                            PaddingTop: =10
+                            ZIndex: =2
+
+                            Container30 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =4
+
+                                Icon5_13 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureConfig/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =200
+                                    ZIndex: =1
+
+                                Label3_14 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureConfig/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure configuration infomation"
+                                    Tooltip: ="Iaas-Paas申请页面的后台配置信息"
+                                    Underline: =true
+                                    Width: =Parent.Width-40
+                                    X: =80.25999999999999
+                                    Y: =200
+                                    ZIndex: =2
+
+                            Container32 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =5
+
+                                Icon5_15 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AADRole/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =300
+                                    ZIndex: =1
+
+                                Label3_16 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AADRole/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="AAD role permission content setting"
+                                    Tooltip: ="添加Account账户页面,维护AAD角色权限的描述信息"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =300
+                                    ZIndex: =2
+
+                            Container37 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =6
+
+                                Icon5_17 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    Height: =82
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/_layouts/15/user.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =400
+                                    ZIndex: =1
+
+                                Label3_18 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    Height: =51
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/_layouts/15/user.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="New user permission configuration"
+                                    Tooltip: ="添加新用户的权限页面,需要将新用户添加到权限组"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =400
+                                    ZIndex: =2
+
+                            Container32_7 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =7
+
+                                Icon5_19 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    Height: =82
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePermissionApplication/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =500
+                                    ZIndex: =1
+
+                                Label3_20 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    Height: =51
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePermissionApplication/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure permission application details"
+                                    Tooltip: ="权限申请信息的后台数据"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =500
+                                    ZIndex: =2
+
+                            Container37_1 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =8
+
+                                Icon5_21 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureIaas/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =600
+                                    ZIndex: =1
+
+                                Label3_22 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureIaas/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure Iaas application details"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =600
+                                    ZIndex: =2
+
+                            Container37_2 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =9
+
+                                Icon5_22 As icon.Database:
+                                    BorderColor: =RGBA(166, 166, 166, 1)
+                                    Color: =RGBA(0, 120, 212, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(220, 220, 220, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    FocusedBorderThickness: =4
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Icon: =Icon.Database
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePaas/AllItems.aspx")
+                                    PaddingRight: =0.00
+                                    PaddingTop: =0.00
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =51.37
+                                    X: =658.12
+                                    Y: =700
+                                    ZIndex: =1
+
+                                Label3_23 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 107, 211, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    OnSelect: |-
+                                        =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePaas/AllItems.aspx")
+                                    PaddingRight: =4.01
+                                    PaddingTop: =4.01
+                                    Size: =11
+                                    Text: ="Azure Paas application details"
+                                    Underline: =true
+                                    Width: =Parent.Width-50
+                                    X: =80.25999999999999
+                                    Y: =700
+                                    ZIndex: =2
+
+                Container21 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width*0.4
+                    X: =5
+                    ZIndex: =6
+
+                    Container24 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =1
+                        FillPortions: =0
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =360
+                        X: =5
+                        ZIndex: =1
+
+                        Label62 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: =""
+                            Width: =10
+                            ZIndex: =1
+
+                        Txt_moniName2 As text:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HintText: ="brad.ye"
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingBottom: =0
+                            PaddingLeft: =5
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =11
+                            Width: =200
+                            X: =btn_moni_1.X+10
+                            Y: =521
+                            ZIndex: =2
+
+                        Label12 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            Size: =11
+                            Text: ="@bondee.com"
+                            ZIndex: =3
+
+                    Container38 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =1
+                        FillPortions: =0
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =360
+                        X: =5
+                        ZIndex: =2
+
+                        Label42 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: =""
+                            Width: =5
+                            ZIndex: =1
+
+                        btn_moni_1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(0, 107, 211, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: |+
+                                =Set(CurrenInitial,First(ForAll(Split(Txt_moniName2.Text&"@bondee.com","@"), {Result: ThisRecord.Value}).Result));
+                                
+                                Set(CurrenUserEmail,Trim(Txt_moniName2.Text)&"@bondee.com");
+                                
+                                Concurrent(
+                                
+                                
+                                Set(CurrentUserName,User().FullName),
+                                
+                                Set(IsAdmin,!IsBlank(LookUp(ApprovalUser,UserEmail = CurrenUserEmail&&RoleName="Admin").ID)),
+                                Set(IsManager,!IsBlank(LookUp(ApprovalUser,UserEmail = CurrenUserEmail&&RoleName="Approver").ID)),
+                                Set(IsOperation,!IsBlank(LookUp(ApprovalUser,UserEmail=CurrenUserEmail&&RoleName="Operator").ID)),
+                                Set(ApproveITManger,Concat(ForAll(Distinct(Filter(ApprovalUser,RoleName="Approver"),UserEmail), {Result: ThisRecord.Value}),Result,"," )),
+                                
+                                Set(ApproveOperation,Concat(ForAll(Distinct(Filter(ApprovalUser,RoleName="Approver"),UserEmail), {Result: ThisRecord.Value}),Result,"," )),
+                                
+                                ClearCollect(
+                                    ApplicationTmpInfo,Filter(ApprovalRequest,Status.Value="In Progress ")
+                                
+                                ),
+                                
+                                Set(CurrentLanguare,"en");
+                                
+                                );
+                                
+                                
+                                ClearCollect(
+                                    collectionReview,Filter(ApprovalRequest,Status.Value="In Progress"&& Trim(CurrenInitial.Result) in ApproveITManger)
+                                
+                                );
+                                ClearCollect(
+                                    collectionApprove,Filter(ApprovalRequest,Status.Value="Approved"||Status.Value="Complete")
+                                
+                                );
+                                
+                                ClearCollect(
+                                    collectionMyTask,Filter(ApprovalRequest,'Created By'.Email=CurrenUserEmail)
+                                
+                                );
+                                
+                                Clear(NavigateMenuCollect);
+                                If(
+                                    IsAdmin,
+                                    Collect(
+                                        NavigateMenuCollect,
+                                        Table(
+                                            {
+                                                name: "Admin Configuration",
+                                                img: Icon.Settings,
+                                                color: RGBA(
+                                                    164,
+                                                    164,
+                                                    164,
+                                                    1
+                                                ),
+                                                Screen: Screen_Set
+                                            },
+                                            {
+                                                name: "Role Setting",
+                                                img: Icon.People,
+                                                color: RGBA(
+                                                    164,
+                                                    164,
+                                                    164,
+                                                    1
+                                                ),
+                                                Screen: RoleManagement
+                                            }
+                                        )
+                                    )
+                                );
+                                
+                                
+                                Clear(NavigateMainMenu);
+                                If(
+                                    IsOperation,
+                                    Collect(
+                                        NavigateMainMenu,
+                                
+                                        Table(
+                                        {name:"Task List",img:Icon.DocumentWithContent,screen:Scr_MyTodo_Operation},
+                                        {name:"My Applications",img:Icon.DetailList,screen:Src_MyTask},
+                                        {name:"Completed tasks",img:Icon.History,screen:Src_CompleteTask})
+                                
+                                
+                                    ),
+                                    IsManager,
+                                    Collect(
+                                        NavigateMainMenu,
+                                
+                                        Table(
+                                        {name:"Task List",img:Icon.DocumentWithContent,screen:Scr_MyTodo},
+                                        {name:"My Applications",img:Icon.DetailList,screen:Src_MyTask},
+                                        {name:"Completed tasks",img:Icon.History,screen:Src_CompleteTask})
+                                
+                                
+                                    ),
+                                    Collect(
+                                        NavigateMainMenu,
+                                
+                                        Table(
+                                       
+                                        {name:"My Applications",img:Icon.DetailList,screen:Src_MyTask},
+                                        {name:"Completed tasks",img:Icon.History,screen:Src_CompleteTask_Self}
+                                       
+                                    )
+                                    )
+                                );
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Size: =11
+                            Text: =If(CurrentLanguare="en","Role Play", "模拟账户")
+                            X: =1002
+                            Y: =615
+                            ZIndex: =2
+
+                        btn_moni_2 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(0, 107, 211, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: =Navigate('Flow Center')
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Size: =11
+                            Text: ="Close"
+                            X: =1002
+                            Y: =615
+                            ZIndex: =3
+
+        FooterContainer3 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =5
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            Label20 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =
+                ZIndex: =1
+
+    Group3_2 As group:
+        Height: =5
+        Width: =5
+        X: =966
+        Y: =153.5999999999999
+        ZIndex: =7
+
+        Rec_msg_19 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =280
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =showhelp
+            Width: =250
+            X: =Parent.Width-260
+            Y: = Parent.Height-Parent.Height*0.9
+            ZIndex: =2
+
+        Button3_18 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |+
+                =Set(sendMessage,true);
+                Patch(teams,Defaults(teams),{Title:"teams",User:CurrenUserEmail,Operation:Text(showEmailhelp)});
+                
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =10
+            Text: =If(showEmailhelp,"Email us","Start a chat")
+            Visible: =showhelp
+            Width: =100
+            X: =Rec_msg_19.X + (Rec_msg_19.Width - Self.Width) / 2
+            Y: =Rec_msg_19.Y+Rec_msg_19.Height-50
+            ZIndex: =3
+
+        Icon37_19 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showhelp,false)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showhelp
+            Width: =25
+            X: =Rec_msg_19.X+Rec_msg_19.Width-25
+            Y: =Rec_msg_19.Y
+            ZIndex: =4
+
+        HtmlText4_6 As htmlViewer:
+            Height: =200
+            HtmlText: |-
+                ="<div style='border: #999 1px dotted;padding: 5px;font-size: 10pt;font-family:open Sans'>	
+                	<b><p style='font-family:open Sans'>"&If(showEmailhelp,"✉","💬")&"Have questions? Contact us<br>		
+                		<i style='color: #999;font-family:open Sans'>"&"</i><br>
+                                <i style='color: #999;font-family:open Sans'>"&"</i>
+                                <i style='color: #999;font-family:open Sans'>"&If(showEmailhelp,"Send us an email and we'll respond within a few business hours","Click on the button below and we'll respond within a few business minutes")&"</i><br>
+                
+                                <i style='color:green;font-family:open Sans'>"&If(sendMessage=true,"Your message has been sent successfully","")&"</i><br>
+                	
+                </div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Visible: =showhelp
+            Width: =230
+            X: =Rec_msg_19.X+10
+            Y: =Rec_msg_19.Y+20
+            ZIndex: =5
+
+        Image11_6 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =60
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(204, 231, 246, 1)
+            Image: =needhelp
+            OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,false);
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Tooltip: ="How can we help?"
+            Visible: =!showhelp
+            Width: =60
+            X: =Parent.Width-80
+            Y: =Parent.Height-180
+            ZIndex: =6
+

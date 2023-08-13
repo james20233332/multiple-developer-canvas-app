@@ -1,0 +1,206 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_sharedworkspace_forms",
+      "Namespace": "Shared Workspaces (窗体)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_koen_swo_flow_forms",
+      "Namespace": "swo_Flow (Forms)",
+      "Values": {
+        "信息": "ec81db2b-65ff-4a20-a2d2-f62bf905b56a"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_swo_flow_forms",
+      "Namespace": "Flow (Forms)",
+      "Values": {
+        "信息": "ec81db2b-65ff-4a20-a2d2-f62bf905b56a"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvalstep_forms",
+      "Namespace": "Approval Step (Forms)",
+      "Values": {
+        "信息": "c5543a85-cb05-45f1-a56f-d275f20de0df"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvalrole_forms",
+      "Namespace": "Approval Role (Forms)",
+      "Values": {
+        "信息": "677011a7-e9a0-4ade-8525-a1d1524287e9"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_swo_approvalaction_forms",
+      "Namespace": "Approval Action (Forms)",
+      "Values": {
+        "信息": "ebe4c0f5-a980-4a18-bb2f-d985117eb3f2"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvaluser_forms",
+      "Namespace": "Approval User (Forms)",
+      "Values": {
+        "信息": "221d8e79-25bf-4c26-932f-e6decfc9fbad"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_todotasks_forms",
+      "Namespace": "To Do Tasks (Forms)",
+      "Values": {
+        "信息": "07f47be7-9783-4ece-a1f1-f198769087f8"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_activitylist_forms",
+      "Namespace": "Activity List (Forms)",
+      "Values": {
+        "信息": "738937a9-f278-4bfe-a537-d3a351c8dbb8"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_flowinstance_forms",
+      "Namespace": "Flow Instance (Forms)",
+      "Values": {
+        "信息": "a893fae6-bbb1-46bc-8db9-d4275a82b884"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_leaverequest_forms",
+      "Namespace": "LeaveRequest (Forms)",
+      "Values": {
+        "信息": "c9950254-4247-438e-b281-919c5c679074"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_applicationlist_forms",
+      "Namespace": "Application List (Forms)",
+      "Values": {
+        "信息": "e7bd6617-1efc-48b9-b487-b2e1d951e69a"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_swo_flow_forms",
+      "Namespace": "Flow (窗体)",
+      "Values": {
+        "信息": "ec81db2b-65ff-4a20-a2d2-f62bf905b56a"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvalstep_forms",
+      "Namespace": "Approval Step (窗体)",
+      "Values": {
+        "信息": "c5543a85-cb05-45f1-a56f-d275f20de0df"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvalrole_forms",
+      "Namespace": "Approval Role (窗体)",
+      "Values": {
+        "信息": "677011a7-e9a0-4ade-8525-a1d1524287e9"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_swo_approvalaction_forms",
+      "Namespace": "Approval Action (窗体)",
+      "Values": {
+        "信息": "ebe4c0f5-a980-4a18-bb2f-d985117eb3f2"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_approvaluser_forms",
+      "Namespace": "Approval User (窗体)",
+      "Values": {
+        "信息": "221d8e79-25bf-4c26-932f-e6decfc9fbad"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_flowlist_forms",
+      "Namespace": "FlowList (窗体)",
+      "Values": {
+        "信息": "8076ab71-941a-437a-8432-f6b0602bbead"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_active_forms",
+      "Namespace": "Active (窗体)",
+      "Values": {
+        "信息": "40d75ab5-fb8c-40f8-ac58-d12f0cf83183"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "用户 (窗体)",
+      "Values": {
+        "信息": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "应用程序用户": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "用户": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "用户层次结构磁贴窗体": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452",
+        "用户窗体 – 业务": "c2413504-7eb2-4c59-a087-95d819866114"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_flowlist_forms",
+      "Namespace": "FlowList (Forms)",
+      "Values": {
+        "信息": "8076ab71-941a-437a-8432-f6b0602bbead"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_active_forms",
+      "Namespace": "Active (Forms)",
+      "Values": {
+        "信息": "40d75ab5-fb8c-40f8-ac58-d12f0cf83183"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "用户 (Forms)",
+      "Values": {
+        "信息": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "应用程序用户": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "用户": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "用户层次结构磁贴窗体": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452",
+        "用户窗体 – 业务": "c2413504-7eb2-4c59-a087-95d819866114"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_todotasks_forms",
+      "Namespace": "To Do Tasks (窗体)",
+      "Values": {
+        "信息": "07f47be7-9783-4ece-a1f1-f198769087f8"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_activitylist_forms",
+      "Namespace": "Activity List (窗体)",
+      "Values": {
+        "信息": "738937a9-f278-4bfe-a537-d3a351c8dbb8"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_flowinstance_forms",
+      "Namespace": "Flow Instance (窗体)",
+      "Values": {
+        "信息": "a893fae6-bbb1-46bc-8db9-d4275a82b884"
+      }
+    },
+    {
+      "Kind": "default.cds_cr2fe_leaverequest_forms",
+      "Namespace": "LeaveRequest (窗体)",
+      "Values": {
+        "信息": "c9950254-4247-438e-b281-919c5c679074"
+      }
+    },
+    {
+      "Kind": "default.cds_koen_applicationlist_forms",
+      "Namespace": "Application List (窗体)",
+      "Values": {
+        "信息": "e7bd6617-1efc-48b9-b487-b2e1d951e69a"
+      }
+    }
+  ]
+}

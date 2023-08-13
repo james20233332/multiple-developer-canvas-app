@@ -1,0 +1,825 @@
+Setting As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Label41 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 107, 211, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Width: =1366
+        X: =0.00
+        ZIndex: =1
+
+    Label45 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(251, 251, 251, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =768
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Width: =1366
+        X: =0.00
+        ZIndex: =2
+
+    Image7 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =48
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =ecolab
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =135.13
+        X: =0.00
+        ZIndex: =3
+
+    Button13_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 107, 211, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Back()
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =20.27
+        Text: ="退出"
+        Width: =84
+        X: =1221
+        Y: =619
+        ZIndex: =4
+
+    Label2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =10.43
+        Text: =
+        Width: =120.39
+        X: =1225
+        Y: =688
+        ZIndex: =5
+
+    Icon5 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AdminList/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =200
+        ZIndex: =6
+
+    Label3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AdminList/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="管理员配置"
+        Tooltip: ="用于设置后台管理员的信息(可以查看后台数据,模拟用户,设置审批人员)"
+        Underline: =true
+        Width: =240.78
+        X: =272.88
+        Y: =200
+        ZIndex: =7
+
+    Icon5_1 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/ApprovalUser/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =300
+        ZIndex: =8
+
+    Label3_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/ApprovalUser/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure审批角色后台数据"
+        Tooltip: ="查看后台审批人员信息(审批组,审批人)"
+        Underline: =true
+        Width: =240.78
+        X: =272.88
+        Y: =300
+        ZIndex: =9
+
+    Icon5_2 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureConfig/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =200
+        ZIndex: =10
+
+    Label3_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureConfig/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure配置数据（申请Iaas,Paas信息后台配置设置）"
+        Tooltip: ="Iaas-Paas申请页面的后台配置信息"
+        Underline: =true
+        Width: =375.61
+        X: =738.38
+        Y: =200
+        ZIndex: =11
+
+    Label3_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =16.05
+        Text: ="后台数据维护"
+        Width: =321.03
+        X: =38.52
+        Y: =68
+        ZIndex: =12
+
+    Icon5_3 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AADRole/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =300
+        ZIndex: =13
+
+    Label3_4 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AADRole/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="(添加Account账户)AAD角色权限内容设置"
+        Tooltip: ="添加Account账户页面,维护AAD角色权限的描述信息"
+        Underline: =true
+        Width: =401.29
+        X: =738.38
+        Y: =300
+        ZIndex: =14
+
+    Icon5_4 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AsureApplicationInfo/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =400
+        ZIndex: =15
+
+    Label3_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AsureApplicationInfo/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="项目信息(审批邮件附件,CostCenter等信息)"
+        Tooltip: ="后台保存所有项目申请信息以及审批邮件附件,项目信息,联系人等后台数据"
+        Underline: =true
+        Width: =401.29
+        X: =272.88
+        Y: =400
+        ZIndex: =16
+
+    Icon5_5 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/Application/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =500
+        ZIndex: =17
+
+    Label3_6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/Application/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure申请审批信息(审批意见,审批人，状态等)"
+        Tooltip: ="用于保存审批信息包括(审批人,审批状态)"
+        Underline: =true
+        Width: =401.29
+        X: =272.88
+        Y: =500
+        ZIndex: =18
+
+    Icon5_6 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureAccount/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =600
+        ZIndex: =19
+
+    Label3_7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureAccount/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =10.43
+        Text: ="Azure Account申请数据"
+        Tooltip: ="Azure账户的后台数据"
+        Underline: =true
+        Width: =321.03
+        X: =272.88
+        Y: =600
+        ZIndex: =20
+
+    Icon5_7 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureSSLCertification/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =192.62
+        Y: =700
+        ZIndex: =21
+
+    Label3_8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureSSLCertification/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure SSL证书申请数据"
+        Underline: =true
+        Width: =321.03
+        X: =272.88
+        Y: =700
+        ZIndex: =22
+
+    Icon5_8 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =82
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePermissionApplication/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =500
+        ZIndex: =23
+
+    Label3_9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =51
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePermissionApplication/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure 权限申请数据"
+        Tooltip: ="权限申请信息的后台数据"
+        Underline: =true
+        Width: =240.78
+        X: =738.38
+        Y: =500
+        ZIndex: =24
+
+    Icon5_9 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureIaas/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =600
+        ZIndex: =25
+
+    Label3_10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzureIaas/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure Iaas申请数据"
+        Underline: =true
+        Width: =321.03
+        X: =738.38
+        Y: =600
+        ZIndex: =26
+
+    Icon5_10 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePaas/AllItems.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =700
+        ZIndex: =27
+
+    Label3_11 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/Lists/AzurePaas/AllItems.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="Azure Paas申请数据"
+        Underline: =true
+        Width: =321.03
+        X: =738.38
+        Y: =700
+        ZIndex: =28
+
+    Icon5_11 As icon.Database:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =82
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Database
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/_layouts/15/user.aspx")
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51.37
+        X: =658.12
+        Y: =400
+        ZIndex: =34
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        Txt_moniName As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =57
+            HintText: ="brad.ye"
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =17.57
+            Width: =200
+            X: =1002
+            Y: =521
+            ZIndex: =30
+
+        Label46 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =57
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            Size: =17.57
+            Text: ="请输入用户名："
+            Width: =223
+            X: =1002
+            Y: =464
+            ZIndex: =31
+
+        Label49 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =57
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            Size: =17.57
+            Text: ="@ecolab.com"
+            Width: =159
+            X: =1202
+            Y: =521
+            ZIndex: =32
+
+        btn_moni As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =Set(CurrenInitial,First(ForAll(Split(Txt_moniName.Text&"@ecolab.com","@"), {Result: ThisRecord.Value}).Result));
+                
+                Set(CurrenUserEmail,Trim(Txt_moniName.Text)&"@ecolab.com");
+                
+                
+                
+                
+                
+                Concurrent(
+                Set(CurrentUserName,User().FullName),
+                Set(IsApprover,!IsBlank(LookUp(AdminList,EmailInfo = User().Email).Title)),
+                Set(ApproveITManger,Concat(ForAll(Distinct(Filter(ApprovalUser,Role="Approver"),UserEmail), {Result: ThisRecord.Value}),Result,"," )),
+                
+                ClearCollect(
+                    ApplicationTmpInfo,Filter(Application,Status="In progress")
+                
+                );
+                
+                );
+                
+                ClearCollect(
+                    collectionReview,Filter(Application,Status="申请中"&& Trim(CurrenInitial.Result) in ApproveITManger)
+                
+                );
+                Clear(NavigateMenuCollect);
+                If(
+                    IsApprover,
+                    Collect(
+                        NavigateMenuCollect,
+                        Table(
+                            {
+                                name: "后台配置",
+                                img: Icon.Settings,
+                                color: RGBA(
+                                    164,
+                                    164,
+                                    164,
+                                    1
+                                ),
+                                Screen: Screen_Set
+                            },
+                            {
+                                name: "审批角色",
+                                img: Icon.People,
+                                color: RGBA(
+                                    164,
+                                    164,
+                                    164,
+                                    1
+                                ),
+                                Screen: RoleManagment_1
+                            }
+                        )
+                    )
+                );
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =20.27
+            Text: ="模拟账户"
+            X: =1002
+            Y: =615
+            ZIndex: =33
+
+    Label3_12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 107, 211, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =51
+        OnSelect: |-
+            =Launch("https://ecolab.sharepoint.com/sites/Test0209/_layouts/15/user.aspx")
+        PaddingRight: =4.01
+        PaddingTop: =4.01
+        Size: =12.04
+        Text: ="新用户权限设置"
+        Tooltip: ="添加新用户的权限页面,需要将新用户添加到权限组"
+        Underline: =true
+        Width: =240.78
+        X: =738.38
+        Y: =400
+        ZIndex: =35
+

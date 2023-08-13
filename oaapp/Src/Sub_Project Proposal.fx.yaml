@@ -1,0 +1,1845 @@
+"'Sub_Project Proposal' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =ClearCollect(
+            CursorCollect,
+            {   CurrentGuid:"",
+                Index_Number: "",
+                Request_Name:"",
+                Description_Of_Requirements: "",
+                Quantity: "",
+                Amount : "",
+                Currency: ""
+            }
+        );
+        Clear(CursorCollect);
+
+    ScreenContainerMain_sub As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container_Title_Bar_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(40, 60, 185, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =1
+
+            Image3_9 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =MD
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =1
+
+            Label67_10 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =15
+                Text: ="Project Proposal Process"
+                Width: =Parent.Width-350
+                ZIndex: =2
+
+            Icon40_24 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =3
+
+            Icon31_48 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =4
+
+            Icon39_23 As icon.Alarm:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showEmailhelp,true);Set(showhelp,true);Set(sendMessage,false);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1813.84
+                ZIndex: =5
+
+            Label9_11 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =6
+
+        Container42_9 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =2
+
+            LabelBlank_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =50
+                ZIndex: =1
+
+            MainSectionContainer4_3 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(187, 221, 140, 1)
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.Light
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =-10
+                ZIndex: =2
+
+                Lbl_Basict_Info_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Basic Information"
+                    Width: =300
+                    ZIndex: =1
+
+                ContainerMain_12 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    ContainerMain_10_8 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        HtmlText6_52 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Requester Name:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        PP_TextIn_reqname As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: |-
+                                =Office365用户.SearchUser({searchTerm:User().Email})
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["UserPrincipalName","DisplayName"]
+                            DisplayMode: =DisplayMode.View
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            InputTextPlaceholder: ="Search User"
+                            Items: |-
+                                =Office365用户.SearchUser({searchTerm:PP_TextIn_reqname.SearchText,top:10})
+                            PaddingLeft: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Mail"]
+                            SearchItems: |-
+                                =Search(Office365用户.SearchUser({searchTerm:PP_TextIn_reqname.SearchText,top:10}),PP_TextIn_reqname.SearchText,"Mail")
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Person
+                            Width: =300
+                            ZIndex: =4
+
+                    ContainerMain_10_9 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_53 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Application Date:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        PP_TextIn_apldate As text:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =Text(Today(), "mm-dd-yyyy")
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingLeft: =0
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =300
+                            ZIndex: =2
+
+                    ContainerMain_10_10 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_124 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Process ID:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        PP_TextIn_process_id As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: = Text(""&RequestNoProject)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingLeft: =0
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =300
+                            ZIndex: =4
+
+                Lbl_Project_Info_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Project Information"
+                    Width: =300
+                    ZIndex: =3
+
+                ContainerMain_22 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =4
+
+                    ContainerMain_20_8 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_125 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Project Name:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        PP_TextIn_projectname As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =300
+                            ZIndex: =2
+
+                    ContainerMain_20_9 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_126 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Region:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        PP_Dropdown_region As dropdown:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Pubilc_Region
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Width: =300
+                            ZIndex: =3
+
+                    ContainerMain_20_10 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =7
+
+                        HtmlText6_127 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                ContainerMain_32 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =5
+
+                    ContainerMain_30_7 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width/3
+                        ZIndex: =1
+
+                        HtmlText4_34 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =300
+                            HtmlText: |-
+                                ="<div style=""width: 80%;"">
+                                    <font color=""red"">
+                                        <p style=""text-align:left"">Instructions for Request Form:</p>
+                                        <ol>
+                                            <li>Specifications, models, brands, and other information about the purchased goods;</li>
+                                            <li>Scope of service and achievements (overall and sub-items) for service projects;</li>
+                                            <li>For framework projects, please provide an estimated quantity of purchased items;</li>
+                                            <li>Configuration, parameter requirements, etc. for IT projects.</li>
+                                        </ol>
+                                    </font>
+                                </div>
+                                "
+                            Width: =Parent.Width/3*0.8
+                            ZIndex: =2
+
+                    ContainerMain_30_8 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =2
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_128 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Demand Explanation:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        PP_TextIn_demExplanation As text:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =100
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinHeight: =200
+                            Mode: =TextMode.MultiLine
+                            PaddingLeft: =0
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =550
+                            ZIndex: =2
+
+                ContainerMain_43 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =120
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =2
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    PaddingLeft: =5
+                    PaddingRight: =0.00
+                    PaddingTop: =10
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =7
+
+                    ContainerMain_40_7 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =0
+                        Height: =30
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Button8_5 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(40, 60, 185, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: |-
+                                =Set(showDetailDialogProject,true);
+                                Set(NewRecordPPD,true);
+                                Reset(PP_NameInput_d);Reset(PP_Description_d);Reset(PP_QuantityInput_d);Reset(PP_AmountInput_d);
+                                Reset(PP_CurrencyInput_d);
+                                UpdateContext({QuantityNewProject: Value(0)});
+                                UpdateContext({AmountNewProject: Value(0)});
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Text: ="Project Proposal Detail"
+                            Tooltip: ="Add an Iaas"
+                            Width: =200
+                            X: =16.05
+                            ZIndex: =1
+
+                        Image5_3 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =25
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =ADD2
+                            ImagePosition: =ImagePosition.Stretch
+                            OnSelect: |-
+                                =Set(showDetailDialogProject,true);
+                                Set(NewRecordPPD,true);
+                                Reset(PP_NameInput_d);Reset(PP_Description_d);Reset(PP_QuantityInput_d);Reset(PP_AmountInput_d);
+                                Reset(PP_CurrencyInput_d);
+                                UpdateContext({QuantityNewProject: Value(0)});
+                                UpdateContext({AmountNewProject: Value(0)});
+                            PaddingLeft: =10
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Add an IaaS resource."
+                            Width: =40
+                            ZIndex: =2
+
+                    Gallery_detail_6 As gallery.galleryVertical:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(219, 219, 219, 1)
+                        BorderThickness: =1
+                        ContentLanguage: =Parent.Height
+                        FocusedBorderThickness: =1
+                        Height: =1000
+                        Items: =CursorCollect
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =320
+                        ShowNavigation: =true
+                        TemplatePadding: =1
+                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(100, Self.Height - 50))
+                        Width: =Parent.Width
+                        ZIndex: =4
+
+                        pp_Image_detail_delete As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =delete
+                            OnSelect: |+
+                                =Remove(CursorCollect,ThisItem);
+                                
+                                Clear(InputCollection1);
+                                ForAll(
+                                    CursorCollect,
+                                    Collect(
+                                        InputCollection1,
+                                        {
+                                            
+                                            Index_Number: ""&CountRows(InputCollection1) + 1,
+                                            CurrentGuid: Text(CurrentGuid),
+                                            Request_Name: Request_Name,
+                                            Description_Of_Requirements:Description_Of_Requirements,
+                                            Quantity: Quantity,
+                                            Amount: Amount,
+                                            Currency: Currency
+                                           
+                                        }
+                                    )
+                                );
+                                
+                                ClearCollect(CursorCollect,InputCollection1);
+                                
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="delete record"
+                            Width: =30
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24
+                            ZIndex: =1
+
+                        pp_Image_detail_edit As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =35
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =edit
+                            OnSelect: |
+                                =Set(NewRecordPPD,false);
+                                Set(showDetailDialog,true);
+                                Set(currentRecordPPD,Gallery_detail_6.Selected);
+                                //UpdateContext({currentRecordPPD:LookUp(CursorCollect,CurrentGuid=ThisItem.CurrentGuid)});
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Edit record"
+                            Width: =25
+                            X: |
+                                =Parent.TemplateWidth-Parent.TemplateWidth/24*2
+                            ZIndex: =2
+
+                        PP_lbl_requeste_title As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Request Name"
+                            Width: =Parent.TemplateWidth/4
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*22
+                            ZIndex: =3
+
+                        PP_lbl_indexnumber As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Index_Number
+                            Width: =30
+                            Y: =40
+                            ZIndex: =4
+
+                        "'PP_lbl_ currency_title' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="currency"
+                            Width: =100
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*5
+                            ZIndex: =5
+
+                        PP_lbl_description_title As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingTop: =0
+                            Size: =11
+                            Text: |-
+                                ="Description of requirements:"
+                            Width: =300
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*19
+                            ZIndex: =6
+
+                        PP_lbl_number_title As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Nuber"
+                            Width: =100
+                            ZIndex: =7
+
+                        PP_lbl_description As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: = If(Len(ThisItem.Description_Of_Requirements) <= 50, ThisItem.Description_Of_Requirements, Concatenate(Left(ThisItem.Description_Of_Requirements, 50), "..."))
+                            Tooltip: =Self.Text
+                            Width: =330
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*19
+                            Y: =40
+                            ZIndex: =8
+
+                        PP_lbl_quantity_title As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Quantity"
+                            Width: =100
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*13
+                            ZIndex: =9
+
+                        PP_Rectangle3 As rectangle:
+                            BorderColor: =RGBA(237, 237, 237, 1)
+                            BorderThickness: =1
+                            DisabledFill: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            HoverFill: =RGBA(0, 120, 212, 1)
+                            OnSelect: =Select(Parent)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Width: =Parent.TemplateWidth
+                            Y: =90
+                            ZIndex: =10
+
+                        PP_lbl_requester As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Request_Name
+                            Width: =Parent.TemplateWidth/3
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*22
+                            Y: =40
+                            ZIndex: =11
+
+                        PP_lbl_amount As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Amount
+                            Width: =200
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*10
+                            Y: =40
+                            ZIndex: =12
+
+                        PP_lbl_currency As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Currency
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*5
+                            Y: =40
+                            ZIndex: =13
+
+                        PP_lbl_amount_title As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Amount"
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*10
+                            ZIndex: =14
+
+                        PP_lbl_quantity As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Quantity
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/24*13
+                            Y: =40
+                            ZIndex: =15
+
+                Form1_9 As form:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DataSource: =OA_Project_Proposal_Process
+                    DefaultMode: =FormMode.New
+                    FillPortions: =0
+                    Height: =200
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =320
+                    Width: =
+                    ZIndex: =8
+
+                    Attachments_DataCard1_2 As typedDataCard.attachmentsEditCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="{Attachments}"
+                        Default: =ThisItem.Attachments
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OA_Project_Proposal_Process],DataSourceInfo.DisplayName,"{Attachments}")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =200
+                        Required: =false
+                        Update: =pp_DataCardValue.Attachments
+                        Width: =327
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey12_1 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            PaddingLeft: =0
+                            Size: =13
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =18
+                            Y: =3
+                            ZIndex: =1
+
+                        pp_DataCardValue As attachments:
+                            AddAttachmentText: ="Upload Attachment"
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =103
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsInDataCard: =true
+                            ItemColor: =RGBA(0, 0, 0, 1)
+                            ItemFill: =RGBA(0, 120, 212, 1)
+                            ItemHoverColor: =RGBA(51, 51, 51, 1)
+                            ItemHoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Parent.Default
+                            ItemSpacing: =12
+                            MaxAttachments: =20
+                            MaxAttachmentSize: =5
+                            MaxAttachmentsText: ="The maximum number of files has been reached"
+                            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                            NoAttachmentsText: ="(max.5MB each)"
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width-20
+                            Y: =51
+                            ZIndex: =2
+
+                        ErrorMessage13_1 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(168, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(168, 0, 0, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =pp_DataCardValue.Y + pp_DataCardValue.Height
+                            ZIndex: =3
+
+                        Label66_91 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(255, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =25
+                            Size: =15
+                            Text: ="*"
+                            Width: =15
+                            Y: =11
+                            ZIndex: =4
+
+        ContainerSubmit_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =100
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            pp_btn_submit As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                LayoutMinWidth: =50
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            ApplicationNoProject: "RequestNo-" & Text(
+                                Now(),
+                                "yyyymmddhhmmss"
+                            )
+                        }
+                    );
+                    
+                    //校验必填项
+                    UpdateContext({ SubmitFormcheck: true });
+                    //校验必填
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Project Name cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(PP_TextIn_projectname.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Region cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(PP_Dropdown_region.SelectedText) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Demand Explanation cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(PP_TextIn_demExplanation.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Attachment cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: CountRows(pp_DataCardValue.Attachments) > 0 })
+                    );
+                    If(
+                        !SubmitFormcheck,
+                        Notify(
+                            "Alert:" & ErrShowField & "It is blank or filled incorrectly. Please correct it before submitting.",
+                            NotificationType.Error, 2000
+                        );
+                    Set(showMessage, true);
+                    );
+                    
+                    
+                    Set(approvalStepID,LookUp('Approval Step',FlowType.Value="Project Proposal Process" && StepType.Value="StartStep").ID);
+                    Set(approvalStepName,LookUp('Approval Step',FlowType.Value="Project Proposal Process" && StepType.Value="StartStep").'Setp Name');
+                    
+                    If(SubmitFormcheck,
+                    
+                    Patch(
+                        OA_Project_Proposal_Process,
+                        Defaults(OA_Project_Proposal_Process),
+                        {   Title: RequestNoProject,
+                            Process_ID: RequestNoProject,
+                            Region: PP_Dropdown_region.Selected.Title,
+                            Requester_Name: PP_TextIn_reqname.Selected.Mail,
+                            Application_Date: PP_TextIn_apldate.Text,
+                            Project_Name: PP_TextIn_projectname.Text,
+                            Demand_Explanation: PP_TextIn_demExplanation.Text
+                        },
+                        Form1_9.Updates
+                    );
+                    
+                    
+                    Patch(
+                        ApprovalRequest,
+                        Defaults(ApprovalRequest),
+                        {
+                            Title: ApplicationNoProject,
+                            Requestor: User().Email,
+                            RequestNo: RequestNoProject,
+                            ApprovalStepNo:"1",
+                            ApprovalType: {
+                                Id:7,
+                                Value:"Project Proposal Process"},
+                             Status: {
+                                Id:0,
+                                Value:"Approved"},
+                             'ApprovalStep (ApprovalStep0)':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                            Id:approvalStepID,
+                                            Value:approvalStepName}
+                        }
+                    );
+                    
+                    
+                    //清空数据
+                    Set(Submited, false);
+                    ResetForm(Form1_9);
+                    NewForm(Form1_9);
+                    ForAll(
+                        Gallery_detail_6.AllItems As galleryItems,
+                        Patch(
+                            OA_Project_Proposal_Process_Detail,
+                            Defaults(OA_Project_Proposal_Process_Detail),
+                            {   
+                                Main_Id:RequestNoProject,
+                                Index_Number:galleryItems.Index_Number,
+                                Request_Name: galleryItems.Request_Name,
+                                Description_Of_Requirements: galleryItems.Description_Of_Requirements,
+                                Quantity: galleryItems.Quantity,
+                                'Amount ': galleryItems.Amount,
+                                Currency:galleryItems.Currency
+                            }
+                        )
+                    );
+                    );
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: ="Submit"
+                Y: =
+                ZIndex: =1
+
+    Lbl_backGroud_25 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =Parent.Height
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Visible: =showDetailDialogProject
+        Width: =Parent.Width
+        ZIndex: =4
+
+    Group_Project_Detail As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rectangle23_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, .8)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height
+            HoverFill: =RGBA(0, 0, 0, .8)
+            PressedFill: =RGBA(0, 0, 0, .8)
+            Visible: =showDetailDialogProject
+            Width: =Parent.Width
+            ZIndex: =2
+
+        Lbl_PermissionBackgroud_1 As label:
+            BorderColor: =RGBA(219, 219, 219, 1)
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(251, 251, 251, 1)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height*0.6
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            Size: =11
+            Text: =
+            Visible: =showDetailDialogProject
+            Width: =Parent.Width*0.8
+            X: =(Parent.Width - Self.Width) / 2
+            Y: =(Parent.Height - Self.Height) / 2
+            ZIndex: =3
+
+        Label75_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(40, 60, 185, 1)
+            FocusedBorderThickness: =4
+            Height: =Lbl_PermissionBackgroud_1.Height/11.45
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            Size: =13
+            Text: ="Project approval details"
+            Visible: =showDetailDialogProject
+            Width: =Lbl_PermissionBackgroud_1.Width
+            X: =Lbl_PermissionBackgroud_1.X
+            Y: =Lbl_PermissionBackgroud_1.Y-40
+            ZIndex: =5
+
+        btn_permissionSave_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 60, 185, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =Lbl_PermissionBackgroud_1.Height/15
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =If(
+                  IsBlank(PP_NameInput_d.Text) || IsBlank(PP_Description_d.Text) || IsBlank(PP_QuantityInput_d.Text) || IsBlank(PP_AmountInput_d.Text) || IsBlank(PP_CurrencyInput_d.SelectedText),
+                  Notify("Please fill in all required fields", NotificationType.Error),
+                  UpdateContext({ varguid: GUID() });
+                UpdateContext(
+                    {
+                        DetailNo: "BBPP_D" & Text(
+                            Now(),
+                            "yyyymmddhhmmss"
+                        )
+                    }
+                );
+                If(
+                    NewRecordPPD,
+                    Patch(
+                        CursorCollect,
+                        Defaults(CursorCollect),
+                        {
+                            CurrentGuid: varguid,
+                            Index_Number: CountRows(CursorCollect)+1,
+                            Request_Name: PP_NameInput_d.Text,
+                            Description_Of_Requirements: PP_Description_d.Text,
+                            Quantity: PP_QuantityInput_d.Text,
+                            Currency:PP_CurrencyInput_d.Selected.Currency,
+                            Amount: PP_AmountInput_d.Text
+                        }
+                    ),
+                    Patch(
+                        CursorCollect,
+                        LookUp(
+                            CursorCollect,
+                            CurrentGuid = Trim(currentRecordPPD.CurrentGuid)
+                        ),
+                        {
+                            Request_Name: PP_NameInput_d.Text,
+                            Description_Of_Requirements: PP_Description_d.Text,
+                            Quantity: PP_QuantityInput_d.Text,
+                            Currency:PP_CurrencyInput_d.Selected.Currency,
+                            Amount: PP_AmountInput_d.Text
+                            
+                        }
+                    )
+                );
+                Set(showDetailDialogProject,false);
+                ); 
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =11
+            Text: ="Save"
+            Visible: =showDetailDialogProject
+            Width: =100
+            X: =Lbl_PermissionBackgroud_1.X+Lbl_PermissionBackgroud_1.Width*0.5-Self.Width
+            Y: =Lbl_PermissionBackgroud_1.Y+Lbl_PermissionBackgroud_1.Height-60
+            ZIndex: =6
+
+        Button28_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(40, 60, 185, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Height: =Lbl_PermissionBackgroud_1.Height/15
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(showDetailDialogProject,false);
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =11
+            Text: ="Close"
+            Visible: =showDetailDialogProject
+            Width: =100
+            X: =btn_permissionSave_1.X+btn_permissionSave_1.Width+30
+            Y: =Lbl_PermissionBackgroud_1.Y+Lbl_PermissionBackgroud_1.Height-60
+            ZIndex: =7
+
+        Container_detail1_1 As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            Height: =Parent.Height*0.5
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =showDetailDialogProject
+            Width: =Parent.Width*0.8-20
+            X: =Lbl_PermissionBackgroud_1.X+20
+            Y: |
+                =Lbl_PermissionBackgroud_1.Y
+            ZIndex: =8
+
+            ContainerDetail10 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =120
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                ContainerDetail10_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    HtmlText5_6 As htmlViewer:
+                        Height: =61
+                        HtmlText: |-
+                            ="<b>
+                                <font color=black>
+                                    <p style='text-align:left'><span style='color:red'>*</span>
+                                        Request Name
+                                </font>
+                            </b>"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    PP_NameInput_d As text:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        Default: =If(!NewRecordPPD,Text(currentRecordPPD.Request_Name),"")
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(51, 51, 51, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =Parent.Width*0.9
+                        ZIndex: =2
+
+                ContainerDetail10_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =3
+
+                    HtmlText5_7 As htmlViewer:
+                        Height: =61
+                        HtmlText: |-
+                            ="<b>
+                                <font color=black>
+                                    <p style='text-align:left'><span style='color:red'>*</span>
+                                        Description of requirements
+                                </font>
+                            </b>"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    PP_Description_d As text:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        Default: =If(!NewRecordPPD,Text(currentRecordPPD.Description_Of_Requirements),"")
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(51, 51, 51, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =Parent.Width*0.9
+                        ZIndex: =2
+
+                ContainerDetail10_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =4
+
+                    HtmlText5_11 As htmlViewer:
+                        Height: =61
+                        HtmlText: |-
+                            ="<b>
+                                <font color=black>
+                                    <p style='text-align:left'><span style='color:red'>*</span>
+                                        Quantity
+                                </font>
+                            </b>"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    PP_QuantityInput_d As text:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        Default: |-
+                            =If(!NewRecordPPD,Text(currentRecordPPD.Quantity),Text(QuantityNew, "[$-en-GB]#,##0"))
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnChange: |-
+                            =UpdateContext({QuantityNew: Value(PP_QuantityInput_d.Text)})
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(51, 51, 51, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =Parent.Width*0.9
+                        ZIndex: =2
+
+            ContainerDetail20 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =120
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =2
+
+                ContainerDetail20_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    BorderStyle: =BorderStyle.None
+                    Height: =120
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    HtmlText5_14 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Start
+                        Height: =61
+                        HtmlText: |-
+                            ="<b>
+                                <font color=black>
+                                    <p style='text-align:left'><span style='color:red'>*</span>
+                                        Amount 
+                                </font>
+                            </b>"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    PP_AmountInput_d As text:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        Default: |-
+                            =If(!NewRecordPPD,Text(currentRecordPPD.Amount),Coalesce(Text(AmountNew, "[$-en-GB]#,##0.00"), "0.00"))
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnChange: |-
+                            =UpdateContext({AmountNew: Value(PP_AmountInput_d.Text)})
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(51, 51, 51, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =Parent.Width*0.9
+                        ZIndex: =2
+
+                ContainerDetail20_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    BorderStyle: =BorderStyle.None
+                    Height: =120
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    HtmlText5_15 As htmlViewer:
+                        Height: =61
+                        HtmlText: |-
+                            ="<b>
+                                <font color=black>
+                                    <p style='text-align:left'><span style='color:red'>*</span>
+                                        Currency
+                                </font>
+                            </b>"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    PP_CurrencyInput_d As dropdown:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        Default: =If(!NewRecordPPD,Text(currentRecordPPD.Currency),"")
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        Items: =Pubilc_Currency
+                        PaddingBottom: =5
+                        PaddingLeft: =12
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        Size: =13
+                        Width: =Parent.Width*0.9
+                        ZIndex: =3
+
+                ContainerDetail20_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =3
+
+                    HtmlText5_16 As htmlViewer:
+                        Height: =50
+                        HtmlText: =""
+                        Width: =Parent.Width
+                        ZIndex: =1
+

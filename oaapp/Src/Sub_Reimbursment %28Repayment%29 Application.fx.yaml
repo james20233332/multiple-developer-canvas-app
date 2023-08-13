@@ -1,0 +1,1948 @@
+"'Sub_Reimbursment (Repayment) Application' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainerMain_3 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container_Title_Bar_3 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(40, 60, 185, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =1
+
+            Image_Logo_3 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =md
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =1
+
+            Label_Subject_3 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =15
+                Text: ="Reimbursment (Repayment) Application Form"
+                Width: =Parent.Width-350
+                ZIndex: =2
+
+            Icon_home_3 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =3
+
+            Icon_refresh_3 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =4
+
+            Icon_mail_3 As icon.Alarm:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showEmailhelp,true);Set(showhelp,true);Set(sendMessage,false);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1813.84
+                ZIndex: =5
+
+            Label9_23 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =6
+
+        ContainerMain_3 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =2
+
+            LabelBlank_4 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =50
+                ZIndex: =1
+
+            MainSectionContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(187, 221, 140, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =11
+                FillPortions: =0
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =-10
+                Width: |
+                    =Parent.Width-50
+                ZIndex: =2
+
+                Lbl_Basict_Info_9 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Basic Information"
+                    Width: =300
+                    ZIndex: =1
+
+                ContainerMain_39 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =95
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    ContainerMain_10_34 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        HtmlText6_382 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Process ID:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        rei_txt_process_id As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: = Text(""&_RequestNo)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingLeft: =5
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_10_35 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_383 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Subject:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        rei_txt_subject As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =4
+
+                    ContainerMain_10_36 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_384 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Applicant (Payee):</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        rei_txt_applicant As combobox:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: |-
+                                =Office365用户.SearchUser({searchTerm:User().Email})
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["UserPrincipalName","DisplayName"]
+                            DisplayMode: =DisplayMode.View
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            InputTextPlaceholder: ="Search User"
+                            Items: |-
+                                =Office365用户.SearchUser({searchTerm:rei_txt_applicant.SearchText,top:10})
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Mail"]
+                            SearchItems: |-
+                                =Search(Office365用户.SearchUser({searchTerm:rei_txt_applicant.SearchText,top:10}),rei_txt_applicant.SearchText,"Mail")
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Person
+                            Width: =Parent.Width*0.8
+                            ZIndex: =5
+
+                    ContainerMain_10_37 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_385 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Application Date:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_application_date As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =Text(Today(), "mm-dd-yyyy")
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =UpdateContext({
+                                    SelectedYear: Text(Year(rei_txt_application_date)),
+                                    SelectedMonth: Text(DateTimeValue(rei_txt_application_date),"mm")
+                                });
+                                //查询币种
+                                //UpdateContext({ SelectedCurrency: LookUp(Pubilc_Party_A, Name_Party_A=txt_payer.Text, Currency) });
+                                UpdateContext({ CurrencyPair: Concatenate(rei_txt_currency_host.Text, "-", rei_txt_currency_home.Text) });
+                                // 查询汇率表，更新汇率字段
+                                Set(
+                                    _ex_rate_home,LookUp(
+                                            Public_Exchange_Rates,
+                                            'Name (Title)' = CurrencyPair && Year.Value=Text(SelectedYear)&&Month.Value=Text(SelectedMonth)
+                                            //'Name (Title)' = "JPY-HKD" && Year.Value = "2023" && Month.Value="07"
+                                        ).Rate
+                                );
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                Lbl_Reimbursement_Info_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Reimbursement Information"
+                    Width: =300
+                    ZIndex: =3
+
+                ContainerMain_56 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =4
+
+                    ContainerMain_20_34 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        HtmlText6_386 As htmlViewer:
+                            Height: =52
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>
+                                Payer:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_payer As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_payer
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =200
+                            ZIndex: =2
+
+                    ContainerMain_20_35 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_387 As htmlViewer:
+                            Height: =52
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Region:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_drp_region As dropdown:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Region
+                            LayoutMinWidth: =200
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_20_36 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_388 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =52
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>
+                                Borrower:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_borrower As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_borrower
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =200
+                            ZIndex: =2
+
+                    ContainerMain_20_37 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =95
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText4_44 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Font: =Font.'Segoe UI'
+                            Height: =52
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Corresponding Advance (Loan) OA:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_cbb_corresponding_advance_oa As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Process_ID","Amount"]
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =IDATA
+                            OnChange: |
+                                =Set(_payer,rei_cbb_corresponding_advance_oa.Selected.Payer);
+                                Set(_borrower,rei_cbb_corresponding_advance_oa.Selected.Requester_Name);
+                                Set(_amount_of_loan_host,rei_cbb_corresponding_advance_oa.Selected.Host_Country_Currency_Amount);
+                                Set(_currency_host,rei_cbb_corresponding_advance_oa.Selected.Host_Country_Currency);
+                                Set(_currency_home,rei_cbb_corresponding_advance_oa.Selected.Home_Country_Currency);
+                                Set(_balance_host,(Value(rei_txt_amount_of_loan_host.Text) - Value(rei_txt_reimbursment_amount_host.Text) - Value(rei_txt_repayment_amount_host.Text)));
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Process_ID"]
+                            SearchItems: =[]
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Double
+                            ZIndex: =2
+
+                ContainerMain_57 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =120
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =5
+
+                    ContainerMain_30_29 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width/3
+                        ZIndex: =1
+
+                        HtmlText6_389 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>
+                                Amount Of Loan:<br>(Host Country Currency)</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_amount_of_loan_host As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_amount_of_loan_host
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =2
+
+                    ContainerMain_30_30 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_390 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>
+                                Currency:<br>(Host Country Currency)</font></b>"
+                            LayoutMinHeight: =70
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_currency_host As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_currency_host
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =2
+
+                    ContainerMain_30_31 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_391 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>
+                                Currency:<br>(Home Country Currency)</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =10
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_currency_home As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_currency_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_30_32 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                        HtmlText6_392 As htmlViewer:
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Reimbursment Amount:<br>&nbsp;&nbsp;&nbsp;(Host Country Currency)</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_reimbursment_amount_host As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_reimbursment_amount_host
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(_balance_host,(Value(rei_txt_amount_of_loan_host.Text) - Value(rei_txt_reimbursment_amount_host.Text) - Value(rei_txt_repayment_amount_host.Text)));
+                                Set(_reimbursment_amount_host,Text(Round(Value(rei_txt_reimbursment_amount_host.Text),2),"0.00"));
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                ContainerMain_58 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =120
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =6
+
+                    ContainerMain_40_29 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_393 As htmlViewer:
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Repayment Amount:<br>&nbsp;&nbsp;&nbsp;(Host Country Currency)</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_repayment_amount_host As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_repayment_amount_host
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(_balance_host,(Value(rei_txt_amount_of_loan_host.Text) - Value(rei_txt_reimbursment_amount_host.Text) - Value(rei_txt_repayment_amount_host.Text)));
+                                Set(_repayment_amount_host,Text(Round(Value(rei_txt_reimbursment_amount_host.Text),2),"0.00"));
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_40_30 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_394 As htmlViewer:
+                            Height: =72
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>
+                                Balance:<br>(Host Country Currency)</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        rei_txt_balance_host As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_balance_host
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            OnChange: =//Set(_balance_host,Text(Round(Value(txt_balance_host.Text),2),"0.00"));
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    Container3_3 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                    Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                ContainerMain_59 As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =150
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =7
+
+                    ContainerMain_6_8 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =2
+                        Height: =150
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =6
+
+                        HtmlText6_395 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Nature of Payment:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_nature_of_payment As text:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FillPortions: =1
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =80
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            Mode: =TextMode.MultiLine
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    Container2_5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =30
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =7
+
+                        HtmlText6_396 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            FillPortions: =1
+                            Height: =50
+                            HtmlText: |-
+                                ="<font color=black><p style='text-align:left'><span style='color:red'>Prompt(Reminder): Please fill in the core content of the contract, our main rights and obligations, the other party's main rights and obligations, and whether there is exclusive or preferential treatment.
+                                </span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =15
+                            PaddingRight: =15
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                Form1_16 As form:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DataSource: =OA_Reimbursment_Application_Form
+                    DefaultMode: =FormMode.New
+                    FillPortions: =0
+                    Height: =150
+                    LayoutMinHeight: =120
+                    LayoutMinWidth: =600
+                    Width: =Parent.Width-100
+                    ZIndex: =8
+
+                    Attachments_DataCard1_11 As typedDataCard.attachmentsEditCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="{Attachments}"
+                        Default: =ThisItem.Attachments
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OA_Reimbursment_Application_Form],DataSourceInfo.DisplayName,"{Attachments}")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        Required: =false
+                        Update: =rei_DataCardValue26.Attachments
+                        Width: =Parent.Width-200
+                        WidthFit: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =12
+
+                        DataCardKey26_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            PaddingLeft: =10
+                            Size: =11
+                            Text: =Parent.DisplayName
+                            Width: |
+                                =Parent.Width - 30
+                            Wrap: =false
+                            ZIndex: =1
+
+                        rei_DataCardValue26 As attachments:
+                            AddAttachmentText: ="Upload Attachment"
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =120
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsInDataCard: =true
+                            ItemColor: =RGBA(0, 0, 0, 1)
+                            ItemFill: =RGBA(0, 120, 212, 1)
+                            ItemHoverColor: =RGBA(51, 51, 51, 1)
+                            ItemHoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Parent.Default
+                            ItemSpacing: =12
+                            MaxAttachmentsText: ="The maximum number of files has been reached。"
+                            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                            NoAttachmentsText: ="(max.10MB each)"
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Size: =11
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Y: =30
+                            ZIndex: =2
+
+                        ErrorMessage26_2 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(168, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(168, 0, 0, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            ZIndex: =3
+
+                        StarVisible26_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =DataCardKey26_2.Height
+                            PaddingLeft: =0
+                            Size: =13
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey26_2.Y
+                            ZIndex: =4
+
+                Container_190_hide As groupContainer.verticalAutoLayoutContainer:
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =120
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =9
+
+                    ContainerMain_190_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width/3
+                        ZIndex: =1
+
+                        HtmlText4_45 As htmlViewer:
+                            Height: =70
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Ex-rate:<br>&nbsp;&nbsp;&nbsp;(Home Country Currency)</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =100
+                            ZIndex: =1
+
+                        rei_txt_ex_rate_home As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_ex_rate_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =2
+
+                    ContainerMain_190_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_397 As htmlViewer:
+                            Height: =70
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Amount Of Loan<br>&nbsp;&nbsp;&nbsp;(Home Country Currency):</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_amount_of_loan_home As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_amount_of_loan_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =2
+
+                    ContainerMain_190_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_398 As htmlViewer:
+                            Height: =70
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Reimbursment Amount:<br>&nbsp;&nbsp;&nbsp;(Home Country Currency)</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_reimbursment_amount_home As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_reimbursment_amount_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_190_4 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                        HtmlText6_399 As htmlViewer:
+                            Height: =70
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Balance:<br>&nbsp;&nbsp;&nbsp;(Home Country Currency)</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        rei_txt_balance_home As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_balance_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                Container_200_hide As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =10
+
+                    Container_200_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width/3
+                        ZIndex: =2
+
+                        HtmlText4_46 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =70
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Repayment Amount:<br>&nbsp;&nbsp;&nbsp;(Home Country Currency)</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =40
+                            ZIndex: =2
+
+                        rei_txt_repayment_amount_home As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_repayment_amount_home
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinWidth: =200
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            ZIndex: =3
+
+                    Container_200_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        Container1_3 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            Height: =70
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =1
+
+                            HtmlText6_400 As htmlViewer:
+                                Height: =50
+                                HtmlText: |-
+                                    ="<b><font color=red><p style='text-align:left;'><span style='color:red'>*</span>
+                                    Amount US:</font></b>"
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Width: =150
+                                ZIndex: =1
+
+                            rei_Label1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Size: =13
+                                Text: =_usd_exchange_rate
+                                ZIndex: =2
+
+                        txt_amount_us As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_amount_us
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |-
+                                =UpdateContext({amountUS: Value(txt_amount_us.Text)})
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    Container_200_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_401 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Financial Affiliated Company :</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_finacialcompany As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_payer
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    Container_200_4 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =3
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                        HtmlText6_402 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*
+                                Finance Affiliated Department:</span></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        rei_txt_financialdept As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_fristdep
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+        ContainerSubmit_3 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =100
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            btn_submit_5 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                LayoutMinWidth: =50
+                OnSelect: |
+                    =UpdateContext(
+                        {
+                            ApplicationNo: "RequestNo-" & Text(
+                                Now(),
+                                "yyyymmddhhmmss"
+                            )
+                        }
+                    );
+                    //校验必填项
+                    UpdateContext({SubmitFormcheck: true});
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Region cannot be empty！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(rei_drp_region.Selected.Name)})
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Process of OA must be selected be empty！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(rei_cbb_corresponding_advance_oa.Selected.Process_ID)})
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Reimbursment Amount cannot be empty！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(rei_txt_reimbursment_amount_host.Text)})
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Repayment Amount cannot be empty！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(rei_txt_repayment_amount_host.Text)})
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Nature of Payment cannot be empty！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(rei_txt_nature_of_payment.Text)})
+                    );
+                    If(
+                        !SubmitFormcheck,
+                        Notify(
+                            "Alert:" & ErrShowField & "It is blank or filled incorrectly. Please correct it before submitting.",
+                            NotificationType.Error,
+                            2000
+                        );
+                        Set(
+                            showMessage,
+                            true
+                        );
+                        
+                    );
+                    Patch(
+                        OA_Reimbursment_Application_Form,
+                        Defaults(OA_Reimbursment_Application_Form),
+                        {
+                            Process_Id: rei_txt_process_id.Text,
+                            Subject: rei_txt_subject.Text,
+                            Applicant: rei_txt_applicant.Selected.Mail,
+                            Application_Date: rei_txt_application_date.Text,
+                            Payer: rei_txt_payer.Text,
+                            Region: rei_drp_region.Selected.Title,
+                            Borrower: rei_txt_borrower.Text,
+                            Corresponding_Advance_OA: rei_cbb_corresponding_advance_oa.Selected.Process_ID,
+                            Host_Country_Currency_Amount_Of_Loan: rei_txt_amount_of_loan_host.Text,
+                            Host_Country_Currency_Currency: rei_txt_currency_host.Text,
+                            Home_Country_Currency_Currency: rei_txt_currency_home.Text,
+                            Home_Country_Currency_Ex_Rate: rei_txt_ex_rate_home.Text,
+                            Home_Country_Currency_Amount_Of_Loan: rei_txt_amount_of_loan_home.Text,
+                            Host_Country_Currency_Reimbursment_Amount: rei_txt_reimbursment_amount_host.Text,
+                            Home_Country_Currency_Reimbursment_Amount: rei_txt_reimbursment_amount_home.Text,
+                            Host_Country_Currency_Repayment_Amount: rei_txt_repayment_amount_host.Text,
+                            Home_Country_Currency_Repayment_Amount: rei_txt_repayment_amount_home.Text,
+                            Host_Country_Currency_Balance: rei_txt_balance_host.Text,
+                            Home_Country_Currency_Balance: rei_txt_balance_home.Text,
+                            Amount_US: txt_amount_us.Text,
+                            Financial_Affiliated_Company: rei_txt_finacialcompany.Text,
+                            Finance_Affiliated_Department: rei_txt_financialdept.Text,
+                            Nature_Of_Payment: rei_txt_nature_of_payment.Text
+                        },
+                        Form1_16.Updates
+                    );
+                    Patch(
+                        ApprovalRequest,
+                        Defaults(ApprovalRequest),
+                        {
+                            Title: ApplicationNo,
+                            Requestor: User().Email,
+                            RequestNo: _RequestNo,
+                            ApprovalType: {
+                                Id: 10,
+                                Value: "Reimbursment Application Form"
+                            },
+                            Status: {
+                                Id: 0,
+                                Value: "Approved"
+                            }
+                        }
+                    );
+                    //清空数据
+                    Set(
+                        Submited,
+                        false
+                    );
+                    ResetForm(Form1_16);
+                    NewForm(Form1_16);
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: ="Submit"
+                Y: =
+                ZIndex: =1
+

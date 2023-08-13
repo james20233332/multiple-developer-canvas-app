@@ -1,0 +1,2795 @@
+"'Sub_Travel Reimbursement' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainerMain_travel As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container_Title_Bar_travel As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(40, 60, 185, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =1
+
+            Image_Logo_1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =md
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =1
+
+            Label_Subject_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =15
+                Text: ="Travel Reimbursement Form"
+                Width: =Parent.Width-350
+                ZIndex: =2
+
+            Icon_home_1 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =3
+
+            Icon_refresh_1 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =4
+
+            Icon_mail_1 As icon.Alarm:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showEmailhelp,true);Set(showhelp,true);Set(sendMessage,false);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1813.84
+                ZIndex: =5
+
+            Label9_19 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =6
+
+        ContainerMain_travel As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =2
+
+            LabelBlank_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =50
+                ZIndex: =1
+
+            MainSectionContainer_travel As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(187, 221, 140, 1)
+                BorderStyle: =BorderStyle.None
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =-10
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Lbl_Basict_Info_5 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Basic Information"
+                    Width: =300
+                    ZIndex: =1
+
+                ContainerMain_17 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    ContainerMain_10_18 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        HtmlText6_292 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Process ID:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_process_id_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: = Text(""&RequestNo)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_10_19 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_293 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Subject:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_subject_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_10_20 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_294 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Applicant (Payee):</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_applicant_travel As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: |-
+                                =Office365用户.SearchUser({searchTerm:User().Email})
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["UserPrincipalName","DisplayName"]
+                            DisplayMode: =DisplayMode.View
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            InputTextPlaceholder: ="Search User"
+                            Items: |-
+                                =Office365用户.SearchUser({searchTerm:TextIn_applicant_travel.SearchText,top:10})
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Mail"]
+                            SearchItems: |-
+                                =Search(Office365用户.SearchUser({searchTerm:TextIn_applicant_travel.SearchText,top:10}),TextIn_applicant_travel.SearchText,"Mail")
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Person
+                            Width: =Parent.Width*0.8
+                            ZIndex: =5
+
+                    ContainerMain_10_21 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_295 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Application Date:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_apldate_travel As text:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =Text(Today(), "mm-dd-yyyy")
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                Lbl_Reimbursement_Info_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    Size: =15
+                    Text: ="Reimbursement Information"
+                    Width: =300
+                    ZIndex: =3
+
+                ContainerMain_25 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =4
+
+                    ContainerMain_20_18 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_296 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Month:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_month_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_20_19 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_297 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Region:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        Dropdown_region_travel As dropdown:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Region
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =3
+
+                    ContainerMain_20_20 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                        HtmlText6_298 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Main Applicant:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_mainapplicant_travel As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: |-
+                                =Office365用户.SearchUser({searchTerm:User().Email})
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["UserPrincipalName","DisplayName"]
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            InputTextPlaceholder: ="Search User"
+                            Items: |-
+                                =Office365用户.SearchUser({searchTerm:TextIn_mainapplicant_travel.SearchText,top:10})
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Mail"]
+                            SearchItems: |-
+                                =Search(Office365用户.SearchUser({searchTerm:TextIn_mainapplicant_travel.SearchText,top:10}),TextIn_mainapplicant_travel.SearchText,"Mail")
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Person
+                            Width: =Parent.Width*0.8
+                            ZIndex: =5
+
+                    ContainerMain_20_21 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =6
+
+                        HtmlText6_299 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Attendees:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_attendees_travel As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["UserPrincipalName","DisplayName"]
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            InputTextPlaceholder: ="Search User"
+                            Items: |-
+                                =Office365用户.SearchUser({searchTerm:TextIn_attendees_travel.SearchText,top:10})
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["Mail"]
+                            SearchItems: |-
+                                =Search(Office365用户.SearchUser({searchTerm:TextIn_attendees_travel.SearchText,top:10}),TextIn_attendees_travel.SearchText,"Mail")
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Person
+                            Width: =Parent.Width*0.8
+                            ZIndex: =5
+
+                ContainerMain_35 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =150
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =5
+
+                    ContainerMain_30_15 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderStyle: =BorderStyle.None
+                        Height: =150
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width/3
+                        ZIndex: =1
+
+                        HtmlText4_40 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Related Business Travel Process:</font></b>"
+                            Width: =40
+                            ZIndex: =2
+
+                        cbb_related_business_travel As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["RequestNo","Requestor"]
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =businessTravelList
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SearchFields: =["RequestNo"]
+                            SearchItems: =[]
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =13
+                            Template: =ListItemTemplate.Double
+                            Width: =Parent.Width*0.8
+                            ZIndex: =3
+
+                    ContainerMain_30_16 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =2
+                        Height: =150
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_300 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Purpose:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_purpose_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =80
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinHeight: =200
+                            Mode: =TextMode.MultiLine
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_30_17 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =150
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_30_travel As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                ContainerMain_46 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =6
+
+                    ContainerMain_40_13 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_301 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Financial affiliated company :</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_finacialcompany_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_Company
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_40_14 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_302 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Finance affiliated department:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        lbl_financialdept_travel As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: =_firstDept
+                            Tooltip: =Self.Text
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_40_15 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =7
+
+                        HtmlText6_303 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'>Local Currency:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_local_currency_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =_localCurrency.Value
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_40_16 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =8
+
+                        HtmlText6_304 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Amount US:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_amount_us_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: |
+                                =If(homeAmountTimerUS=Text(amountUS),amountUS,homeAmountTimerUS)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |-
+                                =UpdateContext({amountUS: Text(Value(TextIn_amount_us_travel.Text), "#.00")});
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                ContainerMain_52 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =7
+
+                    ContainerMain_50_9 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        HtmlText6_305 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>Accomodation:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_accomodation_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: |-
+                                =If(Value(Sum(Gallery_detail_10.AllItems,Local_Currency_Amount_Detail2))=0,"",Text(Value(Sum(Gallery_detail_10.AllItems,Local_Currency_Amount_Detail2)), "#.00"))
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |-
+                                =UpdateContext({Accomodation: Value(TextIn_accomodation_travel.Text)});
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =2
+
+                    ContainerMain_50_10 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_306 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>Transportation:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_transportation_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: |-
+                                =If(Value(Sum(Gallery_detail_travel.AllItems,Local_Currency_Amount_Detail1))=0,"",Text(Value(Sum(Gallery_detail_travel.AllItems,Local_Currency_Amount_Detail1)), "#.00"))
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |
+                                =UpdateContext({Transportation: Value(TextIn_transportation_travel.Text)});
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_50_11 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =5
+
+                        HtmlText6_307 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'>Meal:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                        TextIn_meal_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: |-
+                                =Text(Meal, "#.00")
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |-
+                                =UpdateContext({Meal: Value(TextIn_meal_travel.Text)});
+                                UpdateContext({homeAmountTimerUS:""})
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                    ContainerMain_50_12 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =6
+
+                        HtmlText6_308 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'>*</span>
+                                Total:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                        TextIn_total_travel As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: |-
+                                =If(Value(Sum(TextIn_accomodation_travel,TextIn_meal_travel,TextIn_transportation_travel))=0,"",Text(Value(Sum(TextIn_accomodation_travel,TextIn_meal_travel,TextIn_transportation_travel)), "#.00"))
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: |
+                                =UpdateContext({homeAmountTimerUS:""});
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.8
+                            ZIndex: =4
+
+                ContainerMain_60 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(204, 204, 204, 1)
+                    BorderStyle: =BorderStyle.None
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =8
+
+                    ContainerMain_60_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        HtmlText6_309 As htmlViewer:
+                            Height: =51
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left;'><span style='color:red'></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =1
+
+                    ContainerMain_60_4 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                        HtmlText6_310 As htmlViewer:
+                            Height: =50
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:left'></font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Width: =250
+                            ZIndex: =3
+
+                ContainerMain_72 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =120
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =2
+                    LayoutMinHeight: =400
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    PaddingLeft: =5
+                    PaddingRight: =0.00
+                    PaddingTop: =10
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =9
+
+                    ContainerMain_70_travel As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =0
+                        Height: =30
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Button8_9 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(40, 60, 185, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: |-
+                                =Set(showDetailDialog1,true);
+                                Set(NewRecordTRA,true);
+                                Reset(dp_depature_date_d1new_travel); Reset(tx_departure_location_d1new_travel); Reset(dp_arrival_date_d1new_travel); Reset(tx_arrival_location_d1new_travel); Reset(dd_transportation_d1new_travel);
+                                Reset(tx_number_docs_d1new_travel);Reset(tx_host_amount_d1new_travel); Reset(dd_original_currency_d1new_travel); 
+                                UpdateContext({amountD1New:"0"});
+                                Set(ExchangeRateTimer,0);
+                                UpdateContext({homeAmountTimer:""});
+                                Set(NoDocs,0);
+                                Set(timeGo,false);
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Text: ="Travel Details"
+                            Tooltip: ="Add an Iaas"
+                            Width: =200
+                            X: =16.05
+                            ZIndex: =1
+
+                        Image5_5 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =25
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =ADD2
+                            ImagePosition: =ImagePosition.Stretch
+                            OnSelect: |-
+                                =Set(showDetailDialog1,true);
+                                Set(NewRecordTRA,true);
+                                Reset(dp_depature_date_d1new_travel); Reset(tx_departure_location_d1new_travel); Reset(dp_arrival_date_d1new_travel); Reset(tx_arrival_location_d1new_travel); Reset(dd_transportation_d1new_travel);
+                                Reset(tx_number_docs_d1new_travel);Reset(tx_host_amount_d1new_travel); Reset(dd_original_currency_d1new_travel); 
+                                UpdateContext({amountD1New:"0"});
+                                Set(ExchangeRateTimer,0);
+                                UpdateContext({homeAmountTimer:""});
+                                Set(NoDocs,0);
+                                Set(timeGo,false);
+                            PaddingLeft: =10
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Add an IaaS resource."
+                            Width: =40
+                            ZIndex: =2
+
+                    Gallery_detail_travel As gallery.galleryVertical:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(219, 219, 219, 1)
+                        BorderThickness: =1
+                        ContentLanguage: =Parent.Height
+                        FocusedBorderThickness: =1
+                        Height: =1000
+                        Items: =TravelCollect
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =320
+                        OnSelect: =Set(currentTravelRecord,Gallery_detail_travel.Selected)
+                        ShowNavigation: =true
+                        TemplatePadding: =1
+                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(100, Self.Height - 50))
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        Image_detail_delete_travel As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =delete
+                            OnSelect: |-
+                                =Remove(TravelCollect,ThisItem);
+                                
+                                Clear(InputCollection1);
+                                ForAll(
+                                    TravelCollect,
+                                    Collect(
+                                        InputCollection1,
+                                        {
+                                            
+                                            Index_Number: ""&CountRows(InputCollection1) + 1,
+                                            CurrentGuid: Text(CurrentGuid),
+                                            Departure_Date: Departure_Date,
+                                            Departure_Location:Departure_Location,
+                                            Arrival_Date: Arrival_Date,
+                                            Arrival_Location: Arrival_Location,
+                                            Transportation: Transportation,
+                                            No_Supporting_Docs:No_Supporting_Docs,
+                                            Original_Amount_Detail1:Original_Amount_Detail1,
+                                            Original_Currency_Detail1:Original_Currency_Detail1,
+                                            Local_Currency_Amount_Detail1:Local_Currency_Amount_Detail1,
+                                            Local_Currency_Exchange_Rate_Detail1:Local_Currency_Exchange_Rate_Detail1
+                                        }
+                                    )
+                                );
+                                
+                                ClearCollect(TravelCollect,InputCollection1);
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="delete record"
+                            Width: =30
+                            X: =Parent.Width-Parent.Width/41
+                            ZIndex: =1
+
+                        Image_detail_edit_travel As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =35
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =edit
+                            OnSelect: |
+                                =Set(NewRecordTRA,false);
+                                Set(showDetailDialog1Eidt,true);
+                                Set(currentRecordTRA,Gallery_detail_travel.Selected);
+                                UpdateContext({amountD1Value:Text(Gallery_detail_travel.Selected.Original_Amount_Detail1)});
+                                Reset(tx_detail1_amount_d1edit_travel);
+                                UpdateContext({homeAmountTimerEdit1:Gallery_detail_travel.Selected.Local_Currency_Amount_Detail1})
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Edit record"
+                            Width: =25
+                            X: =Parent.Width-Parent.Width/41*2
+                            ZIndex: =2
+
+                        Rectangle3_8 As rectangle:
+                            BorderColor: =RGBA(237, 237, 237, 1)
+                            BorderThickness: =1
+                            DisabledFill: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =2
+                            HoverFill: =RGBA(0, 120, 212, 1)
+                            OnSelect: =Select(Parent)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =3
+
+                        lbl_local_amount_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =37
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Local_Currency_Amount_Detail1
+                            Width: =103
+                            X: =Parent.Width-Parent.Width/41*7
+                            ZIndex: =4
+
+                        lbl_local_amount_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Local Currency Amount"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*7
+                            ZIndex: =5
+
+                        lbl_local_exchange_rate_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Local_Currency_Exchange_Rate_Detail1
+                            Width: =120
+                            X: =Parent.Width-Parent.Width/41*10
+                            ZIndex: =6
+
+                        lbl_local_exchange_rate_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Local Currency Exchange Rate"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*10
+                            ZIndex: =7
+
+                        lbl_original_currency_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Original_Currency_Detail1
+                            Width: =120
+                            X: =Parent.Width-Parent.Width/41*13
+                            ZIndex: =8
+
+                        lbl_original_currency_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Original Currency"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*13
+                            ZIndex: =10
+
+                        lbl_amount_detail_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Original_Amount_Detail1
+                            Width: =100
+                            X: =Parent.Width-Parent.Width/41*18
+                            ZIndex: =11
+
+                        lbl_amount_detail_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Amount"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*18
+                            ZIndex: =12
+
+                        lbl_no_supporting_docs_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.No_Supporting_Docs
+                            Width: =103
+                            X: =Parent.Width-Parent.Width/41*21
+                            ZIndex: =13
+
+                        lbl_no_supporting_docs_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="No.Supporting Docs"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*21
+                            ZIndex: =14
+
+                        lbl_transportation_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Transportation
+                            Width: =120
+                            X: =Parent.Width-Parent.Width/41*24
+                            ZIndex: =15
+
+                        "'lbl_ transportation_title_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Transportation"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*24
+                            ZIndex: =16
+
+                        lbl_arrival_location_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =41
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Arrival_Location
+                            Width: =120
+                            X: =Parent.Width-Parent.Width/41*29
+                            ZIndex: =17
+
+                        lbl_arrival_location_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Arrival Location"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*29
+                            ZIndex: =18
+
+                        lbl_arrival_date_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Arrival_Date
+                            Width: =120
+                            X: =Parent.Width-Parent.Width/41*32
+                            ZIndex: =19
+
+                        lbl_arrival_date_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Arrival Date"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*32
+                            ZIndex: =20
+
+                        lbl_departure_location_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Departure_Location
+                            Tooltip: =Self.Text
+                            X: =Parent.Width-Parent.Width/41*37
+                            ZIndex: =21
+
+                        lbl_departure_location_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Departure Location"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*37
+                            ZIndex: =22
+
+                        lbl_departure_date_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Departure_Date
+                            Width: =100
+                            X: =Parent.Width-Parent.Width/41*40
+                            ZIndex: =23
+
+                        lbl_departure_date_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Departure Date"
+                            Width: =1
+                            X: =Parent.Width-Parent.Width/41*40
+                            ZIndex: =24
+
+                        lbl_indexnumber_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Index_Number
+                            Width: =37
+                            ZIndex: =25
+
+                        lbl_number_title_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="NO"
+                            Width: =1
+                            ZIndex: =26
+
+                ContainerMain_82 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =120
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =2
+                    LayoutMinHeight: =400
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    PaddingLeft: =5
+                    PaddingRight: =0.00
+                    PaddingTop: =10
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =10
+
+                    ContainerMain_80_3 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =0
+                        Height: =30
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Button8_10 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(40, 60, 185, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: |
+                                =Set(showDetailDialog2,true);
+                                Set(NewRecordACC,true);
+                                Reset(dp_d2new_date_travel); Reset(tx_d2new_destination_travel); Reset(tx_d2new_hotel_travel); Reset(tx_roomates_d2new_travel); Reset(tx_d2new_amount_travel);
+                                Reset(dd_original_currency_d2new_travel);Reset(tx_d2new_local_rate_travel); Reset(tx_d2new_local_amount_travel); 
+                                UpdateContext({amountD2New:"0"});
+                                Set(ExchangeRateTimer2,0);
+                                UpdateContext({homeAmountTimer2:"0.00"});
+                                Set(timeGo2,false);
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Text: ="Accommodation Details"
+                            Tooltip: ="Add an Iaas"
+                            Width: =200
+                            X: =16.05
+                            ZIndex: =1
+
+                        Image5_6 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =25
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =ADD2
+                            ImagePosition: =ImagePosition.Stretch
+                            OnSelect: |
+                                =Set(showDetailDialog2,true);
+                                Set(NewRecordACC,true);
+                                Reset(dp_d2new_date_travel); Reset(tx_d2new_destination_travel); Reset(tx_d2new_hotel_travel); Reset(tx_roomates_d2new_travel); Reset(tx_d2new_amount_travel);
+                                Reset(dd_original_currency_d2new_travel);Reset(tx_d2new_local_rate_travel); Reset(tx_d2new_local_amount_travel); 
+                                UpdateContext({amountD2New:"0"});
+                                Set(ExchangeRateTimer2,0);
+                                UpdateContext({homeAmountTimer2:"0.00"});
+                                Set(timeGo2,false);
+                            PaddingLeft: =10
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Add an IaaS resource."
+                            Width: =40
+                            ZIndex: =2
+
+                    Gallery_detail_10 As gallery.galleryVertical:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(219, 219, 219, 1)
+                        BorderThickness: =1
+                        ContentLanguage: =Parent.Height
+                        FocusedBorderThickness: =1
+                        Height: =1000
+                        Items: =AccommodationCollect
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =320
+                        ShowNavigation: =true
+                        TemplatePadding: =1
+                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(100, Self.Height - 50))
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        Image_detail_d2_travel As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =delete
+                            OnSelect: |+
+                                =Remove(AccommodationCollect,ThisItem);
+                                
+                                Clear(InputCollection2);
+                                ForAll(
+                                    AccommodationCollect,
+                                    Collect(
+                                        InputCollection2,
+                                        {
+                                            Index_Number: ""&CountRows(InputCollection2) + 1,
+                                            CurrentGuid: Text(CurrentGuid),
+                                            Date: Date,
+                                            Destination: Destination,
+                                            Hotel: Hotel,
+                                            Roomates: Roomates,
+                                            Original_Amount_Detail2: Original_Amount_Detail2,
+                                            Original_Currency_Detail2: Original_Currency_Detail2,
+                                            Local_Currency_Exchange_Rate_Detail2: Local_Currency_Exchange_Rate_Detail2,
+                                            Local_Currency_Amount_Detail2:Local_Currency_Amount_Detail2
+                                           
+                                        }
+                                    )
+                                );
+                                
+                                ClearCollect(AccommodationCollect,InputCollection2);
+                                
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="delete record"
+                            Width: =Parent.TemplateWidth/40
+                            X: |
+                                =Parent.TemplateWidth-Parent.TemplateWidth/40
+                            ZIndex: =1
+
+                        Image_detail_edit_d2_travel As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =edit
+                            OnSelect: |-
+                                =Set(NewRecordACC,false);
+                                UpdateContext({showDetailDialog2Eidt:true});
+                                Set(currentRecordACC,Gallery_detail_10.Selected);
+                                UpdateContext({amountD2Value:Text(Gallery_detail_10.Selected.Original_Amount_Detail2)});
+                                Reset(tx_d2edit_host_amount_travel);
+                                UpdateContext({homeAmountTimerEdit2:Gallery_detail_10.Selected.Local_Currency_Amount_Detail2})
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Edit record"
+                            Width: =Parent.TemplateWidth/40*0.75
+                            X: |
+                                =Parent.TemplateWidth-Parent.TemplateWidth/40*2
+                            ZIndex: =2
+
+                        Rectangle3_9 As rectangle:
+                            BorderColor: =RGBA(237, 237, 237, 1)
+                            BorderThickness: =1
+                            DisabledFill: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =2
+                            HoverFill: =RGBA(0, 120, 212, 1)
+                            OnSelect: =Select(Parent)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =3
+
+                        lbl_local_amount_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Local_Currency_Amount_Detail2
+                            Width: =Parent.TemplateWidth/40*5
+                            X: |
+                                =Parent.TemplateWidth-Parent.TemplateWidth/40*7
+                            ZIndex: =4
+
+                        lbl_local_amount_title_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Local Currency Amount"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*7
+                            ZIndex: =5
+
+                        lbl_local_exchange_rate_details2_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Local_Currency_Exchange_Rate_Detail2
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*12
+                            ZIndex: =6
+
+                        lbl_local_exchange_rate_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Local Currency Exchange Rate"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*12
+                            ZIndex: =7
+
+                        lbl_original_currency_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Original_Currency_Detail2
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*17
+                            ZIndex: =8
+
+                        lbl_original_currency_title_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Original Currency"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*17
+                            ZIndex: =9
+
+                        "'lbl_ amount_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Original_Amount_Detail2
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*22
+                            ZIndex: =10
+
+                        "'lbl_ amount_details2_title_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Amount"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*22
+                            ZIndex: =11
+
+                        "'lbl_roomate(s)_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Roomates
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*27
+                            ZIndex: =12
+
+                        "'lbl_roomate(s)_title_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Roomate(s)"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*27
+                            ZIndex: =13
+
+                        lbl_hotel_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Hotel
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*32
+                            ZIndex: =14
+
+                        lbl_hotel_title_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Hotel"
+                            Width: =Parent.TemplateWidth/40*5
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*32
+                            ZIndex: =15
+
+                        "'lbl_ destination_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Destination
+                            Tooltip: =Self.Text
+                            Width: =Parent.TemplateWidth/40*4
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*36
+                            ZIndex: =16
+
+                        "'lbl_ destination_title_d2_travel' As label":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Destination"
+                            Width: =Parent.TemplateWidth/40*4
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*36
+                            ZIndex: =17
+
+                        lbl_date_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =ThisItem.Date
+                            Width: =Parent.TemplateWidth/40*3
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*38
+                            ZIndex: =18
+
+                        lbl_date_title_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="Date"
+                            Width: =Parent.TemplateWidth/40*3
+                            X: =Parent.TemplateWidth-Parent.TemplateWidth/40*38
+                            ZIndex: =19
+
+                        lbl_indexnumber_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingRight: =6.76
+                            PaddingTop: =0
+                            Size: =11
+                            Text: =ThisItem.Index_Number
+                            Width: =Parent.TemplateWidth/40
+                            ZIndex: =20
+
+                        lbl_number_title_d2_travel As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =0
+                            PaddingTop: =0
+                            Size: =11
+                            Text: ="NO"
+                            Width: =Parent.TemplateWidth/40
+                            ZIndex: =21
+
+                Form1_12 As form:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DataSource: =OA_Travel_Reimbursement_Form_Details2
+                    DefaultMode: =FormMode.New
+                    FillPortions: =0
+                    Height: =200
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =320
+                    ZIndex: =11
+
+                    Attachments_DataCard1_7 As typedDataCard.attachmentsEditCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="{Attachments}"
+                        Default: =ThisItem.Attachments
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OA_Travel_Reimbursement_Form],DataSourceInfo.DisplayName,"{Attachments}")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =200
+                        Required: =false
+                        Update: =DataCardValue12_1.Attachments
+                        Width: =327
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey12_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =34
+                            PaddingLeft: =0
+                            Size: =13
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =18
+                            Y: =3
+                            ZIndex: =1
+
+                        DataCardValue12_1 As attachments:
+                            AddAttachmentText: ="Upload Attachment"
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =103
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsInDataCard: =true
+                            ItemColor: =RGBA(0, 0, 0, 1)
+                            ItemFill: =RGBA(0, 120, 212, 1)
+                            ItemHoverColor: =RGBA(51, 51, 51, 1)
+                            ItemHoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Parent.Default
+                            ItemSpacing: =12
+                            MaxAttachments: =20
+                            MaxAttachmentSize: =
+                            MaxAttachmentsText: ="The maximum number of files has been reached"
+                            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                            NoAttachmentsText: ="(max.10MB each)"
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width-20
+                            Y: =51
+                            ZIndex: =2
+
+                        ErrorMessage13_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(168, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(168, 0, 0, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue12_1.Y + DataCardValue12_1.Height
+                            ZIndex: =3
+
+                        Label66_94 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(255, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Height: =25
+                            Size: =15
+                            Text: ="*"
+                            Width: =15
+                            Y: =11
+                            ZIndex: =4
+
+        ContainerSubmit_travel As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =100
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            btn_submit_3 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                LayoutMinWidth: =50
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            ApplicationNo: "RequestNo-" & Text(
+                                Now(),
+                                "yyyymmddhhmmss"
+                            )
+                        }
+                    );
+                    
+                    //校验必填项
+                    UpdateContext({ SubmitFormcheck: true });
+                    //校验必填
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Month cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(TextIn_month_travel.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Region cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(Dropdown_region_travel.SelectedText) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Main Applicant cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(TextIn_mainapplicant_travel.Selected.Mail) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Related Business Travel Process Cannot Be Empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(cbb_related_business_travel.Selected.RequestNo) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Purpose cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(TextIn_purpose_travel.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Total cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(TextIn_total_travel.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Amount US cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: !IsBlank(TextIn_amount_us_travel.Text) })
+                    );
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ ErrShowField: "Attachment cannot be empty！" });
+                    UpdateContext({ SubmitFormcheck: CountRows(DataCardValue12_1.Attachments) > 0 })
+                    );
+                    If(
+                        !SubmitFormcheck,
+                        Notify(
+                            "Alert:" & ErrShowField & "It is blank or filled incorrectly. Please correct it before submitting.",
+                            NotificationType.Error, 2000
+                        );
+                    Set(showMessage, true);
+                    );
+                    Set(approvalStepID,LookUp('Approval Step',FlowType.Value="Travel Reimbursement Approval Process" && StepType.Value="StartStep").ID);
+                    Set(approvalStepName,LookUp('Approval Step',FlowType.Value="Travel Reimbursement Approval Process" && StepType.Value="StartStep").'Setp Name');
+                    
+                    If(
+                        SubmitFormcheck,
+                        Set(
+                            ShowWaiting,
+                            true
+                        );
+                    
+                    Patch(
+                        OA_Travel_Reimbursement_Form,
+                        Defaults(OA_Travel_Reimbursement_Form),
+                        {
+                            Title:RequestNo,
+                            Process_ID: RequestNo,
+                            Subject: TextIn_subject_travel.Text,
+                            Applicant: TextIn_applicant_travel.Selected.Mail,
+                            Application_Date: TextIn_apldate_travel.Text,
+                            Region: Dropdown_region_travel.Selected.Title,
+                            Month:TextIn_month_travel.Text,
+                            Main_Applicant: TextIn_mainapplicant_travel.Selected.Mail,
+                            Attendees: TextIn_attendees_travel.Selected.Mail,
+                            Related_Business_Travel_Process: cbb_related_business_travel.Selected.RequestNo,
+                            Purpose: TextIn_purpose_travel.Text,
+                            'Financial_Affiliated_Company ': TextIn_finacialcompany_travel.Text,
+                            'Finance_Affiliated_Department ': lbl_financialdept_travel.Text,
+                            Accomodation: TextIn_accomodation_travel.Text,
+                            Transportation: TextIn_transportation_travel.Text,
+                            Meal: TextIn_meal_travel.Text,
+                            Total: TextIn_total_travel.Text,
+                            Local_Currency: TextIn_local_currency_travel.Text,
+                            Amount_US: TextIn_amount_us_travel.Text
+                        }
+                       
+                    );
+                    
+                    
+                    Patch(
+                        ApprovalRequest,
+                        Defaults(ApprovalRequest),
+                        {
+                            Title: ApplicationNo,
+                            Requestor: User().Email,
+                            RequestNo: RequestNo,
+                            ApprovalStepNo:"1",
+                            ApprovalType: {
+                                Id: 4,
+                                Value: "Travel Reimbursement Approval Process"
+                            },
+                            Status: {
+                                Id: 0,
+                                Value: "Approved"
+                            },
+                            'ApprovalStep (ApprovalStep0)':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                            Id:approvalStepID,
+                                            Value:approvalStepName}
+                        }
+                    );
+                    
+                    
+                    //清空数据
+                    Set(Submited, false);
+                    ResetForm(Form1_12);
+                    NewForm(Form1_12);
+                    ForAll(
+                        Gallery_detail_travel.AllItems As galleryItems,
+                        Patch(
+                            OA_Travel_Reimbursement_Form_Details1,
+                            Defaults(OA_Travel_Reimbursement_Form_Details1),
+                            {
+                                Main_Id: RequestNo,
+                                Number: galleryItems.Index_Number,
+                                Departure_Date: galleryItems.Departure_Date,
+                                Departure_Location: galleryItems.Departure_Location,
+                                Arrival_Date: galleryItems.Arrival_Date,
+                                Arrival_Location:galleryItems.Arrival_Location,
+                                Transportation:galleryItems.Transportation,
+                                No_Supporting_Docs:galleryItems.No_Supporting_Docs,
+                                Original_Amount_Detail1: galleryItems.Original_Amount_Detail1,
+                                Original_Currency_Detail1: galleryItems.Original_Amount_Detail1,
+                                Local_Currency_Exchange_Rate_Detail1:galleryItems.Local_Currency_Exchange_Rate_Detail1,
+                                Local_Currency_Amountt_Detail1:galleryItems.Local_Currency_Amount_Detail1
+                                
+                            }
+                        )
+                    );
+                    ForAll(
+                        Gallery_detail_10.AllItems As galleryItems2,
+                        Patch(
+                            OA_Travel_Reimbursement_Form_Details2,
+                            Defaults(OA_Travel_Reimbursement_Form_Details2),
+                            {
+                                Main_Id: RequestNo,
+                                Index_Number: galleryItems2.Index_Number,
+                                Date: galleryItems2.Date,
+                                Destination: galleryItems2.Destination,
+                                Hotel: galleryItems2.Hotel,
+                                Roomates: galleryItems2.Roomates,
+                                Original_Amount_Detail2: galleryItems2.Original_Amount_Detail2,
+                                Original_Currency_Detail2: galleryItems2.Original_Currency_Detail2,
+                                Local_Currency_Exchange_Rate_Detail2: galleryItems2.Local_Currency_Exchange_Rate_Detail2,
+                                Local_Currency_Amount_Detail2:galleryItems2.Local_Currency_Amount_Detail2
+                                
+                            }
+                        )
+                    );
+                    );
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: |+
+                    ="Submit "
+                    
+                Y: =
+                ZIndex: =1
+

@@ -1,0 +1,527 @@
+"My_AllApplication As screen.'tabletAutoLayout_Sidebar_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer1_9 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =768
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =1366
+        X: =0.00
+        ZIndex: =1
+
+        RightSideContainer1_9 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =6
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1843.54
+            X: =0.00
+            ZIndex: =1
+
+            HeaderContainer1_9 As groupContainer.horizontalAutoLayoutContainer:
+                Fill: =RGBA(164, 38, 44, 1)
+                FillPortions: =0
+                Height: =50
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =1843.54
+                X: =0.00
+                ZIndex: =4
+
+                Container4_8 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(0, 107, 211, 1)
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =500
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =30
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =921.37
+                    X: =0.00
+                    ZIndex: =4
+
+                    Image11_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =ecolab
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =135.13
+                        X: =24.08
+                        ZIndex: =1
+
+                Container6_9 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(0, 107, 211, 1)
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =5
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =13.51
+                    PaddingTop: =0.00
+                    Width: =921.37
+                    X: =921.37
+                    ZIndex: =5
+
+                    Label1_9 As label:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =17.57
+                        Text: ="欢迎 "
+                        Width: =108.11
+                        X: =517.67
+                        ZIndex: =1
+
+                    Label2_9 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(251, 251, 251, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: =CurrenInitial.Result
+                        Width: =162.16
+                        X: =630.03
+                        ZIndex: =2
+
+                    Image1_9 As image:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =User().Image
+                        ImagePosition: =ImagePosition.Stretch
+                        LayoutMinHeight: =60
+                        LayoutMinWidth: =70
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Width: =25
+                        X: =796.16
+                        ZIndex: =3
+
+                    Icon32_1 As icon.Leave:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(220, 220, 220, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 107, 211, 1)
+                        FocusedBorderThickness: =4
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Leave
+                        LayoutMinHeight: =25
+                        OnSelect: =Navigate('Flow Center');
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="返回首页"
+                        Width: =25
+                        X: =853.95
+                        ZIndex: =4
+
+            MainSectionContainer1_6 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(0, 75, 12, 1)
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =1843.54
+                X: =0.00
+                ZIndex: =5
+
+                Container7_5 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(164, 38, 44, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =1843.54
+                    X: =0.00
+                    ZIndex: =1
+
+                    Container19_3 As groupContainer.horizontalAutoLayoutContainer:
+                        Fill: =RGBA(0, 107, 211, 1)
+                        FillPortions: =0
+                        Height: =40
+                        LayoutGap: =2
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =1843.54
+                        X: =0.00
+                        ZIndex: =1
+
+                        TextInput7_1 As text:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13.51
+                            Width: =432.43
+                            X: =8.03
+                            ZIndex: =1
+
+                        Icon9_2 As icon.Search:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(251, 251, 251, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Search
+                            PaddingRight: =0.00
+                            PaddingTop: =0.00
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =40.54
+                            X: =442.22
+                            ZIndex: =2
+
+                    Container20_4 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =300
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =1843.54
+                        X: =0.00
+                        ZIndex: =3
+
+                        Gallery5_3 As gallery.galleryVertical:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Items: = SortByColumns(Filter(Application,applicant=CurrenUserEmail),"Modified",SortOrder.Descending)
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =300
+                            LayoutMinWidth: =320
+                            TemplatePadding: =3
+                            TemplateSize: =120
+                            Width: =1843.54
+                            X: =0.00
+                            ZIndex: =1
+
+                            Rectangle11_3 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledFill: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(255, 255, 255, 1)
+                                FocusedBorderThickness: =4
+                                Height: =118
+                                HoverFill: =RGBA(173, 175, 175, 1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =RGBA(173, 175, 175, 1)
+                                Width: =1838.72
+                                X: =0.00
+                                ZIndex: =1
+
+                            Label21_3 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: ="单号："&ThisItem.ApplicationCode
+                                Width: =321.03
+                                X: =73.55
+                                Y: =10
+                                ZIndex: =3
+
+                            Label22_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: |-
+                                    ="申请日期："& Text(ThisItem.Created,"yyyy-mm-dd hh:mm:ssss")
+                                Width: =321.03
+                                X: =459.68
+                                Y: =10
+                                ZIndex: =4
+
+                            Label24_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: |-
+                                    ="申请人: "&ThisItem.applicant
+                                Width: =321.03
+                                X: =73.55
+                                Y: =65
+                                ZIndex: =5
+
+                            Label26_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: |-
+                                    =//"状态："& If(ThisItem.Status="申请中","🟢","")&ThisItem.Status
+                                    
+                                    
+                                    Switch(ThisItem.Status,"同意", "🟢", "拒绝", "🔴", "🔵" )&ThisItem.Status
+                                Width: =204.84
+                                X: =743
+                                Y: =10
+                                ZIndex: =6
+
+                            Button18_2 As button:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Fill: =RGBA(0, 107, 211, 1)
+                                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =31
+                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                HoverColor: =RGBA(255, 255, 255, 1)
+                                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                                OnSelect: =Set(azureRecord,Gallery5_3.Selected);Navigate(Azure_Application_View,ScreenTransition.Cover);
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                                PressedColor: =RGBA(255, 255, 255, 1)
+                                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Size: =16.22
+                                Text: ="查看详细"
+                                Width: =127.03
+                                X: =1678.21
+                                Y: =Parent.TemplateHeight/3
+                                ZIndex: =7
+
+                            Label56_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: ="申请类型："&ThisItem.AppType
+                                Width: =321.03
+                                X: =991
+                                ZIndex: =8
+
+                            Label60_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.TemplateHeight/2
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: ="审批意见："&If(IsBlank(ThisItem.Memo),"",ThisItem.Memo)
+                                Width: =460.88
+                                X: =459.68
+                                Y: =50
+                                ZIndex: =9
+
+                            Label67_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                Height: =60
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =13.51
+                                Text: =If(IsBlank(ThisItem.Memo),"",ThisItem.Memo)
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =false
+                                Width: =285.58
+                                X: =991.89
+                                Y: =50
+                                ZIndex: =10
+
+                            Rectangle29_1 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                DisabledFill: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(0, 120, 212, 1)
+                                FocusedBorderThickness: =4
+                                Height: =1
+                                HoverFill: =RGBA(0, 120, 212, 1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =RGBA(0, 120, 212, 1)
+                                Width: =1843.54
+                                X: =0.00
+                                Y: =Parent.TemplateHeight
+                                ZIndex: =11
+
+                            Icon10 As icon.ChevronRight:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                Color: =RGBA(0, 120, 212, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(220, 220, 220, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =4
+                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                HoverFill: =RGBA(0, 0, 0, 0)
+                                Icon: =Icon.ChevronRight
+                                OnSelect: =Set(azureRecord,Gallery5_3.Selected);Navigate(Azure_Application_View,ScreenTransition.Cover);
+                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                X: =1248
+                                Y: =23
+                                ZIndex: =12
+
+        Container22_5 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =2.70
+            X: =1843.54
+            ZIndex: =2
+

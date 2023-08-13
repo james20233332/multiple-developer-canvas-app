@@ -1,0 +1,1003 @@
+"Scr_MyTodo_List_Approvl As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =Clear(CollApproveList);
+        Refresh(ApprovalRequest);
+
+    ScreenContainer2_3 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =1
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container20_15 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(40, 60, 185, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1845.95
+            X: =0.00
+            ZIndex: =1
+
+            Image11_14 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =60
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =approvalcenter
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =1
+
+            Label85_2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Size: =13
+                Text: ="Approval Center"
+                Width: =Parent.Width-360
+                ZIndex: =2
+
+            Icon40_17 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Flow Center');
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: =If(CurrentLanguare="en","Home Page","返回首页")
+                Width: =30
+                X: =1757.66
+                ZIndex: =3
+
+            Icon31_21 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: |-
+                    =Refresh(ApprovalRequest);
+                    ClearCollect(
+                        ApplicationTmpInfo,Filter(ApprovalRequest,Status.Value="Approved")
+                    
+                    );
+                    Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: =If(CurrentLanguare="en","Refresh", "刷新")
+                Width: =25
+                X: =1701.48
+                ZIndex: =4
+
+            Icon39_15 As icon.Alarm:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showEmailhelp,true);Set(showhelp,true);Set(sendMessage,false);
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: =If(CurrentLanguare="en","Contact Us", "求助")
+                Width: =30
+                X: =1813.84
+                ZIndex: =5
+
+            Label34_6 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =6
+
+        MainSectionContainer2_3 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderThickness: =1
+            LayoutGap: =5
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+
+            "Gallery6_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Height: =600
+                Items: |-
+                    = SortByColumns(Filter(collectionApprove, 'Created By'.Email=CurrenUserEmail),"Created",SortOrder.Descending)
+                     
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =300
+                TemplateFill: |-
+                    = If(
+                        ThisItem.Title = Gallery6_6.Selected.Title,
+                        Color.Azure,
+                        Color.White
+                    )
+                TemplatePadding: =0
+                TemplateSize: =Min(100, Self.Height - 60)
+                ZIndex: =1
+
+                Lbl_orderName_6 As label:
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: |-
+                        =If(CurrentLanguare="en", "Order Number:","单号：")&ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth/4
+                    X: =40
+                    ZIndex: =1
+
+                NextArrow4_6 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =40
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.ChevronRight
+                    OnSelect: |-
+                        =Navigate(Application_Detail);
+                        
+                        Set(SelectedRecord,Gallery6_6.Selected);
+                        
+                        Set(varTabSeleted,1);
+                        /*
+                        Concurrent(
+                        Set(ApplicationName,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).ApplicationName),
+                        Set(Department,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).Department);
+                        Set(TechnicalContact,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).TechnicalContact);
+                        Set(CostCenter,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).CostCenter);
+                        Set(BusinessContact,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).BusinessContact);
+                        Set(AzureEnviroment,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).AzureEnviroment);
+                        
+                        Set(WorkSpace,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).WorkSpace);
+                        Set(ResourceGroup,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).ResourceGroup);
+                        )*/
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    TabIndex: =0
+                    Tooltip: ="View item details"
+                    Width: =40
+                    X: =Parent.TemplateWidth - Self.Width - 70
+                    ZIndex: =2
+
+                Separator4_6 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - 1
+                    ZIndex: =3
+
+                lbl_OrderType_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =If(CurrentLanguare="en", "Type:","申请类型：")&ThisItem.ApprovalType.Value
+                    Width: =Parent.TemplateWidth/4
+                    X: =Lbl_orderName_6.Width+Lbl_orderName_6.X
+                    ZIndex: =4
+
+                lbl_applyDate_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =If(CurrentLanguare="en","Date:","申请日期：")&ThisItem.Created
+                    Width: =Parent.TemplateWidth/4
+                    X: =lbl_OrderType_6.Width+lbl_OrderType_6.X
+                    ZIndex: =5
+
+                lbl_createdby_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =If(CurrentLanguare="en", "Created By:","申请人: ")&ThisItem.'Created By'.DisplayName
+                    Width: =Parent.TemplateWidth/4
+                    X: =1024
+                    Y: =70
+                    ZIndex: =6
+
+                Label61_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        =//"状态："& If(ThisItem.Status="申请中","🟢","")&ThisItem.Status
+                        
+                        If(CurrentLanguare="en",Switch(ThisItem.Status.Value,"Approved", "🟢", "Rejected", "🔴","Closed","⚫",
+                        "In Progress","🟡","🔵" )&ThisItem.Status.Value,
+                        Switch(ThisItem.Status.Value,"同意", "🟢", "拒绝", "🔴", "🔵" )&ThisItem.Status.Value)
+                    X: =Lbl_orderName_6.Width+Lbl_orderName_6.X
+                    ZIndex: =7
+
+                Checkbox1_6 As checkbox:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    CheckboxBorderColor: =RGBA(102, 102, 102, 1)
+                    CheckboxSize: =30
+                    CheckmarkFill: =RGBA(0, 120, 212, 1)
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =1
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(51, 51, 51, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    OnCheck: =Collect(CollApproveList,ThisItem)
+                    OnSelect: =Select(Parent)
+                    OnUncheck: =Remove(CollApproveList,ThisItem)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(51, 51, 51, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Size: =10
+                    Text: =""
+                    Visible: =false
+                    Width: =30
+                    X: =8
+                    ZIndex: =9
+
+                Image24_6 As image:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =25
+                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Image: =excel
+                    OnSelect: |
+                        =Notify("The excel data is being exported and will take about 40 seconds. Please check your email attachments later.",NotificationType.Information,1000);
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Import excel file"
+                    X: =Parent.TemplateWidth - Self.Width - 140
+                    ZIndex: =11
+
+                Label80_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =35
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        ="Approval Role:"&ThisItem.'ApprovalStep (ApprovalStep0)'.Value
+                    Width: =280
+                    X: =381
+                    Y: =60
+                    ZIndex: =12
+
+                Label94_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        ="ApprovalStepNo:"&ThisItem.Status.Value
+                    Width: =202
+                    X: =lbl_OrderType_6.Width+lbl_OrderType_6.X
+                    ZIndex: =13
+
+                Label93_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: |-
+                        ="RequesNo:"&ThisItem.Name
+                    Width: =331
+                    X: =38
+                    Y: =60
+                    ZIndex: =14
+
+        FooterContainer2_4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =50
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            Button4_2 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 120, 212, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: |+
+                    =//校验必填项
+                    
+                    UpdateContext({SubmitFormcheck: true});
+                    //校验省份
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Please select the records you want to review."});
+                        UpdateContext({SubmitFormcheck: CountRows(CollApproveList)>0})
+                    );
+                    
+                    
+                    
+                    If(
+                        !SubmitFormcheck,
+                        Notify(
+                            "[" & ErrShowField & "], please correct and submit again！",
+                            NotificationType.Error
+                        )
+                    );
+                    
+                    If(
+                         SubmitFormcheck,   
+                         Reset(Radio_IsAgreen_2);Reset(txt_Agreenment_2);
+                         Set(ToApprove,true);
+                          
+                    );
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Text: ="Approve"
+                Visible: =false
+                Width: =120
+                ZIndex: =2
+
+            Button6_2 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 120, 212, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                OnSelect: =Navigate('Flow Center')
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Text: ="Reject"
+                Visible: =false
+                Width: =120
+                ZIndex: =3
+
+            Label30_3 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =50
+                ZIndex: =4
+
+    Lbl_backGroud_12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =Parent.Height
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Visible: =ToApprove||showExcelMessage
+        Width: =Parent.Width
+        X: =0.00
+        ZIndex: =2
+
+    Group_excel_5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rec_msg_35 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FocusedBorderThickness: =4
+            Height: =200
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =showExcelMessage
+            Width: =400
+            X: =(Parent.Width - Rec_msg_35.Width) / 2
+            Y: =(Parent.Height - Rec_msg_35.Height) / 2
+            ZIndex: =9
+
+        Button3_27 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(showExcelMessage,false)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="OK"
+            Visible: =showExcelMessage
+            Width: =100
+            X: =Rec_msg_35.X+Rec_msg_35.Width/2-50
+            Y: =Rec_msg_35.Y+Rec_msg_35.Height-40
+            ZIndex: =10
+
+        Icon37_35 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =19
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showExcelMessage,false)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showExcelMessage
+            Width: =51.37
+            X: =Rec_msg_35.X+Rec_msg_35.Width-51
+            Y: =Rec_msg_35.Y
+            ZIndex: =11
+
+        HtmlText8_9 As htmlViewer:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Height: =104
+            HtmlText: =" 💬<b><font color=black>The excel data is being exported and will take about<font color=red> 40 seconds</font>. Please check your email attachments later.</font></b>"
+            Visible: =showExcelMessage
+            Width: =315
+            X: =Rec_msg_35.X+30
+            Y: =Rec_msg_35.Y+30
+            ZIndex: =12
+
+    Group_approve_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        Rec_msg_34 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FocusedBorderThickness: =4
+            Height: =350
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =ToApprove
+            Width: =650
+            X: =(Parent.Width - Rec_msg_34.Width) / 2
+            Y: =(Parent.Height - Rec_msg_34.Height) / 2
+            ZIndex: =3
+
+        Button3_28 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |+
+                =//校验必填项
+                
+                UpdateContext({SubmitFormcheck: true});
+                
+                If(
+                    SubmitFormcheck,
+                    UpdateContext({ErrShowField: "Please select whether to agree or not"});
+                    UpdateContext({SubmitFormcheck: !IsBlank(Radio_IsAgreen_2.Selected.Value)})
+                );
+                
+                /*
+                If(
+                    SubmitFormcheck,
+                    UpdateContext({ErrShowField: "Please fill in the approval comments"});
+                    UpdateContext({SubmitFormcheck: !IsBlank(txt_Agreenment.Text)})
+                );*/
+                
+                If(
+                    !SubmitFormcheck,
+                    Notify(
+                        "[" & ErrShowField & "]Fill in the error, please correct it and then submit！",
+                        NotificationType.Error
+                    )
+                );
+                
+                If(
+                     SubmitFormcheck,
+                
+                       ForAll(
+                        CollApproveList As galleryItems,
+                        
+                            Patch(
+                            Application,
+                            LookUp(Application,Title=galleryItems.ApplicationCode),
+                            {
+                                Status:If(Radio_IsAgreen_2.SelectedText.Value="Approve","Approved","Rejected"),
+                                Memo:txt_Agreenment_2.Text
+                            }
+                           
+                        )            
+                            
+                        
+                    );
+                
+                
+                    ClearCollect(
+                    ApplicationTmpInfo,Filter(Application,Status="In progress")
+                
+                );
+                
+                //request
+                    Set(requestors, Concat(CollApproveList, 'Created By'.Email& ","));
+                     Set(requestNos, Concat(CollApproveList, Title& ","));
+                
+                TeamsMessage.Run(requestors,If(Radio_IsAgreen_2.SelectedText.Value="Approve","Approved","Rejected"),CurrenUserEmail,requestNos);
+                
+                ClearCollect(
+                    collectionReview,Filter(Application,Status="In Progress"&& Trim(CurrenInitial.Result) in ApproveITManger)
+                
+                );     
+                Notify("Complete the approval。",NotificationType.Success);
+                Reset(Radio_IsAgreen_2);Reset(txt_Agreenment_2);
+                Set(ToApprove,false)
+                );
+                
+                
+                
+                
+                
+            PaddingBottom: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="OK"
+            Visible: =ToApprove
+            Width: =120
+            X: =Rec_msg_34.X + (Rec_msg_34.Width - Self.Width) / 2
+            Y: =Rec_msg_34.Y+Rec_msg_34.Height-60
+            ZIndex: =4
+
+        Radio_IsAgreen_2 As radio:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Items: =["Approve","Reject"]
+            Layout: =Layout.Horizontal
+            LineHeight: =1
+            PaddingBottom: =5
+            PaddingTop: =5
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadioBorderColor: =RGBA(51, 51, 51, 1)
+            RadioSelectionFill: =RGBA(0, 120, 212, 1)
+            RadioSize: =30
+            Size: =11
+            Visible: =ToApprove
+            Width: =357
+            X: =Rec_msg_34.X+70
+            Y: =Rec_msg_34.Y+Rec_msg_34.Height/8
+            ZIndex: =5
+
+        txt_Agreenment_2 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =117
+            HintText: ="Please enter approval comments."
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            LineHeight: =1
+            Mode: =TextMode.MultiLine
+            PaddingBottom: =0
+            PaddingLeft: =5
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =11
+            Visible: =ToApprove
+            Width: =450
+            X: =Rec_msg_34.X+80
+            Y: =Rec_msg_34.Y+Rec_msg_34.Height/8+80
+            ZIndex: =6
+
+        lbl_Approval_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: ="Approval"
+            Visible: =ToApprove
+            Width: =Rec_msg_34.Width
+            X: =Rec_msg_34.X
+            Y: =Rec_msg_34.Y-40
+            ZIndex: =7
+
+        Icon37_34 As icon.Cancel:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderThickness: =4
+            Height: =40
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(ToApprove,false)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =ToApprove
+            Width: =30
+            Y: =lbl_Approval_2.Y
+            ZIndex: =8
+
+    Group3_10 As group:
+        Height: =5
+        Width: =5
+        X: =966
+        Y: =153.5999999999999
+        ZIndex: =18
+
+        Rec_msg_36 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =280
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =showhelp
+            Width: =250
+            X: =Parent.Width-500
+            Y: =If(showEmailhelp, Parent.Height-Parent.Height*0.8,Parent.Height-440)
+            ZIndex: =13
+
+        Button3_29 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |+
+                =Set(sendMessage,true);
+                Patch(teams,Defaults(teams),{Title:"teams",User:CurrenUserEmail,Operation:Text(showEmailhelp)});
+                
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =10
+            Text: =If(showEmailhelp,"Email us","Start a chat")
+            Visible: =showhelp
+            Width: =100
+            X: =Rec_msg_36.X + (Rec_msg_36.Width - Self.Width) / 2
+            Y: =Rec_msg_36.Y+Rec_msg_36.Height-50
+            ZIndex: =14
+
+        Icon37_36 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showhelp,false)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showhelp
+            Width: =25
+            X: =Rec_msg_36.X+Rec_msg_36.Width-25
+            Y: =Rec_msg_36.Y
+            ZIndex: =15
+
+        HtmlText4_18 As htmlViewer:
+            Height: =200
+            HtmlText: |-
+                ="<div style='border: #999 1px dotted;padding: 5px;font-size: 10pt;font-family:open Sans'>	
+                	<b><p style='font-family:open Sans'>"&If(showEmailhelp,"✉","💬")&"Have questions? Contact us<br>		
+                		<i style='color: #999;font-family:open Sans'>"&"</i><br>
+                                <i style='color: #999;font-family:open Sans'>"&"</i>
+                                <i style='color: #999;font-family:open Sans'>"&If(showEmailhelp,"Send us an email and we'll respond within a few business hours","Click on the button below and we'll respond within a few business minutes")&"</i><br>
+                
+                                <i style='color:green;font-family:open Sans'>"&If(sendMessage=true,"Your message has been sent successfully","")&"</i><br>
+                	
+                </div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Visible: =showhelp
+            Width: =230
+            X: =Rec_msg_36.X+10
+            Y: =Rec_msg_36.Y+20
+            ZIndex: =16
+
+        Image11_15 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(204, 231, 246, 1)
+            Image: =needhelp
+            OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,false);
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Tooltip: ="How can we help?"
+            Visible: =!showhelp
+            Width: =55
+            X: =Parent.Width-60
+            Y: =Parent.Height-185
+            ZIndex: =17
+

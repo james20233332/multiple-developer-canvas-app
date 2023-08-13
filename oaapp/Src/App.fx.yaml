@@ -1,0 +1,163 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =Concurrent(
+        Set(CurrenUserEmail,User().Email),
+        Set(CurrenInitial,First(ForAll(Split(User().Email,"@"), {Result: ThisRecord.Value}).Result)),
+        Set(CurrentUserName,User().FullName),
+        
+        Set(IsManager,true),
+        Set(IsAdmin,false),
+        
+        ClearCollect(
+            collectionReview,Filter(ApprovalRequest,Appoval=User().Email&& Status.Value="In Progress")
+        
+        ),
+        
+        Set(CurrentLanguare,"en");
+        
+        
+        ClearCollect(
+            collectionApprove,Filter(ApprovalRequest,Appoval=User().Email&&(Status.Value="Approved"||Status.Value="Complete"))
+        
+        );
+        
+        ClearCollect(
+            collectionMyTask,Filter(ApprovalRequest,'Created By'.Email=User().Email)
+        
+        );
+        
+        
+        
+        
+        );
+        
+        
+        
+        
+        
+        Clear(NavigateMenuCollect);
+        If(
+            IsAdmin,
+            Collect(
+                NavigateMenuCollect,
+                Table(
+                    {
+                        name: "Configuration Management",
+                        img: Icon.Settings,
+                        color: RGBA(
+                            164,
+                            164,
+                            164,
+                            1
+                        ),
+                        Screen: Screen_Set
+                    },
+                    {
+                        name: "Role Configuration",
+                        img: Icon.People,
+                        color: RGBA(
+                            164,
+                            164,
+                            164,
+                            1
+                        ),
+                        Screen: RoleManagement
+                    }
+                )
+            )
+        );
+        
+        
+        Clear(NavigateMainMenu);
+        If(
+            IsAdmin,
+            Collect(
+                NavigateMainMenu,
+        
+                Table(
+                {name:"Task List",img:Icon.DocumentWithContent,screen:Scr_MyTodo_List},
+                {name:"My Applications",img:Icon.DetailList,screen:Src_MyTask},
+                {name:"Completed tasks",img:Icon.History,screen:Scr_MyTodo_List_Approvl})
+        
+        
+            ),
+            IsManager,
+            Collect(
+                NavigateMainMenu,
+        
+                Table(
+                {name:"Task List",img:Icon.DocumentWithContent,screen:Scr_MyTodo_List},
+                {name:"My Applications",img:Icon.DetailList,screen:Src_MyTask},
+                {name:"Completed tasks",img:Icon.History,screen:Scr_MyTodo_List_Approvl})
+        
+        
+            )
+          
+            );
+        
+        ClearCollect(contractList,Filter(ApprovalRequest,('Created By'.Email=User().Email || Appoval=User().Email ) && IsEnd="Y" && (ApprovalType.Value="Non-Procurement Expenditure Contract Process" || ApprovalType.Value= "Contract Review and Approval Process" )));
+        
+        
+        Set(firstDayOfMonthPayment, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+        // 获取当前记录的编号
+        Set(num, CountRows(
+        
+            Filter(
+        
+                OA_Payment_Claim_Form,
+        
+                DateValue(Created) >= firstDayOfMonth && DateValue(Created) <= Now()
+        
+            )
+        
+        ));
+        Set(num, num + 1);
+        Set(
+                BDRequestNo, "BDPC-" & Text(
+        
+                    Now(),
+        
+                    "yyyymmdd"
+        
+                ) & "-" & num
+        );
+        //获取立项流程编号
+        Set(firstDayOfMonthProject, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+        Set(numProject, CountRows(
+            Filter(
+                OA_Project_Proposal_Process,
+                DateValue(Created) >= firstDayOfMonthProject && DateValue(Created) <= Now()
+            )
+        ));
+        Set(numProject, numProject + 1);
+        Set(RequestNoProject, "BDPP-" & Text(Now(), "yyyymmdd") & "-" & num);
+        //获取采购执行流程编号
+        // 获取本月第一天
+        Set(firstDayOfMonthPurchase, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+        // 获取当前记录的编号
+        Set(numPurchase, CountRows(
+                Filter(
+                OA_Purchase_Execution_Process,
+                DateValue(Created) >= firstDayOfMonth && DateValue(Created) <= Now()
+                )
+        ));
+        Set(numPurchase, numPurchase + 1);
+        Set(RequestNoPurchase, "BDPE-" & Text(Now(),"yyyymmdd") & "-" & num);
+        ClearCollect(projectProposalList,Filter(ApprovalRequest,('Created By'.Email=User().Email || Appoval=User().Email ) && IsEnd="Y" && (ApprovalType.Value="Project Proposal Process" )));
+        
+        
+        
+        
+        
+        
+    StartScreen: ='Flow Center'
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

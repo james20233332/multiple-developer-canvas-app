@@ -1,0 +1,934 @@
+"RoleManagement As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer7 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container20_12 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(226, 226, 226, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =1
+
+            Icon40_11 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Flow Center');
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =1
+
+            Icon31_13 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Refresh(ApprovalUser);Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =2
+
+            Icon39_10 As icon.Alarm:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,true);
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1813.84
+                ZIndex: =3
+
+            Label9_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =4
+
+        MainSectionContainer7 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =5
+            Height: =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+
+            Container39 As groupContainer.horizontalAutoLayoutContainer:
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                X: =10
+                ZIndex: =1
+
+                Container10_13 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(255, 255, 255, 1)
+                    BorderThickness: =5
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =500
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =Parent.Width*0.6
+                    X: =0.80
+                    ZIndex: =2
+
+                    Container16_4 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        FillPortions: =0
+                        Height: =40
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =15
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =Parent.Width
+                        X: =0.00
+                        ZIndex: =1
+
+                        Icon25_1 As icon.Search:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =RGBA(0, 94, 146, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Search
+                            PaddingRight: =0.00
+                            PaddingTop: =0.00
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =30
+                            X: =12.04
+                            ZIndex: =1
+
+                        TextSearchBox1_1 As text:
+                            BorderColor: =RGBA(0, 75, 120, 1)
+                            Clear: =true
+                            Color: =RGBA(116, 116, 116, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =1
+                            Height: =30
+                            HintText: ="Search"
+                            HoverBorderColor: =RGBA(0, 75, 120, 1)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =11
+                            Width: =378.38
+                            X: =102.73
+                            ZIndex: =2
+
+                    Container17_4 As groupContainer.verticalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height*0.9
+                        LayoutAlignItems: =LayoutAlignItems.End
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =400
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =20
+                        PaddingRight: =10
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        X: =0.00
+                        ZIndex: =3
+
+                        Gallery9_1 As gallery.galleryVertical:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            FillPortions: =0
+                            Height: =590
+                            Items: |-
+                                =SortByColumns(
+                                    Filter(ApprovalUser,!IsBlank(Role)&&StartsWith(Role,Trim(TextSearchBox1_1.Text))
+                                ),"ID",SortOrder.Descending)
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =320
+                            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(400, Self.Width - 20), Min(80, Self.Height - 80))
+                            Width: =Parent.Width-30
+                            X: =5
+                            Y: =5
+                            ZIndex: =2
+
+                            Label43_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =11
+                                Text: =ThisItem.Role
+                                Width: =100
+                                X: =Label44_1.X+Label44_1.Width+Parent.TemplateWidth/7
+                                Y: =20
+                                ZIndex: =1
+
+                            Label44_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =11
+                                Text: =ThisItem.User
+                                X: =Label48_1.X+Label48_1.Width+10
+                                Y: =(Parent.TemplateHeight - Self.Height) / 2
+                                ZIndex: =2
+
+                            Label48_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Height: =32
+                                OnSelect: =Select(Parent)
+                                PaddingRight: =6.76
+                                PaddingTop: =6.76
+                                Size: =11
+                                Text: =ThisItem.UserEmail
+                                Width: =320
+                                Y: =(Parent.TemplateHeight - Self.Height) / 2
+                                ZIndex: =3
+
+                            Icon28_1 As icon.Cancel:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                BorderThickness: =1
+                                Color: =RGBA(0, 107, 211, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(220, 220, 220, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(239, 239, 239, 1)
+                                FocusedBorderThickness: =4
+                                Height: =25
+                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                HoverFill: =RGBA(0, 0, 0, 0)
+                                Icon: =Icon.Cancel
+                                OnSelect: =Remove([@ApprovalUser], Gallery9_1.Selected);
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                Width: =25
+                                X: =Parent.TemplateWidth-60
+                                Y: =(Parent.TemplateHeight - Self.Width) / 2
+                                ZIndex: =4
+
+                            Rectangle12_1 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderThickness: =1
+                                DisabledFill: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(219, 219, 219, 1)
+                                FocusedBorderThickness: =4
+                                Height: =2
+                                HoverFill: =RGBA(0, 120, 212, 1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =RGBA(0, 120, 212, 1)
+                                Width: =Parent.TemplateWidth
+                                X: =0.00
+                                Y: =Parent.TemplateHeight
+                                ZIndex: =5
+
+                Container34_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =Parent.Width*0.4
+                    X: =0.00
+                    ZIndex: =3
+
+                    Container36_11 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =40
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =600
+                        X: =0.00
+                        ZIndex: =1
+
+                    Container36_6 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =600
+                        X: =0.00
+                        ZIndex: =2
+
+                        Label50_3 As label:
+                            Align: =Align.Right
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            Size: =11
+                            Text: ="UserName："
+                            Width: =Parent.Width*0.2
+                            X: =0.00
+                            ZIndex: =1
+
+                        txt_User_1 As text:
+                            BorderColor: =RGBA(219, 219, 219, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width*0.5
+                            X: =203.05
+                            ZIndex: =2
+
+                    Container36_7 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =600
+                        X: =0.00
+                        ZIndex: =3
+
+                        Label50_4 As label:
+                            Align: =Align.Right
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            Size: =11
+                            Text: ="Email："
+                            Width: =Parent.Width*0.2
+                            X: =0.00
+                            ZIndex: =1
+
+                        txt_email_1 As text:
+                            BorderColor: =RGBA(219, 219, 219, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            Default: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            FocusedBorderThickness: =4
+                            HintText: ="****@***.com"
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(51, 51, 51, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =11
+                            Width: =Parent.Width*0.5
+                            X: =203.05
+                            ZIndex: =2
+
+                    Container36_8 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =600
+                        X: =0.00
+                        ZIndex: =4
+
+                        Label50_5 As label:
+                            Align: =Align.Right
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            Size: =11
+                            Text: ="Role："
+                            Width: =Parent.Width*0.2
+                            X: =0.00
+                            ZIndex: =1
+
+                        drp_role_1 As dropdown:
+                            BorderColor: =RGBA(219, 219, 219, 1)
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(219, 219, 219, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: |-
+                                =If(CurrentLanguare="en",
+                                ForAll(Split(LookUp(TitleMap,Title="Role").TitleEn,","), {Result: ThisRecord.Value}),
+                                ForAll(Split(LookUp(TitleMap,Title="Role").TitleCn,","), {Result: ThisRecord.Value}))
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(219, 219, 219, 1)
+                            Width: =Parent.Width*0.5
+                            X: =203.05
+                            ZIndex: =2
+
+                    Container36_9 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =80
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =600
+                        X: =0.00
+                        ZIndex: =5
+
+                        Button15_1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(0, 107, 211, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: |
+                                =//校验必填项
+                                
+                                UpdateContext({SubmitFormcheck: true});
+                                //校验省份
+                                If(
+                                    SubmitFormcheck,
+                                    UpdateContext({ErrShowField: "Username can not be empty！"});
+                                    UpdateContext({SubmitFormcheck: !IsBlank(txt_User_1.Text)})
+                                );
+                                
+                                If(
+                                    SubmitFormcheck,
+                                    UpdateContext({ErrShowField: "The mail name cannot be empty！"});
+                                    UpdateContext({SubmitFormcheck: !IsBlank(txt_email_1.Text)})
+                                );
+                                
+                                
+                                
+                                If(
+                                    !SubmitFormcheck,
+                                    Notify(       
+                                        "[" & ErrShowField & "]Fill in the error, please correct it and then submit！",
+                                        NotificationType.Error
+                                    );
+                                    Set(showMessage,true);
+                                   
+                                );
+                                
+                                
+                                If(SubmitFormcheck,
+                                
+                                
+                                Patch(
+                                      ApprovalUser,
+                                            Defaults(ApprovalUser),
+                                            {
+                                            Role:Trim(drp_role_1.Selected.Result),
+                                            User:txt_User_1.Text,
+                                            UserEmail:Trim(txt_email_1.Text)
+                                               
+                                
+                                            }
+                                          
+                                            
+                                        );
+                                
+                                
+                                //批量提交resorce
+                                
+                                
+                                Reset(drp_role_1);
+                                Reset(txt_email_1);
+                                Reset(txt_User_1);
+                                
+                                    
+                                
+                                
+                                
+                                //清空数据
+                                
+                                     
+                                
+                                Notify("Successfully submitted。",NotificationType.Success);
+                                UpdateContext({ErrShowField: "Successfully submitted。"});
+                                Set(showMessage,true);
+                                
+                                )
+                                        
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Size: =11
+                            Text: ="Submit"
+                            Width: =140
+                            X: =0.00
+                            ZIndex: =1
+
+                        Button25_1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(0, 107, 211, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                            OnSelect: =Back()
+                            PaddingRight: =6.76
+                            PaddingTop: =6.76
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Size: =11
+                            Text: ="Exit"
+                            Width: =140
+                            X: =312.21
+                            ZIndex: =2
+
+                    Container36_10 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Width: =738.38
+                        X: =0.00
+                        ZIndex: =6
+
+        FooterContainer6 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =4
+
+    Group_Msg_3 As group:
+        Height: =5
+        Width: =5
+        X: =433
+        Y: =259
+        ZIndex: =7
+
+        Rec_msg_12 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(217, 234, 249, 1)
+            FocusedBorderThickness: =4
+            Height: =250
+            HoverFill: =RGBA(217, 234, 249, 1)
+            PressedFill: =RGBA(217, 234, 249, 1)
+            Visible: =showMessage
+            Width: =500
+            X: =(Parent.Width - Self.Width) / 2
+            Y: =(Parent.Height - Rec_msg_12.Height) / 2
+            ZIndex: =2
+
+        Label14_3 As label:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =30
+            PaddingRight: =4.01
+            PaddingTop: =4.01
+            Size: =16.05
+            Text: =ErrShowField
+            Visible: =showMessage
+            Width: =341
+            X: =Rec_msg_12.X + (Rec_msg_12.Width - Label14_3.Width) / 2
+            Y: =Rec_msg_12.Y+Rec_msg_12.Height*0.2
+            ZIndex: =3
+
+        Button3_11 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(showMessage, false )
+            PaddingRight: =4.01
+            PaddingTop: =4.01
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="OK"
+            Visible: =showMessage
+            Width: =120
+            X: =Rec_msg_12.X + (Rec_msg_12.Width - Button3_11.Width) / 2
+            Y: =Rec_msg_12.Y+Rec_msg_12.Height*0.7
+            ZIndex: =4
+
+        Icon37_12 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showMessage,false)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showMessage
+            Width: =30
+            X: =Rec_msg_12.X+Rec_msg_12.Width-30
+            Y: =Rec_msg_12.Y
+            ZIndex: =5
+
+        Icon38_3 As icon.Error:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 107, 211, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Warning
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showMessage
+            Width: =30
+            X: =Label14_3.X-40
+            Y: =Label14_3.Y
+            ZIndex: =6
+
+    Group3_1 As group:
+        Height: =5
+        Width: =5
+        X: =966
+        Y: =328
+        ZIndex: =13
+
+        Rec_msg_18 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =280
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =showhelp
+            Width: =250
+            X: =Parent.Width-250
+            Y: =Parent.Height-Parent.Height*0.8
+            ZIndex: =8
+
+        Button3_17 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Set(sendMessage,true);
+                Patch(teams,Defaults(teams),{Title:"teams",User:CurrenUserEmail,Operation:Text(showEmailhelp)});
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =10
+            Text: =If(showEmailhelp,"Email us","Start a chat")
+            Visible: =showhelp
+            Width: =100
+            X: =Rec_msg_18.X + (Rec_msg_18.Width - Self.Width) / 2
+            Y: =Rec_msg_18.Y+Rec_msg_18.Height-50
+            ZIndex: =9
+
+        Icon37_18 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(showhelp,false)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showhelp
+            Width: =25
+            X: =Rec_msg_18.X+Rec_msg_18.Width-25
+            Y: =Rec_msg_18.Y
+            ZIndex: =10
+
+        HtmlText4_5 As htmlViewer:
+            Height: =200
+            HtmlText: |-
+                ="<div style='border: #999 1px dotted;padding: 5px;font-size: 10pt;font-family:open Sans'>	
+                	<b><p style='font-family:open Sans'>"&If(showEmailhelp,"✉","💬")&"Have questions? Contact us<br>		
+                		<i style='color: #999;font-family:open Sans'>"&"</i><br>
+                                <i style='color: #999;font-family:open Sans'>"&"</i>
+                                <i style='color: #999;font-family:open Sans'>"&If(showEmailhelp,"Send us an email and we'll respond within a few business hours","Click on the button below and we'll respond within a few business minutes")&"</i><br>
+                
+                                <i style='color:green;font-family:open Sans'>"&If(sendMessage=true,"Your message has been sent successfully","")&"</i><br>
+                	
+                </div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Visible: =showhelp
+            Width: =230
+            X: =Rec_msg_18.X+10
+            Y: =Rec_msg_18.Y+20
+            ZIndex: =11
+
+        Image11_5 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =60
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(204, 231, 246, 1)
+            Image: =needhelp
+            OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,false);
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Tooltip: ="How can we help?"
+            Visible: =!showhelp
+            Width: =60
+            X: =Parent.Width-80
+            Y: =Parent.Height-180
+            ZIndex: =12
+

@@ -1,0 +1,1131 @@
+"AzureApplicationDetai2 As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer8 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Label25_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                ZIndex: =1
+
+            Icon26_2 As icon.Leave:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Leave
+                LayoutMinWidth: =32
+                OnSelect: =Back()
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: =If(CurrentLanguare="en","Back","返回")
+                Width: =30
+                X: =1084.29
+                ZIndex: =2
+
+            Icon31_16 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 107, 211, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(226, 226, 226, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Refresh(AzureConfig);Set(Submited,true);
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: =If(CurrentLanguare="en","Refresh","刷新")
+                Width: =25
+                X: =1701.48
+                ZIndex: =3
+
+            Icon16_1 As icon.Add:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,true);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                ZIndex: =4
+
+            Label35_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =5
+
+        HeaderContainer2_6 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            FillPortions: =0
+            Height: =70
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Image19_6 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =Approve2023
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =900
+                ZIndex: =1
+
+        MainSectionContainer8 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =Parent.Height-200
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Container27_3 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =1
+
+                Label27_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height/3
+                    PaddingBottom: =0
+                    PaddingLeft: =15
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =If(CurrentLanguare="en","IaaS Application Information", "IAAS申请信息")
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Gallery_Iaas_6 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height*2/3
+                    Items: =Filter(AzureIaas,ApplicationID=azureRecord.Title)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =320
+                    ShowNavigation: =true
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 50))
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =2
+
+                    Lbl_CreatDate_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =22
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Date Created：",
+                            "提交时间:")&Text(DateTimeValue(ThisItem.Created),"yyyy-mm-dd hh:mm:ssss")
+                        Width: =Parent.TemplateWidth/3
+                        X: =Parent.TemplateWidth*0.3
+                        ZIndex: =1
+
+                    Label38_26 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =22
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: =If(CurrentLanguare="en","Order Number：", "Iaas单号：")&ThisItem.ApplicationID
+                        Width: =Parent.TemplateWidth/3
+                        ZIndex: =3
+
+                    Button14_2 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(251, 251, 251, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(0, 122, 201, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                        OnSelect: |-
+                            =UpdateContext({IsShowAzureBack: true});
+                            Set(IaasReviewRecord,Gallery_Iaas_6.Selected)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13.51
+                        Text: ="详细"
+                        Visible: =false
+                        Width: =81.08
+                        ZIndex: =7
+
+                    Label38_3 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =22
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Created By:","申请人："&ThisItem.'Created By'.DisplayName)&ThisItem.'Created By'.DisplayName
+                        Width: =Parent.TemplateWidth/3-50
+                        X: =Parent.TemplateWidth*0.6
+                        ZIndex: =8
+
+                    Image20_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =detail
+                        OnSelect: |+
+                            =Set(showDetail,true);
+                            
+                            
+                            Concurrent(
+                            Set(VMLinxType,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMLinxType)),
+                            Set(VMLinxLevel,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMLinxLevel));
+                            Set(VMLinuxNumber,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMLinuxNumber));
+                            Set(VMLinuxCost,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMLinuxCost));
+                            Set(VMLinuxMemo,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMLinuxMemo));
+                            Set(VMWindowsType,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMWindowsType));
+                            Set(VMWindowsLevel,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMWindowsLevel));
+                            
+                            Set(VMWindowsNumber,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMWindowsNumber));
+                            Set(VMWindowsCost,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMWindowsCost));
+                            Set(VMWindowsMemo,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).VMWindowsMemo));
+                            Set(StorageHDDLevel,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageHDDLevel));
+                            Set(StorageHDDNumber,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageHDDNumber));
+                            Set(StorageHDDCost,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageHDDCost));
+                            Set(StorageHDDMemo,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageHDDMemo));
+                            Set(StorageSSDevel,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageSSDevel));
+                            Set(StorageSSDNumber,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageSSDNumber));
+                            Set(StorageSSDMemo,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageSSDMemo));
+                            Set(StorageSSDCost,Trim(LookUp(AzureIaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageSSDCost));
+                            );
+                            
+                            
+                            
+                            
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="View"
+                        Width: =25
+                        X: =Parent.Width-100
+                        ZIndex: =9
+
+            Container30_3 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =2
+
+                Label28_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height/3
+                    PaddingBottom: =0
+                    PaddingLeft: =15
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =If(CurrentLanguare="en","PaaS Application Information", "PaaS申请信息")
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Gallery_Paas_3 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =Parent.Height*2/3
+                    Items: =Filter(AzurePaas,ApplicationID=azureRecord.Title)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =10
+                    LayoutMinWidth: =320
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(380, Self.Width - 20), Min(50, Self.Height - 40))
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =2
+
+                    Label39_3 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: =If(CurrentLanguare="en","Order Number：", "Paas单号：")&ThisItem.ApplicationID
+                        Width: =Parent.TemplateWidth/3
+                        X: =0.00
+                        ZIndex: =1
+
+                    lbl_CreateDatePass_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Date Created：",
+                            "提交时间:")&Text(DateTimeValue(ThisItem.Created),"yyyy-mm-dd hh:mm:ssss")
+                        Width: =Parent.TemplateWidth/3
+                        X: =397
+                        Y: =5
+                        ZIndex: =4
+
+                    Button19_2 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(0, 122, 201, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                        OnSelect: |-
+                            =UpdateContext({IsShowPaasBack:true});
+                            Set(PaasReviewRecord,Gallery_Paas_3.Selected)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13.51
+                        Text: ="详细"
+                        Visible: =false
+                        Width: =81.08
+                        ZIndex: =5
+
+                    Label51_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Created By:","申请人："&ThisItem.'Created By'.DisplayName)&ThisItem.'Created By'.DisplayName
+                        Width: =Parent.TemplateWidth/3-50
+                        X: =Parent.TemplateWidth*0.6
+                        ZIndex: =6
+
+                    Image21_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =detail
+                        OnSelect: |+
+                            =Set(showDetailPaas,true);
+                            Set(IaasReviewRecord,Gallery_Iaas_6.Selected);
+                            
+                            
+                            
+                            Concurrent(
+                            Set(AppWinServiceType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceType),
+                            Set(AppWinServiceLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceLevel);
+                            Set(AppWinServiceLanguage,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceLanguage);
+                            Set(AppWinServiceNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceNumber);
+                            Set(AppWinServiceCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceCost);
+                            Set(AppWinServiceMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppWinServiceMemo);
+                            Set(AppLinuxServiceType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceType);
+                            
+                            Set(AppLinuxServiceLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceLevel);
+                            Set(AppLinuxServiceLanguage,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceLanguage);
+                            Set(AppLinuxServiceNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceNumber);
+                            Set(AppLinuxServiceCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceCost);
+                            Set(AppLinuxServiceMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).AppLinuxServiceMemo);
+                            Set(SQLInstanceV5Level,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLInstanceV5Level);
+                            Set(SQLInstanceV5Number,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLInstanceV5Number);
+                            Set(SQLInstanceV5Cost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLInstanceV5Cost);
+                            Set(SQLInstanceV5Memo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLInstanceV5Memo);
+                            Set(SQLElasticV5Level,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticV5Level);
+                            Set(SQLElasticV5Number,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticV5Number);
+                            
+                            Set(SQLElasticV5Cost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticV5Cost);
+                            Set(SQLElasticV5Memo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticV5Memo);
+                            Set(SQLElasticDTUType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticDTUType);
+                            Set(SQLElasticDTULevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticDTULevel);
+                            Set(SQLElasticDTUNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticDTUNumber);
+                            Set(SQLElasticDTUCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticDTUCost);
+                            Set(SQLElasticDTUMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLElasticDTUMemo);
+                            Set(SQLSingleDTUType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLSingleDTUType);
+                            Set(SQLSingleDTULevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLSingleDTULevel);
+                            
+                            
+                            
+                            
+                            Set(SQLSingleDTUNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLSingleDTUNumber);
+                            Set(SQLSingleDTUCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLSingleDTUCost);
+                            Set(SQLSingleDTUMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SQLSingleDTUMemo);
+                            Set(FunctionWindowsType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsType);
+                            Set(FunctionWindowsLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsLevel);
+                            Set(FunctionWindowsLanguage,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsLanguage);
+                            Set(FunctionWindowsNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsNumber);
+                            Set(FunctionWindowsCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsCost);
+                            Set(FunctionWindowsMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionWindowsMemo);
+                            
+                            
+                            Set(FunctionLinuxType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxType);
+                            Set(FunctionLinuxLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxLevel);
+                            Set(FunctionLinuxLanguage,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxLanguage);
+                            Set(FunctionLinuxNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxNumber);
+                            Set(FunctionLinuxCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxCost);
+                            Set(FunctionLinuxMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).FunctionLinuxMemo);
+                            Set(StorageAccountPerformance,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageAccountPerformance);
+                            Set(StorageAccountType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageAccountType);
+                            Set(StorageAccountRedundancy,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageAccountRedundancy);
+                            
+                            
+                            
+                            Set(StorageAccountMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).StorageAccountMemo);
+                            Set(SecretKeyCallNum,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SecretKeyCallNum);
+                            Set(SecretKeyIsManaged,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SecretKeyIsManaged);
+                            Set(SecretKeyCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).SecretKeyCost);
+                            Set(CDNZone1,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone1);
+                            Set(CDNZone1Number,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone1Number);
+                            Set(CDNZone2,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone2);
+                            Set(CDNZone2Number,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone2Number);
+                            Set(CDNZone1Cost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone1Cost);
+                            
+                            
+                            
+                            Set(CDNZone2Cost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).CDNZone2Cost);
+                            Set(RedisType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).RedisType);
+                            Set(RedisLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).RedisLevel);
+                            Set(RedisNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).RedisNumber);
+                            Set(RedisCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).RedisCost);
+                            Set(RedisMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).RedisMemo);
+                            Set(IotType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).IotType);
+                            Set(IotLevel,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).IotLevel);
+                            Set(IotNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).IotNumber);
+                            Set(IotMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).IotMemo);
+                            
+                            
+                            
+                            Set(IotCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).IotCost);
+                            Set(EventHubType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).EventHubType);
+                            Set(EventHubCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).EventHubCost);
+                            Set(EventHubMemo,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).EventHubMemo);
+                            Set(VodType,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).VodType);
+                            Set(VodMinutes,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).VodMinutes);
+                            Set(VodNumber,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).VodNumber);
+                            Set(VodCost,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).VodCost);
+                            Set(OtherServices,LookUp(AzurePaas,ApplicationID=Trim(ThisItem.ApplicationID)).OtherServices);
+                            
+                            Set(MediaDetail,"Encoding—Video on demand (VoD) encoding");
+                            
+                            
+                            );
+                            
+                            
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="View"
+                        Width: =25
+                        X: =Parent.Width-100
+                        ZIndex: =7
+
+            Container32_8 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =3
+
+                Label40_6 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height/3
+                    PaddingBottom: =0
+                    PaddingLeft: =15
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =If(CurrentLanguare="en","Account Application Information","Account申请信息")
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Gallery_Account_3 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    Height: =Parent.Height*2/3
+                    Items: =Filter(AzureAccount,ApplicationID=azureRecord.Title)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =320
+                    ShowNavigation: =true
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 50))
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =2
+
+                    lbl_createDateAccount_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Date Created：",
+                            "提交时间:")&Text(DateTimeValue(ThisItem.Created),"yyyy-mm-dd hh:mm:ssss")
+                        Width: =275.95
+                        ZIndex: =1
+
+                    Label38_28 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Created By:","申请人："&ThisItem.'Created By'.DisplayName)&ThisItem.'Created By'.DisplayName
+                        Width: =Parent.TemplateWidth/3-50
+                        X: =Parent.TemplateWidth*0.6
+                        ZIndex: =2
+
+                    Label38_27 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: =If(CurrentLanguare="en","Order Number：", "Iaas单号：")&ThisItem.ApplicationID
+                        Width: =1
+                        X: =0.00
+                        ZIndex: =3
+
+                    Button21_6 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(0, 122, 201, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                        OnSelect: |-
+                            =UpdateContext({IsShowAccountBack:true});
+                            Set(AccountReviewRecord,Gallery_Account_3.Selected)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13.51
+                        Text: ="详细"
+                        Visible: =false
+                        Width: =81.08
+                        ZIndex: =4
+
+                    Image25_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =detail
+                        OnSelect: |+
+                            =Set(showDetailAccount,true);
+                            
+                            
+                            Concurrent(
+                            Set(AccountName,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountName),
+                            Set(AccountNo,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountNo);
+                            Set(AccountEmail,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountEmail);
+                            Set(AccountPosition,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountPosition);
+                            Set(AccountDepartment,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountDepartment);
+                            Set(AccountCompany,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountCompany);
+                            Set(AccountTel,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountTel);
+                            Set(RoleDescipt,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).RoleDescription);
+                            Set(AccountMessage,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountMessage);
+                            Set(AccountRolePermission,LookUp(AzureAccount,ApplicationID=Trim(ThisItem.ApplicationID)).AccountRolePermission);
+                            );
+                            
+                            
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="View"
+                        Width: =25
+                        X: =Parent.Width-100
+                        ZIndex: =5
+
+            Container32_9 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =4
+
+                Label40_7 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height/3
+                    PaddingBottom: =0
+                    PaddingLeft: =15
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =If(CurrentLanguare="en","SSL Certificate Application Information", "SSL证书申请信息")
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Gallery_SSL_2 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    Height: =Parent.Height*2/3
+                    Items: =Filter(AzureSSLCertification,ApplicationID=azureRecord.Title)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =320
+                    ShowNavigation: =true
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 50))
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =2
+
+                    lbl_CreateDateSSl_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Date Created：",
+                            "提交时间:")&Text(DateTimeValue(ThisItem.Created),"yyyy-mm-dd hh:mm:ssss")
+                        Width: =275.95
+                        ZIndex: =1
+
+                    Label38_30 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Created By:","申请人："&ThisItem.'Created By'.DisplayName)&ThisItem.'Created By'.DisplayName
+                        Width: =Parent.TemplateWidth/3-50
+                        X: =Parent.TemplateWidth*0.6
+                        ZIndex: =2
+
+                    Label38_29 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: =If(CurrentLanguare="en","Order Number：", "SSL单号：")&ThisItem.ApplicationID
+                        Width: =1
+                        X: =0.00
+                        ZIndex: =3
+
+                    Button21_7 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(0, 122, 201, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                        OnSelect: |-
+                            =UpdateContext({IsShowSSLBack:true});
+                            Set(SSLReviewRecord,Gallery_SSL_2.Selected)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13.51
+                        Text: ="详细"
+                        Visible: =false
+                        Width: =81.08
+                        ZIndex: =4
+
+                    Image26_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =detail
+                        OnSelect: |+
+                            =Set(showDetailCertification,true);
+                            
+                            
+                            Concurrent(
+                            Set(SSLName,LookUp(AzureSSLCertification,ApplicationID=Trim(ThisItem.ApplicationID)).SSLName),
+                            Set(SSLMemo,LookUp(AzureSSLCertification,ApplicationID=Trim(ThisItem.ApplicationID)).SSLMemo);
+                            
+                            
+                            );
+                            
+                            
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="View"
+                        Width: =25
+                        X: =Parent.Width-100
+                        ZIndex: =5
+
+            Container32_10 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =5
+
+                Label40_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height/3
+                    PaddingBottom: =0
+                    PaddingLeft: =15
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: =If(CurrentLanguare="en","Permission Request Information", "权限申请信息")
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =1
+
+                Gallery_Pemission_2 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(219, 219, 219, 1)
+                    Height: =Parent.Height*2/3
+                    Items: =Filter(AzurePermissionApplication,ApplicationID=azureRecord.Title)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =320
+                    ShowNavigation: =true
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 50))
+                    Width: =Parent.Width
+                    X: =0.00
+                    ZIndex: =2
+
+                    lbl_CreateDatePermission_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Date Created：",
+                            "提交时间:")&Text(DateTimeValue(ThisItem.Created),"yyyy-mm-dd hh:mm:ssss")
+                        Width: =275.95
+                        ZIndex: =1
+
+                    Label38_32 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        Size: =10
+                        Text: |-
+                            =If(CurrentLanguare="en","Created By:","申请人："&ThisItem.'Created By'.DisplayName)&ThisItem.'Created By'.DisplayName
+                        Width: =Parent.TemplateWidth/3-50
+                        X: =Parent.TemplateWidth*0.6
+                        ZIndex: =2
+
+                    Label38_31 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =10
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: =If(CurrentLanguare="en","Order Number：", "PermissionNo单号：")&ThisItem.ApplicationID
+                        Width: =1
+                        X: =0.00
+                        ZIndex: =3
+
+                    Button21_8 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(0, 122, 201, 1)
+                        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                        Font: =Font.'Segoe UI'
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                        OnSelect: |-
+                            =UpdateContext({IsShowPermissionBack:true});
+                            Set(PermissionReviewRecorded,Gallery_Pemission_2.Selected)
+                        PaddingRight: =6.76
+                        PaddingTop: =6.76
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13.51
+                        Text: ="详细"
+                        Visible: =false
+                        Width: =81.08
+                        ZIndex: =4
+
+                    Image27_1 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =25
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: =detail
+                        OnSelect: |+
+                            =Set(showDetailPermission,true);
+                            
+                            
+                            Concurrent(
+                            Set(PermissionName,LookUp(AzurePermissionApplication,ApplicationID=Trim(ThisItem.ApplicationID)).PermissionName),
+                            Set(PermissionType,LookUp(AzurePermissionApplication,ApplicationID=Trim(ThisItem.ApplicationID)).PermissionType);
+                            Set(PermissionMemo,LookUp(AzurePermissionApplication,ApplicationID=Trim(ThisItem.ApplicationID)).PermissionMemo);
+                            
+                            
+                            );
+                            
+                            
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="View"
+                        Width: =25
+                        X: =Parent.Width-100
+                        ZIndex: =5
+
+        FooterContainer7 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+

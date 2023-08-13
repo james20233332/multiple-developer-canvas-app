@@ -1,0 +1,1332 @@
+"Leave_Application As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =// 获取本月第一天
+        Set(firstDayOfMonth, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+        // 获取当前记录的编号
+        Set(num, CountRows(
+        
+            Filter(
+        
+                OA_Purchase_Execution_Process,
+                DateValue(Created) >= firstDayOfMonth && DateValue(Created) <= Now()
+        
+            )
+        
+        ));
+        
+         
+        
+        Set(num, num + 1);
+        
+         
+        
+        Set(
+        
+            
+        
+                BDRequestNo, "BDBV-" & Text(
+        
+                    Now(),
+        
+                    "yyyymmdd"
+        
+                ) & "-" & num
+        
+            
+        
+        );
+
+    ScreenContainer4_1 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        ContainerTitle_2 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(40, 60, 185, 1)
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =1
+
+            Image3_2 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =busines2
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                ZIndex: =1
+
+            Label67_3 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =15
+                Text: ="Leave Application"
+                Width: =Parent.Width-350
+                ZIndex: =2
+
+            Icon40_16 As icon.Home:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate('Flow Center')
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Home Page"
+                Width: =30
+                X: =1757.66
+                ZIndex: =3
+
+            Icon31_20 As icon.Reload:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =25
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Reload
+                OnSelect: =Refresh(WorkingTime)
+                PaddingRight: =0.00
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Refresh"
+                Width: =25
+                X: =1701.48
+                ZIndex: =4
+
+            Icon39_14 As icon.Alarm:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(40, 60, 185, 1)
+                FocusedBorderThickness: =4
+                Height: =35
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Mail
+                OnSelect: =Set(showEmailhelp,true);Set(showhelp,true);Set(sendMessage,false);
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Contact Us"
+                Width: =30
+                X: =1813.84
+                ZIndex: =5
+
+            Label9_4 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =""
+                Width: =10
+                ZIndex: =6
+
+        MainSectionContainer4_1 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            ZIndex: =3
+
+            Container9_2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =100
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =1
+
+                Label15_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =15
+                    Text: ="Basic Information"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Container33_2 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =150
+                    LayoutMinHeight: =150
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    Container41_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =150
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        lbl_agent_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            Size: =10
+                            Text: ="Full Name"
+                            ZIndex: =1
+
+                        Label39_4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =30
+                            Size: =10
+                            Text: =User().FullName
+                            Width: =200
+                            ZIndex: =2
+
+                    Container43_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =150
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        Label66_32 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            Size: =10
+                            Text: ="Employee ID"
+                            ZIndex: =2
+
+                        lbl_EmployeeCode As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =10
+                            Text: ="0098"
+                            Width: =250
+                            ZIndex: =3
+
+                    Container51_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =150
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        Label73_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            Size: =10
+                            Text: ="Process ID"
+                            ZIndex: =1
+
+                        Label74_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =10
+                            Text: =BDRequestNo
+                            ZIndex: =2
+
+            Container52_1 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =120
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =2
+
+                Label76_5 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(40, 60, 185, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Leave Application Information"
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Container53_1 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =70
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =150
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    HtmlText10_3 As htmlViewer:
+                        Height: =55
+                        HtmlText: |-
+                            ="<b><font font-size:9pt><p style='text-align:center;'><span style='color:red'>*</span>
+                            Type:</font></b>"
+                        PaddingTop: =0
+                        Size: =10
+                        ZIndex: =1
+
+                    Drp_LevelType As dropdown:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                        ChevronFill: =RGBA(33, 33, 33, 1)
+                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        HoverColor: =RGBA(51, 51, 51, 1)
+                        HoverFill: =RGBA(212, 212, 212, 1)
+                        Items: =["Annual leave","Unpaid Personal Leave"]
+                        PaddingBottom: =5
+                        PaddingLeft: =12
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        Size: =13
+                        Width: =Parent.Width/3
+                        ZIndex: =4
+
+            Container54 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =125
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =3
+
+                HtmlText10_1 As htmlViewer:
+                    Height: =125
+                    HtmlText: |-
+                        ="<div style='border: #999 1px dotted;padding: 10px;font-size: 12pt;'>	
+                        <i style='color: #999;font-family:Sakkal Majalla'>Annual Leave Details</i><br>
+                        <i style='color: #999;font-family:Sakkal Majalla'>Minimum application unit is 0.5 days;annual leave is accrued as per calendar year, the number of days applied cannot exceed total annual leave balance within the same calendar year; for employees who are onboarded mid year, annual leave accrual will be pro-rated based on the days in the current calendar year.</i>
+                        </div>"
+                    PaddingLeft: =15
+                    Size: =15
+                    Width: =Parent.Width/2
+                    ZIndex: =1
+
+                HtmlText10_4 As htmlViewer:
+                    Height: =125
+                    HtmlText: |-
+                        ="<div style='border: #999 1px dotted;padding: 10px;font-size: 12pt;'>	
+                        <i style='color: #999;font-family:Sakkal Majalla'>Unpaid Personal Leave Details</i><br>
+                        <i style='color: #999;font-family:Sakkal Majalla'>Minimum application unit is 0.5 days;kindly use your annual leave balances first before applying for unpaid personal leave. Cannot apply personal leave for period longer than 30 consecutive days at once.</i>
+                        </div>"
+                    PaddingLeft: =15
+                    Size: =15
+                    Width: =Parent.Width/2
+                    ZIndex: =2
+
+            Container4_4 As groupContainer.horizontalAutoLayoutContainer:
+                BorderColor: =RGBA(219, 219, 219, 1)
+                BorderThickness: =2
+                FillPortions: =0
+                Height: =100
+                LayoutMinHeight: =350
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Container6_4 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderThickness: =1
+                    Height: =Parent.Height*0.6
+                    LayoutAlignItems: =LayoutAlignItems.End
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =40
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width/2
+                    X: =1
+                    ZIndex: =2
+
+                    Container28_20 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        FillPortions: =0
+                        Height: =70
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =5
+                        LayoutMinHeight: =70
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =20
+                        Width: =Parent.Width
+                        X: =0.00
+                        ZIndex: =2
+
+                        HtmlText6_9 As htmlViewer:
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: =60
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:center;'><span style='color:red'>*</span>
+                                Leave Start:</font></b>"
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =10
+                            Width: =250
+                            ZIndex: =2
+
+                        Business_StartDate_1 As datepicker:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverDateFill: =RGBA(200, 200, 200, 1)
+                            IconBackground: =RGBA(0, 120, 212, 1)
+                            OnChange: =Set(varDate,Business_StartDate_1.SelectedDate)
+                            OnSelect: =
+                            PaddingTop: =5
+                            SelectedDateFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Tooltip: ="The end date must be greater than the start date"
+                            Width: =200
+                            ZIndex: =3
+
+                        drp_businessStartTime_1 As dropdown:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: |-
+                                =ForAll(Split(LookUp(WorkingTime,CountryName="China").Memo,","),{Result:ThisRecord.Value})
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Tooltip: ="The end date must be greater than the start date"
+                            Width: =100
+                            ZIndex: =4
+
+                Container16_5 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderColor: =RGBA(230, 230, 230, 1)
+                    BorderThickness: =1
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height*0.6
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =40
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width/2
+                    ZIndex: =3
+
+                    Container28_26 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =70
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =5
+                        LayoutMinHeight: =70
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =20
+                        Width: =Parent.Width
+                        X: =0.00
+                        ZIndex: =1
+
+                        HtmlText6_10 As htmlViewer:
+                            Height: =62
+                            HtmlText: |-
+                                ="<b><font color=black><p style='text-align:center;'><span style='color:red'>*</span>Leave End: </font></b>"
+                            Size: =10
+                            Width: =250
+                            ZIndex: =1
+
+                        business_EndDate_1 As datepicker:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverDateFill: =RGBA(200, 200, 200, 1)
+                            IconBackground: =RGBA(0, 120, 212, 1)
+                            OnChange: |
+                                =Set(totalDays,
+                                RoundDown(DateDiff(Business_StartDate_1.SelectedDate, business_EndDate_1.SelectedDate, TimeUnit.Days) / 7, 0) * 5 +
+                                Mod(5 + Weekday(business_EndDate_1.SelectedDate) - Weekday(Business_StartDate_1.SelectedDate), 5) -
+                                CountIf(Holiday, Country="China",Date_Holiday >= Business_StartDate_1.SelectedDate, Date_Holiday <= business_EndDate_1.SelectedDate));
+                                
+                                //如果上午超过12点算午休1小时，半天
+                                
+                                Set(HourStart,DateTimeValue(Business_StartDate_1.SelectedDate&" "&drp_businessStartTime_1.SelectedText.Value));
+                                
+                                Set(HourEnd,DateTimeValue(business_EndDate_1.SelectedDate&" "&Drp_businessEndTime_1.SelectedText.Value));
+                                
+                                
+                                Set(Hours,Mod(DateDiff(HourStart,HourEnd,TimeUnit.Minutes),1440)/60);
+                                
+                                
+                                Set(resultDay,If(Hours<=4&&Hours>1,totalDays+0.5,Hours>4,totalDays+1,totalDays));
+                            PaddingTop: =5
+                            SelectedDateFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Tooltip: ="The end date must be greater than the start date"
+                            Width: =200
+                            ZIndex: =2
+
+                        Drp_businessEndTime_1 As dropdown:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: |-
+                                =ForAll(Split(LookUp(WorkingTime,CountryName="China").Memo,","),{Result:ThisRecord.Value})
+                            OnChange: |-
+                                =Set(totalDays,
+                                RoundDown(DateDiff(Business_StartDate_1.SelectedDate, business_EndDate_1.SelectedDate, TimeUnit.Days) / 7, 0) * 5 +
+                                Mod(5 + Weekday(business_EndDate_1.SelectedDate) - Weekday(Business_StartDate_1.SelectedDate), 5) -
+                                CountIf(Holiday, Country="China",Date_Holiday >= Business_StartDate_1.SelectedDate, Date_Holiday <= business_EndDate_1.SelectedDate));
+                                
+                                
+                                Set(HourStart,DateTimeValue(Business_StartDate_1.SelectedDate&" "&drp_businessStartTime_1.SelectedText.Value));
+                                
+                                Set(HourEnd,DateTimeValue(business_EndDate_1.SelectedDate&" "&Drp_businessEndTime_1.SelectedText.Value));
+                                Set(Hours,Mod(DateDiff(HourStart,HourEnd,TimeUnit.Minutes),1440)/60);
+                                
+                                If(TimeValue(Drp_businessEndTime_1.SelectedText.Value)>TimeValue("13:00"),Set(LunchHour,1),Set(LunchHour,0));
+                                
+                                Set(Hours,Hours-LunchHour);
+                                Set(resultDay,If(Hours<=4&&Hours>1,totalDays+0.5,Hours>4,totalDays+1,totalDays));
+                            OnSelect: =
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Tooltip: ="The end date must be greater than the start date"
+                            Width: =100
+                            ZIndex: =3
+
+                        Icon1 As icon.Blocked:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            Color: =If(Self.Icon=Icon.Check,Color.Green,Color.Red)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =30
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =If(DateValue(Business_StartDate_1.SelectedDate)<DateValue(business_EndDate_1.SelectedDate),Icon.Check,Icon.Error)
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =30
+                            ZIndex: =4
+
+                Container45_1 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =200
+                    ZIndex: =4
+
+                    Container46_1 As groupContainer.verticalAutoLayoutContainer:
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        lbl_LeaveDurarion As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =10
+                            Text: |-
+                                ="Leave Duration:"
+                            ZIndex: =1
+
+                        lbl_leaveDuration_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: =resultDay
+                            ZIndex: =2
+
+            Container28_33 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                Height: =150
+                LayoutMinHeight: =70
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0.00
+                PaddingTop: =20
+                Width: =Parent.Width
+                X: =0.00
+                Y: =
+                ZIndex: =6
+
+                HtmlText6_21 As htmlViewer:
+                    Height: =100
+                    HtmlText: |-
+                        ="<b><font color=black><p style='text-align:center'><span style='color:red'>*</span>
+                        Reason for leave application: </font></b>"
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Width: =250
+                    ZIndex: =2
+
+                txt_ReasonBusiness_1 As text:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(51, 51, 51, 1)
+                    Default: =
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =100
+                    HintText: ="Please fill in the Reason"
+                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverColor: =RGBA(51, 51, 51, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Mode: =TextMode.MultiLine
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(51, 51, 51, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =Parent.Width-400
+                    ZIndex: =3
+
+            Container14_1 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =7
+
+                HtmlText6_22 As htmlViewer:
+                    Height: =100
+                    HtmlText: |-
+                        ="<b><font color=black><p style='text-align:center'><span style='color:red'>*</span>
+                        Attachment: </font></b>"
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Width: =250
+                    ZIndex: =1
+
+                Form1_5 As form:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DataSource: =OA_Leave_Application
+                    DefaultMode: =FormMode.New
+                    FillPortions: =0
+                    Height: =Parent.Height-50
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =400
+                    Width: =Parent.Width/2
+                    ZIndex: =7
+
+                    Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="{Attachments}"
+                        Default: =ThisItem.Attachments
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@OA_Leave_Application],DataSourceInfo.DisplayName,"{Attachments}")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =200
+                        Required: =false
+                        Update: =DataCardValue9.Attachments
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =8
+
+                        DataCardKey9 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =34
+                            PaddingLeft: =0
+                            Size: =13
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue9 As attachments:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =180
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsInDataCard: =true
+                            ItemColor: =RGBA(0, 0, 0, 1)
+                            ItemFill: =RGBA(0, 120, 212, 1)
+                            ItemHoverColor: =RGBA(51, 51, 51, 1)
+                            ItemHoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Parent.Default
+                            ItemSpacing: =12
+                            NoAttachmentsColor: =RGBA(166, 166, 166, 1)
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width
+                            X: =30
+                            Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage9 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(168, 0, 0, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(168, 0, 0, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =13
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue9.Y + DataCardValue9.Height
+                            ZIndex: =3
+
+                        StarVisible9 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =DataCardKey9.Height
+                            PaddingLeft: =0
+                            Size: =13
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey9.Y
+                            ZIndex: =4
+
+        Container11_3 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            FillPortions: =0
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.End
+            LayoutGap: =100
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =50
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            btn_next_5 As button:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 122, 201, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+                LayoutMinWidth: =50
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            ApplicationNo:"RequestNo-"&Text(
+                                Now(),
+                                "yyyymmddhhmmss"
+                            )
+                        }
+                    );
+                    
+                    //关联lookup 的step
+                    Set(approvalStepID,LookUp('Approval Step',FlowType.Value="Business Visit Approval Process" && StepType.Value="StartStep").ID);
+                    Set(approvalStepName,LookUp('Approval Step',FlowType.Value="Business Visit Approval Process" && StepType.Value="StartStep").'Setp Name');
+                    // 获取本月第一天
+                    Set(firstDayOfMonth, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+                    
+                    // 获取当前记录的编号
+                    Set(num, CountRows(
+                        Filter(
+                            'Business Visit Approval Process',
+                            DateValue(Created) >= firstDayOfMonth && DateValue(Created) <= Now()
+                        )
+                    ));
+                    
+                    Set(num,num+1);
+                    
+                    UpdateContext(
+                        {
+                            RequestNo:"BDBV-"&Text(
+                                Now(),
+                                "yyyymmdd"
+                            )&"-"&num
+                        }
+                    );
+                    //校验必填项
+                    UpdateContext({SubmitFormcheck: true});
+                    
+                    
+                    //
+                    
+                    
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Leave Satrt不能为空！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(Business_StartDate_1.SelectedDate)})
+                    );
+                    
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "Leave End不能为空！"});
+                        UpdateContext({SubmitFormcheck: !IsBlank(business_EndDate_1.SelectedDate)})
+                    );
+                    
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "The time to apply for a holiday is negative！"});
+                        UpdateContext({SubmitFormcheck: DateValue(Business_StartDate_1.SelectedDate)<DateValue(business_EndDate_1.SelectedDate)})
+                    );
+                    
+                    If(
+                        SubmitFormcheck,
+                        UpdateContext({ErrShowField: "附件不能为空！"});
+                        UpdateContext({SubmitFormcheck: CountRows(DataCardValue9.Attachments) > 0})
+                    );
+                    
+                    
+                    If(
+                        !SubmitFormcheck,
+                        Notify(
+                           "Alert:"&ErrShowField&"It is blank or filled incorrectly. Please correct it before submitting.", 
+                            NotificationType.Error,2000
+                        );
+                        Set(showMessage,true);
+                    );
+                    If(
+                        SubmitFormcheck,
+                        Set(
+                            ShowWaiting,
+                            true
+                        );
+                    
+                          Patch(
+                            OA_Leave_Application,
+                            Defaults(OA_Leave_Application),
+                            {
+                                Title:RequestNo,
+                                Leave_Type:Drp_LevelType.Selected.Value,
+                                Leave_Start:DateTimeValue(Business_StartDate_1.SelectedDate),
+                                Leave_End:DateTimeValue(business_EndDate_1.SelectedDate),
+                                Leave_StartTime:drp_businessStartTime_1.SelectedText.Value,
+                                Leave_EndTime:Drp_businessEndTime_1.SelectedText.Value,
+                                Leave_Reason:txt_ReasonBusiness_1.Text,
+                                Leave_Duration:lbl_LeaveDurarion.Text,
+                                EmployeeCode:lbl_EmployeeCode.Text        
+                              
+                                
+                            },
+                            Form1_5.Updates
+                        );
+                    
+                    
+                    
+                    
+                    
+                    
+                         
+                           Patch(
+                            ApprovalRequest,
+                            Defaults(ApprovalRequest),
+                            {
+                                Title: ApplicationNo,
+                                Requestor: CurrenUserEmail,
+                                RequestNo:RequestNo,
+                                ApprovalStepNo:"1",
+                                ApprovalType:{
+                                             Id:1,
+                                             Value:"Leave Application Approval Process"
+                                            },
+                    
+                                Status: {
+                                         Id:1,
+                                         Value:"In Progress"
+                                         } ,
+                                'ApprovalStep (ApprovalStep0)':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                            Id:approvalStepID,
+                                            Value:approvalStepName}
+                                  
+                            }
+                    
+                    
+                    
+                    
+                    
+                        );
+                        
+                    //批量提交resorce
+                    
+                        
+                    //清空数据
+                    Set(Submited,false);
+                    ResetForm(Form1_5);
+                    NewForm(Form1_5);
+                    //TeamsMessage.Run(CurrenUserEmail," submitted",CurrenUserEmail,RequestNo);
+                    
+                        //Reset(txt_Department);
+                        Notify(
+                            "Your Application information has been submitted.",
+                            NotificationType.Success,2000
+                        );
+                        Set(
+                            ShowWaiting,
+                            false
+                        );
+                         UpdateContext({ErrShowField: "Your Application information has been submitted."});
+                         Set(showMessage,true);
+                        
+                    )
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: ="Submit"
+                Y: =txt_Department_2.Y+20
+                ZIndex: =1
+
+    help_5 As help:
+        CallTeams: |
+            =Set(sendMessage,true);
+            Patch(teams,Defaults(teams),{Title:"teams",User:CurrenUserEmail,Operation:Text(showEmailhelp)});
+        HideContacts: =Set(showhelp,false);Set(showEmailhelp,false);
+        IsEmail: =showEmailhelp
+        IsShow: =showhelp
+        IsShowMessage: =sendMessage
+        ShowContacts: =Set(showhelp,true);Set(sendMessage,false);Set(showEmailhelp,false)
+        X: =Parent.Width-260
+        Y: =Parent.Height-300
+        ZIndex: =4
+
+    Group_Showmessage_4 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =8
+
+        Rectangle23_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, .8)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height
+            HoverFill: =RGBA(0, 0, 0, .8)
+            PressedFill: =RGBA(0, 0, 0, .8)
+            Visible: =isShowVarDialog
+            Width: =Parent.Width
+            X: =0.00
+            ZIndex: =5
+
+        Rectangle_MSG_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height*5/7
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =isShowVarDialog
+            Width: =Parent.Width*4/5
+            X: =(Parent.Width - Self.Width) / 2
+            Y: =(Parent.Height - Self.Height) / 2
+            ZIndex: =6
+
+        HtmlText1_4 As htmlViewer:
+            Height: =Rectangle_MSG_4.Width*1/4
+            HtmlText: |-
+                ="<div style='border: #999 1px dotted;padding: 10px;font-size: 16pt;'>
+                	<div style='text-align:center;font-size: 16pt;font-weight: bold;font-family:open Sans'>Business Visit Approval</div>	<br>
+                		<i style='color: #999;font-family:Sakkal Majalla'>To facilitate the application of Business Visit Application.</i><br>
+                		<i style='color: #999;font-family:Sakkal Majalla'>Business Visit Application should be longer than 1 hour (Note: business visit date shall not coincide with the date as per the business travel application, otherwise it may cause issue with attendance tracking.</i>
+                        <i style='color: #999;font-family:Sakkal Majalla'>Business Visit Application should be longer than 1 hour (Note: business visit date shall not coincide with the date as per the business travel application, otherwise it may cause issue with attendance tracking.</i>
+                        <i style='color: #999;font-family:Sakkal Majalla'>Business Visit Application should be longer than 1 hour (Note: business visit date shall not coincide with the date as per the business travel application, otherwise it may cause issue with attendance tracking.</i>
+                
+                		<i style='color: #999;font-family:Sakkal Majalla'>I already know and confirm that the above information, and promise when used in compliance with the above terms of use.</i>
+                	
+                </div>"
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            Size: =14.86
+            Visible: =isShowVarDialog
+            Width: =Rectangle_MSG_4.Width-60
+            X: =Rectangle_MSG_4.X+34
+            Y: =Rectangle_MSG_4.Y+30
+            ZIndex: =7
+
+        btn_continue_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =Set(isShowVarDialog, false);Set(Submited,true);Set(IsshowCostCenter,true);
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =11
+            Text: ="Continue Apply"
+            Visible: =isShowVarDialog
+            Width: =150
+            X: =Rectangle_MSG_4.X+Rectangle_MSG_4.Width*2/3-40
+            Y: =Rectangle_MSG_4.Y+Rectangle_MSG_4.Height*4/5
+            ZIndex: =8
+
+        Button16_5 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(173, 175, 175, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Navigate('Flow Center');Set(isShowVarDialog, false);
+            PaddingRight: =6.76
+            PaddingTop: =6.76
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =11
+            Text: ="Return"
+            Visible: =isShowVarDialog
+            Width: =150
+            X: =btn_continue_4.X+200
+            Y: =Rectangle_MSG_4.Y+Rectangle_MSG_4.Height*4/5
+            ZIndex: =10
+
+    Image16_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =500
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =subiting
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =ShowWaiting
+        Width: =500
+        X: =(Parent.Width - Self.Width) / 2
+        Y: =(Parent.Height - Self.Height) / 2
+        ZIndex: =11
+

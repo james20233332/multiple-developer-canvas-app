@@ -1,0 +1,9 @@
+[
+  {
+    "IsComponentScoped": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "InputCollection1",
+    "Type": "CollectionDataSourceInfo"
+  }
+]

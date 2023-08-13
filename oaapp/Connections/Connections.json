@@ -1,0 +1,297 @@
+{
+  "1d5c7f33-5564-4e68-b47b-582e2d66697e": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "逻辑流",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "c2c5ca96-228c-492e-83c1-dca010b99497": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "ab5228dd-161f-4c71-b3fa-62b4536e3996"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "c2c5ca96-228c-492e-83c1-dca010b99497"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "ab5228dd-161f-4c71-b3fa-62b4536e3996"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "SubmitApproval"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "c2c5ca96-228c-492e-83c1-dca010b99497"
+    },
+    "dependents": [],
+    "id": "1d5c7f33-5564-4e68-b47b-582e2d66697e"
+  },
+  "64078aeb-7c6c-477c-9de7-09f09898a337": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 用户",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1649/1.0.1649.3368/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365用户"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "64078aeb-7c6c-477c-9de7-09f09898a337"
+  },
+  "c2c5ca96-228c-492e-83c1-dca010b99497": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://bondee.sharepoint.com/sites/BoodeeOASite": {
+        "dataSources": {
+          "AdminList": {
+            "tableName": "330c27b4-a91c-4c4c-860a-ca375729e746"
+          },
+          "AdminList_1": {
+            "tableName": "330c27b4-a91c-4c4c-860a-ca375729e746"
+          },
+          "Approval": {
+            "tableName": "e603916f-44df-4a77-ae38-21c101807a96"
+          },
+          "Approval Step": {
+            "tableName": "fbe07e59-4959-402e-aba2-e3408e7671fd"
+          },
+          "ApprovalRequest": {
+            "tableName": "e6036ed8-2b08-4716-a16f-645f69959481"
+          },
+          "ApprovalUser": {
+            "tableName": "8a604f9b-e338-4f0f-bc3a-5b2bda513e40"
+          },
+          "Business Visit Approval Process": {
+            "tableName": "e9ad7ae7-1f4f-4b3f-b6a3-e5309b30b9b3"
+          },
+          "BusinessUnit": {
+            "tableName": "d9ca33e3-b76d-45d0-b812-1f95cd759377"
+          },
+          "ContractReviewandApprovalProcess": {
+            "tableName": "9c010c3e-42e5-42c1-bb03-8438efad15d9"
+          },
+          "FlowTrace": {
+            "tableName": "7f291253-47e6-4c43-b2e4-0f871dd862d5"
+          },
+          "Holiday": {
+            "tableName": "05965334-7ecd-4a1f-bfb3-d44a3f2b09a7"
+          },
+          "Leave Application": {
+            "tableName": "9b6ac057-ed25-4f87-b2d8-a8aba8a397dd"
+          },
+          "OA_Advance_Application_Form": {
+            "tableName": "66c3a2d5-d6be-442d-b2e8-a9e034771923"
+          },
+          "OA_Business_Travel_Application_Process": {
+            "tableName": "fd93fec9-9c8f-45da-a32f-0eb12246b04e"
+          },
+          "OA_Business_Visit_Application": {
+            "tableName": "dd91a4af-94da-4f0e-ba8e-c2f734956ddf"
+          },
+          "OA_Expenses_Reimbursement_Form": {
+            "tableName": "69f73e96-8a29-47b1-8426-711ba89bce8f"
+          },
+          "OA_Expenses_Reimbursement_Form_Details1": {
+            "tableName": "7985cb1b-7723-4638-bfdf-31dbe2608bc2"
+          },
+          "OA_Expenses_Reimbursement_Form_Details2": {
+            "tableName": "478b0d9f-9a2c-4096-b2e9-95c97ec4bbd6"
+          },
+          "OA_Leave_Application": {
+            "tableName": "dccbd123-25e3-4749-b991-01377928aff1"
+          },
+          "OA_Non-Procurement_Expenditure_Contract_Process": {
+            "tableName": "759a8ee1-6e8b-4a3b-bf2f-96f83e62a05a"
+          },
+          "OA_Non-Procurement_Expenditure_Contract_Process_Attachments02": {
+            "tableName": "3fa56e37-7fb6-449c-97dd-c46e091f7a92"
+          },
+          "OA_Non-Procurement_Expenditure_Contract_Process_Attachments03": {
+            "tableName": "52865f4e-1d1c-4548-b43a-34ecedd99d11"
+          },
+          "OA_Payment_Claim_Form": {
+            "tableName": "81c5fbe3-2a04-4173-86a6-5b2f307bb85b"
+          },
+          "OA_Payment_Claim_Form_1": {
+            "tableName": "81c5fbe3-2a04-4173-86a6-5b2f307bb85b"
+          },
+          "OA_Procurement_Expenditure_Contract_Approval_Process": {
+            "tableName": "593dd531-e683-4959-bb41-e5aac9b8c560"
+          },
+          "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments01": {
+            "tableName": "f393626c-0c3a-4673-b674-027560417f6d"
+          },
+          "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments02": {
+            "tableName": "6a5c90cd-c365-447b-8f46-92d6624eedfe"
+          },
+          "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments03": {
+            "tableName": "6f639680-4990-4ec7-a6d0-7a514c665073"
+          },
+          "OA_Project_Proposal_Process": {
+            "tableName": "a23677e5-a30f-4e03-a0ec-0975f52c7d95"
+          },
+          "OA_Project_Proposal_Process_Detail": {
+            "tableName": "230ff682-fad1-46c5-805d-2b693bef153d"
+          },
+          "OA_Purchase_Execution_Process": {
+            "tableName": "64221f84-66d4-479c-b73f-e4c04c6d24a3"
+          },
+          "OA_Purchase_Execution_Process_Details1": {
+            "tableName": "503c75f5-0b88-4977-84b1-843908358c72"
+          },
+          "OA_Purchase_Execution_Process_Details1_1": {
+            "tableName": "503c75f5-0b88-4977-84b1-843908358c72"
+          },
+          "OA_Reimbursment_Application_Form": {
+            "tableName": "a44224db-0c3a-48ae-a2dc-5b75ea5f232f"
+          },
+          "OA_Travel_Reimbursement_Form": {
+            "tableName": "a3556a89-05c5-49af-9902-ea5c8b9fe5e7"
+          },
+          "OA_Travel_Reimbursement_Form_Details1": {
+            "tableName": "193ee363-4184-41ab-ae97-a73427ab4635"
+          },
+          "OA_Travel_Reimbursement_Form_Details2": {
+            "tableName": "ae18a330-210e-4ae9-a21a-57f11dc39b20"
+          },
+          "Person": {
+            "tableName": "2662d8a1-7aaa-4424-9def-7dbfcbbf0ea7"
+          },
+          "Pubilc_Currency": {
+            "tableName": "8a2b223f-a3db-48cd-baff-e46ac0ca444d"
+          },
+          "Pubilc_Party_A": {
+            "tableName": "9a80d79b-7130-463b-926d-9c159a2e047a"
+          },
+          "Pubilc_Region": {
+            "tableName": "43d16914-5c0d-4a9d-97e2-1d04c491df1d"
+          },
+          "Public_Category": {
+            "tableName": "e536cf8d-80a4-408b-bc9a-7e0462c980ea"
+          },
+          "Public_Exchange_Rates": {
+            "tableName": "5858a23d-b0bd-403e-9da4-d045daa68a29"
+          },
+          "Structure": {
+            "tableName": "739a7b6f-699a-45cd-9b18-f1847b91cd2d"
+          },
+          "teams": {
+            "tableName": "8f09be50-6e20-49ed-9575-0266ec9c7a54"
+          },
+          "WorkingTime": {
+            "tableName": "98e1453e-d4bd-45c9-961a-af9e1a3298f3"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "ApprovalUser",
+      "AdminList",
+      "AdminList_1",
+      "Approval",
+      "ApprovalRequest",
+      "BusinessUnit",
+      "ContractReviewandApprovalProcess",
+      "Leave Application",
+      "teams",
+      "Business Visit Approval Process",
+      "Approval Step",
+      "Public_Exchange_Rates",
+      "Holiday",
+      "OA_Purchase_Execution_Process",
+      "WorkingTime",
+      "OA_Leave_Application",
+      "OA_Travel_Reimbursement_Form",
+      "OA_Travel_Reimbursement_Form_Details1",
+      "OA_Travel_Reimbursement_Form_Details2",
+      "OA_Reimbursment_Application_Form",
+      "OA_Purchase_Execution_Process_Details1",
+      "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments03",
+      "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments02",
+      "OA_Procurement_Expenditure_Contract_Approval_Process_Attachments01",
+      "OA_Procurement_Expenditure_Contract_Approval_Process",
+      "OA_Payment_Claim_Form",
+      "OA_Non-Procurement_Expenditure_Contract_Process_Attachments03",
+      "OA_Non-Procurement_Expenditure_Contract_Process_Attachments02",
+      "OA_Non-Procurement_Expenditure_Contract_Process",
+      "OA_Expenses_Reimbursement_Form_Details2",
+      "OA_Expenses_Reimbursement_Form_Details1",
+      "OA_Expenses_Reimbursement_Form",
+      "OA_Business_Visit_Application",
+      "OA_Business_Travel_Application_Process",
+      "OA_Advance_Application_Form",
+      "OA_Project_Proposal_Process",
+      "OA_Project_Proposal_Process_Detail",
+      "OA_Purchase_Execution_Process_Details1_1",
+      "Pubilc_Party_A",
+      "Pubilc_Currency",
+      "Person",
+      "Pubilc_Region",
+      "Public_Category",
+      "Structure",
+      "OA_Payment_Claim_Form_1",
+      "FlowTrace"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "1d5c7f33-5564-4e68-b47b-582e2d66697e",
+      "ddbd7f10-a99a-4c61-b982-dda5427fbc04"
+    ],
+    "id": "c2c5ca96-228c-492e-83c1-dca010b99497"
+  },
+  "ddbd7f10-a99a-4c61-b982-dda5427fbc04": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "逻辑流",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "c2c5ca96-228c-492e-83c1-dca010b99497": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "988581e1-dc46-42be-b11f-dbc4b8dbd805"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "c2c5ca96-228c-492e-83c1-dca010b99497"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "988581e1-dc46-42be-b11f-dbc4b8dbd805"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "SubmitApproval0810"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "c2c5ca96-228c-492e-83c1-dca010b99497"
+    },
+    "dependents": [],
+    "id": "ddbd7f10-a99a-4c61-b982-dda5427fbc04"
+  }
+}

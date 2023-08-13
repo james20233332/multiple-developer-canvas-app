@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-06-01T21:29:24.0360000Z",
+      "LastChangedTimeString": "2023-06-13T16:06:17.0520000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -29,7 +29,6 @@
       "Business_DateBegin": "Business_DateBegin",
       "Business_DateEnd": "Business_DateEnd",
       "Business_EndTime": "Business_EndTime",
-      "Business_Reson": "Business_Reson",
       "Busniess_Type": "Busniess_Type",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",

@@ -333,7 +333,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_continue_4",
-      "ParentIndex": 11,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1243,14 +1243,7 @@
     "business_EndDate_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Today()",
-          "InvariantPropertyName": "DefaultDate",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DefaultDate",
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1613,14 +1606,7 @@
     "Business_StartDate_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Today()",
-          "InvariantPropertyName": "DefaultDate",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DefaultDate",
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -2130,7 +2116,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button16_5",
-      "ParentIndex": 12,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7709,14 +7695,6 @@
           "InvariantPropertyName": "Tooltip",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"1\"",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -7779,11 +7757,6 @@
         {
           "Category": "Data",
           "PropertyName": "Tooltip",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
@@ -8072,14 +8045,6 @@
           "InvariantPropertyName": "Tooltip",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"1\"",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -8142,11 +8107,6 @@
         {
           "Category": "Data",
           "PropertyName": "Tooltip",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
@@ -8417,15 +8377,7 @@
         },
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"1\"",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "PaddingLeft"
       ],
       "DynamicProperties": [
         {
@@ -8482,11 +8434,6 @@
           "Category": "Data",
           "NameMap": "{\"Value\":\"Value\"}",
           "PropertyName": "Items",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
@@ -9015,14 +8962,6 @@
           "InvariantPropertyName": "DataSource",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Item",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -9098,11 +9037,6 @@
         {
           "Category": "Data",
           "PropertyName": "DataSource",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -9224,7 +9158,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group_Showmessage_4",
-      "ParentIndex": 13,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9357,7 +9291,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "help_5",
-      "ParentIndex": 10,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9507,7 +9441,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_4",
-      "ParentIndex": 9,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12805,7 +12739,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image16_1",
-      "ParentIndex": 8,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17949,7 +17883,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle_MSG_4",
-      "ParentIndex": 7,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18115,7 +18049,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle23_4",
-      "ParentIndex": 6,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18254,7 +18188,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ScreenContainer.ID%",
       "Name": "ScreenContainer4_1",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

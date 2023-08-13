@@ -352,7 +352,7 @@
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             Size: =10
-                            Text: =BDRequestNo
+                            Text: =If(IsBVAEdit,SelectedRecord.RequestNo,BDRequestNo)
                             ZIndex: =2
 
             Container52 As groupContainer.verticalAutoLayoutContainer:
@@ -687,7 +687,7 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             HoverFill: =RGBA(0, 0, 0, 0)
-                            Icon: =If(DateValue(Business_StartDate.SelectedDate)=<DateValue(business_EndDate.SelectedDate),Icon.Check,Icon.Error)
+                            Icon: =If(DateValue(Business_StartDate.SelectedDate)<=DateValue(business_EndDate.SelectedDate),Icon.Check,Icon.Error)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -784,7 +784,7 @@
                 txt_ReasonBusiness As text:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =
+                    Default: =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).'Reason_Business_Visit ')
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -979,7 +979,7 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(0, 122, 201, 1)
+                Fill: =RGBA(40, 60, 185, 1)
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 FontWeight: =FontWeight.Semibold
                 HoverBorderColor: =RGBA(0, 0, 0, 0)

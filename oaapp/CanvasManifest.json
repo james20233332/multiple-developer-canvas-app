@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 3015,
+    "BindingErrorCount": 3013,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -114,7 +114,7 @@
     "ManualOfflineProfileId": "",
     "Name": "PortalBondeeOA",
     "OriginatingVersion": "1.324",
-    "ParserErrorCount": 2,
+    "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {

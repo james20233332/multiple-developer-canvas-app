@@ -917,7 +917,14 @@
     "business_EndDate": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1267,7 +1274,14 @@
     "Business_StartDate": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -7704,6 +7718,14 @@
           "InvariantPropertyName": "OnChange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"1\"",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -7761,6 +7783,11 @@
           "Category": "Data",
           "NameMap": "{\"Value\":\"Value\"}",
           "PropertyName": "Items",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {
@@ -8041,7 +8068,15 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft"
+        "PaddingLeft",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"1\"",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -8098,6 +8133,11 @@
           "Category": "Data",
           "NameMap": "{\"Value\":\"Value\"}",
           "PropertyName": "Items",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Default",
           "RuleProviderType": "Unknown"
         },
         {

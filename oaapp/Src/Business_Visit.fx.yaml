@@ -506,6 +506,9 @@
                             BorderThickness: =1
                             CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             Color: =RGBA(51, 51, 51, 1)
+                            DefaultDate: |
+                                =
+                                If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).Business_DateBegin,Today())
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -530,6 +533,8 @@
                             ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                             ChevronHoverFill: =RGBA(33, 33, 33, 1)
                             Color: =RGBA(51, 51, 51, 1)
+                            Default: |
+                                =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).Business_BeginTime,"1")
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -596,6 +601,9 @@
                             BorderThickness: =1
                             CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             Color: =RGBA(51, 51, 51, 1)
+                            DefaultDate: |
+                                =
+                                If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).Business_DateEnd,Today())
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -635,6 +643,8 @@
                             ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                             ChevronHoverFill: =RGBA(33, 33, 33, 1)
                             Color: =RGBA(51, 51, 51, 1)
+                            Default: |
+                                =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).Business_EndTime,"1")
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -748,7 +758,10 @@
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             Size: =13
-                            Text: =resultDay
+                            Text: |+
+                                =If(IsBVAEdit&&LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).' Leave_Duration'= Text(resultDay),LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).' Leave_Duration',resultDay)
+                                
+                                
                             ZIndex: =2
 
             Container28_32 As groupContainer.horizontalAutoLayoutContainer:
@@ -784,7 +797,8 @@
                 txt_ReasonBusiness As text:
                     BorderColor: =RGBA(166, 166, 166, 1)
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).'Reason_Business_Visit ')
+                    Default: |
+                        =If(IsBVAEdit,LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo).'Reason_Business_Visit ')
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1065,6 +1079,25 @@
                             ShowWaiting,
                             true
                         );
+                    If(IsBVAEdit=true,
+                    
+                     Patch(
+                           LookUp('Business Visit Approval Process',Title=SelectedRecord.RequestNo),
+                            {
+                                Title:RequestNo,
+                                Business_BeginTime:drp_businessStartTime.SelectedText.Value,
+                                Business_DateBegin:Business_StartDate.SelectedDate,
+                                Business_DateEnd:business_EndDate.SelectedDate,
+                                Business_EndTime:Drp_businessEndTime.SelectedText.Value,
+                                ' Leave_Duration':lbl_leaveDuration.Text,
+                                'Reason_Business_Visit ':txt_ReasonBusiness.Text,
+                                Busniess_Type:drp_businessaType.SelectedText.Value
+                                
+                            },
+                            BusinessAchemnt.Updates
+                        ),
+                    
+                    
                         Patch(
                             'Business Visit Approval Process',
                             Defaults('Business Visit Approval Process'),
@@ -1081,6 +1114,8 @@
                             },
                             BusinessAchemnt.Updates
                         );
+                    
+                    );
                     
                     
                         Patch(

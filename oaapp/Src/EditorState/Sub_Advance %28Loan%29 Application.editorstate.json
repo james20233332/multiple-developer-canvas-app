@@ -24808,7 +24808,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_home_2",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25136,7 +25136,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_mail_2",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25416,7 +25416,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_refresh_2",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26266,7 +26266,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label9_21",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

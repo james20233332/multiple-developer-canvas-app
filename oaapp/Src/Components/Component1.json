@@ -105,7 +105,7 @@
         "Name": "Icon40_13",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5497,
+        "PublishOrderIndex": 5367,
         "Rules": [
           {
             "Category": "Data",
@@ -445,7 +445,7 @@
         "Name": "Icon39_11",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5498,
+        "PublishOrderIndex": 5368,
         "Rules": [
           {
             "Category": "Data",
@@ -746,7 +746,7 @@
         "Name": "Icon31_15",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5499,
+        "PublishOrderIndex": 5369,
         "Rules": [
           {
             "Category": "Data",

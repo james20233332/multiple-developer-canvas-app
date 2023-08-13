@@ -1295,7 +1295,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_permissionSave_2",
-      "ParentIndex": 12,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2034,7 +2034,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button28_4",
-      "ParentIndex": 13,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2785,7 +2785,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container_detail1_3",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11946,7 +11946,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group_Purchase_Detail",
-      "ParentIndex": 14,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16229,7 +16229,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon31_44",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16857,7 +16857,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon39_19",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17144,7 +17144,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon40_20",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19175,7 +19175,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label75_4",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20829,7 +20829,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Lbl_backGroud_27",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22426,7 +22426,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Lbl_PermissionBackgroud_3",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29656,7 +29656,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle23_7",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29962,7 +29962,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ScreenContainer4_4",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

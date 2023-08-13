@@ -1,0 +1,40 @@
+Screen1 As screen:
+
+    Timer1 As timer:
+        Duration: =600
+        OnTimerEnd: =Set(result,Label1.Text&"234444");
+        OnTimerStart: =Set(result,"start");
+        Start: =Reset
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Label1 As label:
+        Height: =65
+        Text: =result
+        Width: =1124
+        X: =132
+        Y: =212
+        ZIndex: =2
+
+    Dropdown1 As dropdown:
+        Items: =["4566","123","333","3.4567","3.22213"]
+        OnChange: |-
+            =UpdateContext({Reset: false}); Reset(Timer1); UpdateContext({Reset: true})
+        X: =676
+        Y: =104
+        ZIndex: =3
+
+    TextInput1 As text:
+        Default: |-
+            =Text(Value(Dropdown1.Selected.Value), "###.00")
+        X: =371
+        Y: =277
+        ZIndex: =4
+
+    Rectangle1 As rectangle:
+        Width: =370
+        X: =276
+        Y: =416
+        ZIndex: =5
+

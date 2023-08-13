@@ -1795,3 +1795,858 @@
                         Width: =Parent.Width
                         ZIndex: =1
 
+    Group_Confirm_6 As group:
+        Height: =5
+        Width: =5
+        X: =483
+        Y: =284
+        ZIndex: =23
+
+        Rec_msg_53 As rectangle:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FocusedBorderThickness: =4
+            Height: =200
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =ToConfirm
+            Width: =400
+            X: =(Parent.Width - Rec_msg_53.Width) / 2
+            Y: =(Parent.Height - Rec_msg_53.Height) / 2
+            ZIndex: =51
+
+        btn_yes_5 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                = 
+                Patch(ApprovalRequest,
+                LookUp( ApprovalRequest, Title =SelectedRecord.Title), {Status:{Value: "Approved"} } );
+                
+                SubmitApproval0810.Run(SelectedRecord.Title,SelectedRecord.RequestNo,SelectedRecord.ApprovalType.Value,  Text(SelectedRecord.Requestor),false,User().Email,SelectedRecord.ApprovalStepNo,SelectedRecord.'ApprovalStep (ApprovalStep0)'.Id);
+                 
+                 Set(ToConfirm,false);
+            PaddingRight: =4.01
+            PaddingTop: =4.01
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="Yes"
+            Visible: =ToConfirm
+            Width: =100
+            X: =Rec_msg_53.X+Rec_msg_53.Width/4-10
+            Y: =Rec_msg_53.Y+Rec_msg_53.Height-50
+            ZIndex: =52
+
+        Icon37_53 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(ToConfirm,false)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =ToConfirm
+            Width: =25
+            X: =Rec_msg_53.X+Rec_msg_53.Width-25
+            Y: =Rec_msg_53.Y
+            ZIndex: =53
+
+        HtmlText8_15 As htmlViewer:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            Height: =104
+            HtmlText: =" 💬<b><font color=black>Is it confirmed?</font></b>"
+            Size: =13
+            Visible: =ToConfirm
+            Width: =315
+            X: =Rec_msg_53.X+40
+            Y: =Rec_msg_53.Y+20
+            ZIndex: =54
+
+        btn_no_6 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 107, 211, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Set(ToConfirm,false); Clear(CollApproveListOp);
+                     Set(Reset,false);
+                     Set(Reset,true);
+                     Set(ToConfirm,false);
+            PaddingRight: =4.01
+            PaddingTop: =4.01
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Size: =12.04
+            Text: ="No"
+            Visible: =ToConfirm
+            Width: =100
+            X: =btn_yes_5.X+20+btn_yes_5.Width
+            Y: =Rec_msg_53.Y+Rec_msg_53.Height-50
+            ZIndex: =55
+
+    Lbl_backGroud_32 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =Parent.Height
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Visible: =ToConfirm
+        Width: =Parent.Width
+        X: =0.00
+        ZIndex: =49
+
+    GroupTrace_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =56
+
+        Rtg_traceBondee_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(237, 237, 237, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height-300
+            HoverFill: =RGBA(237, 237, 237, 1)
+            PressedFill: =RGBA(237, 237, 237, 1)
+            Visible: =varTabSeleted=2
+            Width: =Parent.Width
+            Y: =105
+            ZIndex: =9
+
+        Gallery2_9 As gallery.galleryVertical:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =Parent.Height-500
+            Items: =MyTaskAllSign
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =125
+            Visible: =varTabSeleted=2
+            Width: =Parent.Width
+            Y: =Icon1_15last_3.Y+Icon1_15last_3.Height+20
+            ZIndex: =10
+
+            Gallery8_8 As gallery.galleryVertical:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                Height: =95
+                Items: =Filter(ApprovalRequest,'ApprovalStep (ApprovalStep0)'.Value=ThisItem.Value&&RequestNo=SelectedRecord.RequestNo)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =25
+                Width: =Parent.TemplateWidth
+                Y: =30
+                ZIndex: =1
+
+                lbl_Command_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =25
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Memo
+                    X: =619
+                    ZIndex: =1
+
+                lbl_Date_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =20
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: |-
+                        =
+                        "Created:"&ThisItem.Created
+                    Width: =227
+                    X: =10
+                    ZIndex: =2
+
+                lbl_assigned_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =20
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Appoval
+                    Width: =171
+                    X: =267
+                    ZIndex: =3
+
+                lbl_status_8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =20
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Status.Value
+                    X: =470
+                    ZIndex: =4
+
+                Rectangle6_8 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(0, 120, 212, 1)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    Width: =Parent.TemplateWidth
+                    Y: =24
+                    ZIndex: =5
+
+            Container56_8 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =30
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =1
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1356
+                ZIndex: =2
+
+                Label96_8 As label:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =ThisItem.Value
+                    ZIndex: =1
+
+                Icon18_10 As icon.Help:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =If(lbl_LastStatus_7.Text="Approved", RGBA(54, 176, 75, 1),RGBA(255, 132, 0, 100))
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(lbl_LastStatus_7.Text="Approved", Icon.CheckBadge,Icon.Help)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =20
+                    ZIndex: =2
+
+                lbl_LastStatus_7 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =If(ThisItem.AllSign="Yes"&&CountIf(Gallery8_8.AllItems,lbl_status.Text="In Progress")>0,"InProgress","Approved")
+                    ZIndex: =3
+
+                Label81_14 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: |-
+                        ="AllSign:"&ThisItem.AllSign
+                    ZIndex: =4
+
+        Bondee_Icon1_4 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(54, 176, 75, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label1_5.X + (Label1_5.Width - Bondee_Icon1_4.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =11
+
+        Label1_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: ="申请人发起"
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Rtg_traceBondee_4.X
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =12
+
+        Icon1_7 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowRight
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label1_5.X+Label1_5.Width
+            Y: =Bondee_Icon1_4.Y
+            ZIndex: =13
+
+        Icon2_4 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=2, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label2_5.X + (Label2_5.Width - Icon2_4.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =14
+
+        Label2_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step2
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Icon1_7.X+Icon1_7.Width
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =15
+
+        "'Icon2-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowRight
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label2_5.X+Label2_5.Width
+            Y: =Bondee_Icon1_4.Y
+            ZIndex: =16
+
+        Icon3_4 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=3, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label3_28.X + (Label3_28.Width - Icon3_4.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =17
+
+        Label3_28 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step3
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: ='Icon2-1_4'.X+'Icon2-1_4'.Width
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =18
+
+        "'Icon3-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowRight
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label3_28.X+Label3_28.Width
+            Y: =Bondee_Icon1_4.Y
+            ZIndex: =19
+
+        Icon4_5 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=4, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label4_4.X + (Label4_4.Width - Icon4_5.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =20
+
+        Label4_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step4
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: ='Icon3-1_4'.X+'Icon3-1_4'.Width
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =21
+
+        "'Icon4-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowRight
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label4_4.X+Label4_4.Width
+            Y: =Bondee_Icon1_4.Y
+            ZIndex: =22
+
+        Icon5_27 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=5, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label5_4.X + (Label5_4.Width - Icon5_27.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =24
+
+        Label5_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step5
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: ='Icon4-1_4'.X+'Icon4-1_4'.Width
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =25
+
+        "'Icon5-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label6_4.X+25
+            Y: =Label6_4.Y+Label6_4.Height
+            ZIndex: =26
+
+        Icon6_8 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=6, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label6_4.X + (Label6_4.Width - Icon6_8.Width) / 2
+            Y: =Rtg_traceBondee_4.Y+10
+            ZIndex: =27
+
+        Label6_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step6
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Icon6_9.X+Icon6_9.Width
+            Y: =Bondee_Icon1_4.Y+37
+            ZIndex: =28
+
+        Icon6_9 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowRight
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Label5_4.X+Label5_4.Width
+            Y: =Bondee_Icon1_4.Y
+            ZIndex: =29
+
+        Icon7_8 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=7, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =61
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =726
+            Y: ='Icon5-1_4'.Y+'Icon5-1_4'.Height
+            ZIndex: =30
+
+        Label7_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step7
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =701
+            Y: =Icon7_8.Y+Icon7_8.Height
+            ZIndex: =31
+
+        Icon7_9 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =61
+            Icon: =Icon.ArrowLeft
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon6_9.X
+            Y: =Icon7_8.Y
+            ZIndex: =32
+
+        Icon8_19 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=8, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon5_27.X
+            Y: =Icon7_8.Y
+            ZIndex: =33
+
+        Label8_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step8
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Label5_4.X
+            Y: =218
+            ZIndex: =34
+
+        Icon8_20 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowLeft
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: ='Icon4-1_4'.X
+            Y: =Icon7_8.Y
+            ZIndex: =35
+
+        Icon9_9 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=9, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon4_5.X
+            Y: =Icon7_8.Y
+            ZIndex: =36
+
+        Label9_29 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step9
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Label4_4.X
+            Y: =218
+            ZIndex: =37
+
+        Icon9_10 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowLeft
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: ='Icon3-1_4'.X
+            Y: =Icon7_8.Y
+            ZIndex: =38
+
+        Icon10_4 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=10, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon3_4.X
+            Y: =Icon7_8.Y
+            ZIndex: =39
+
+        Label10_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step10
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Label3_28.X
+            Y: =215
+            ZIndex: =40
+
+        "'Icon10-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Bondee_Icon1_4.X
+            Y: =Label12_4.Y+Label12_4.Height
+            ZIndex: =41
+
+        Icon11_4 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=11, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon2_4.X
+            Y: =Icon7_8.Y
+            ZIndex: =42
+
+        Label11_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step11
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Label2_5.X
+            Y: =212
+            ZIndex: =43
+
+        "'Icon1_11-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowLeft
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: ='Icon2-1_4'.X
+            Y: =Icon7_8.Y
+            ZIndex: =44
+
+        Icon1_17 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=12, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Bondee_Icon1_4.X
+            Y: =Icon7_8.Y
+            ZIndex: =45
+
+        Label12_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step12
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Label1_5.X
+            Y: =Icon1_17.Y+Icon1_17.Height
+            ZIndex: =46
+
+        "'Icon1_12-1_4' As icon.ArrowRight":
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.ArrowLeft
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =Icon1_7.X
+            Y: =Icon7_8.Y
+            ZIndex: =47
+
+        Icon1_15last_3 As icon.ArrowRight:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(Value(currentStep)>=13, RGBA(54, 176,75, 100),RGBA(0, 18, 107, 1))
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Visible: =varTabSeleted=2
+            Width: =40
+            X: =100
+            Y: ='Icon10-1_4'.Y+'Icon10-1_4'.Height-30
+            ZIndex: =48
+
+        Label1_17 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =37
+            Size: =10
+            Text: =LookUp(FlowTrace,FlowType.Value=CType).Step13
+            Visible: =varTabSeleted=2
+            Width: =100
+            X: =Icon1_15last_3.X+Icon1_15last_3.Width
+            Y: =Icon1_15last_3.Y
+            ZIndex: =50
+

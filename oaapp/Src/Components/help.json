@@ -115,7 +115,7 @@
         "Name": "Rec_msg_15",
         "Parent": "help",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5358,
+        "PublishOrderIndex": 5488,
         "Rules": [
           {
             "Category": "Design",
@@ -368,7 +368,7 @@
         "Name": "Icon37_15",
         "Parent": "help",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5359,
+        "PublishOrderIndex": 5489,
         "Rules": [
           {
             "Category": "Design",
@@ -678,7 +678,7 @@
         "Name": "HtmlText4_2",
         "Parent": "help",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5360,
+        "PublishOrderIndex": 5490,
         "Rules": [
           {
             "Category": "Data",
@@ -957,7 +957,7 @@
         "Name": "Image11_3",
         "Parent": "help",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5361,
+        "PublishOrderIndex": 5491,
         "Rules": [
           {
             "Category": "Data",
@@ -1352,7 +1352,7 @@
         "Name": "Button3_14",
         "Parent": "help",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 5362,
+        "PublishOrderIndex": 5492,
         "Rules": [
           {
             "Category": "Data",

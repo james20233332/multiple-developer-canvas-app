@@ -37,7 +37,9 @@
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Image: =md
+                Image: |-
+                    =
+                    MD
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 ZIndex: =1
@@ -352,7 +354,7 @@
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderThickness: =2
                             Color: =RGBA(51, 51, 51, 1)
-                            Default: =BDRequestNo
+                            Default: =RequestNoPayment
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -361,7 +363,7 @@
                             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                             HoverColor: =RGBA(51, 51, 51, 1)
                             HoverFill: =RGBA(255, 255, 255, 1)
-                            OnSelect: =BDRequestNo
+                            OnSelect: =RequestNonumPayment
                             PressedBorderColor: =RGBA(0, 120, 212, 1)
                             PressedColor: =RGBA(51, 51, 51, 1)
                             PressedFill: =RGBA(255, 255, 255, 1)
@@ -2242,8 +2244,8 @@
                         OA_Payment_Claim_Form,
                         Defaults(OA_Payment_Claim_Form),
                         {
-                            Title:BDRequestNo,
-                            Process_ID: BDRequestNo,
+                            Title:RequestNoPayment,
+                            Process_ID: RequestNoPayment,
                             Application_Date: pcf_Application_Date.Text,
                             Requester:pcf_Requester.Selected.Mail,
                             'Requester''s_Dept':'pcf_Requester''s Dept'.Text,
@@ -2260,7 +2262,7 @@
                             Currency_Host:pcf_Currency_Host.Selected.Currency,
                             'Ex-rate_Home':pcf_Ex_rate_home.Text
                         },
-                        pcf_Attachment.Updates
+                        Attachments_5.Updates
                     );
                     
                     //存储流程状态
@@ -2277,8 +2279,7 @@
                              Status: {
                                 Id:0,
                                 Value:"Approved"}
-                        }
-                        
+                        } 
                     );
                     )
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)

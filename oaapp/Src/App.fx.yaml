@@ -134,9 +134,7 @@ App As appinfo:
         Set(numProject, numProject + 1);
         Set(RequestNoProject, "BDPP-" & Text(Now(), "yyyymmdd") & "-" & num);
         //获取采购执行流程编号
-        // 获取本月第一天
         Set(firstDayOfMonthPurchase, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
-        // 获取当前记录的编号
         Set(numPurchase, CountRows(
                 Filter(
                 OA_Purchase_Execution_Process,
@@ -146,6 +144,17 @@ App As appinfo:
         Set(numPurchase, numPurchase + 1);
         Set(RequestNoPurchase, "BDPE-" & Text(Now(),"yyyymmdd") & "-" & num);
         ClearCollect(projectProposalList,Filter(ApprovalRequest,('Created By'.Email=User().Email || Appoval=User().Email ) && IsEnd="Y" && (ApprovalType.Value="Project Proposal Process" )));
+        //获取付款流程编号
+        Set(firstDayOfMonthPayment, DateValue(Text(Year(Now())) & "-" & Text(Month(Now())) & "-01"));
+        Set(numPayment, CountRows(
+            Filter(
+                OA_Payment_Claim_Form,
+                DateValue(Created) >= firstDayOfMonth && DateValue(Created) <= Now()
+            )
+        ));
+        Set(numPayment, numPayment + 1);
+        Set(RequestNoPayment, "BDPC-" & Text(Now(),"yyyymmdd") & "-" & numPayment);
+        ClearCollect(contractList,Filter(ApprovalRequest,('Created By'.Email=User().Email || Appoval=User().Email ) && IsEnd="Y" && (ApprovalType.Value="Non-Procurement Expenditure Contract Process" || ApprovalType.Value= "Contract Review and Approval Process" )));
         
         
         

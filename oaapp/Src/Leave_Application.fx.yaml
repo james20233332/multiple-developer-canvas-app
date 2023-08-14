@@ -1106,8 +1106,8 @@
                     
                         If(IsBVAEdit,
                          Patch(
-                            'OA_Leave_Application',
-                            Lookup('OA_Leave_Application',Title=SelectedRecord.RequestNo),
+                            OA_Leave_Application,
+                            Lookup(OA_Leave_Application,Title=SelectedRecord.RequestNo),
                             {           
                                 Leave_Type:Drp_LevelType.Selected.Value,
                                 Leave_Start:DateTimeValue(Business_StartDate_1.SelectedDate),
@@ -1222,6 +1222,26 @@
         X: =Parent.Width-260
         Y: =Parent.Height-300
         ZIndex: =2
+
+    Lbl_backGroud_33 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.6)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =Parent.Height
+        PaddingRight: =6.76
+        PaddingTop: =6.76
+        Size: =17.57
+        Text: =
+        Visible: =showMessage||ShowWaiting
+        Width: =Parent.Width
+        X: =0.00
+        ZIndex: =8
 
     Group_Showmessage_4 As group:
         Height: =5
@@ -1338,26 +1358,6 @@
             X: =btn_continue_4.X+200
             Y: =Rectangle_MSG_4.Y+Rectangle_MSG_4.Height*4/5
             ZIndex: =7
-
-    Lbl_backGroud_33 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(230, 230, 230, 0.6)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =Parent.Height
-        PaddingRight: =6.76
-        PaddingTop: =6.76
-        Size: =17.57
-        Text: =
-        Visible: =showMessage||ShowWaiting
-        Width: =Parent.Width
-        X: =0.00
-        ZIndex: =8
 
     Image16_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)

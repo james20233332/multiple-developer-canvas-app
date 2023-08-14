@@ -10689,7 +10689,8 @@
           "InvariantPropertyName": "DataSource",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Item"
       ],
       "DynamicProperties": [
         {
@@ -10756,6 +10757,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "DefaultMode",

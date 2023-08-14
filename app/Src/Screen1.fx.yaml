@@ -39,7 +39,9 @@ Screen1 As screen:
         ZIndex: =5
 
     Label3 As label:
+        Height: =64
         Text: ="文本2023"
+        Width: =333
         X: =257
         Y: =80
         ZIndex: =6

@@ -3,20 +3,20 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Dropdown1": 8,
+    "Dropdown1": 9,
     "Host": 3,
-    "Label1": 9,
+    "Label1": 10,
     "Label2": 5,
-    "Label3": 12,
-    "Rectangle1": 11,
+    "Label3": 8,
+    "Rectangle1": 12,
     "Screen1": 6,
     "Screen2": 4,
-    "TextInput1": 10,
+    "TextInput1": 11,
     "Timer1": 7
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/14/2023 03:30:02",
+  "HeaderLastSavedDateTimeUTC": "08/14/2023 03:46:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -69,16 +69,16 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1011933,
+    "AnalysisLoadTime": 0.1023035,
     "ControlCount": {
       "dropdown": 1,
-      "label": 2,
+      "label": 3,
       "rectangle": 1,
       "screen": 2,
       "text": 1,
       "timer": 1
     },
-    "DeserializationLoadTime": 0.5123918
+    "DeserializationLoadTime": 0.5350645
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

@@ -40,7 +40,7 @@ Screen1 As screen:
 
     Label3 As label:
         Height: =64
-        Text: ="文本2023"
+        Text: ="文本20230988"
         Width: =333
         X: =257
         Y: =80

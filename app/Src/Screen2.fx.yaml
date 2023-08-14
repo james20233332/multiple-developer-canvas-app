@@ -1,0 +1,8 @@
+Screen2 As screen:
+
+    Label2 As label:
+        Text: ="文本"
+        X: =40
+        Y: =40
+        ZIndex: =1
+

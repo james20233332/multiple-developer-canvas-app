@@ -536,7 +536,7 @@
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
                 =Set(showExcelMessage,false);
-                Navigate(Business_Visit); Set(isShowVarDialog,true);
+                Navigate(Sub_Business_Visit); Set(isShowVarDialog,true);
             PaddingRight: =4.01
             PaddingTop: =4.01
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)

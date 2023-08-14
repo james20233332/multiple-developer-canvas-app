@@ -1302,7 +1302,7 @@
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Folder
-            OnSelect: =Navigate(Leave_Application,ScreenTransition.None);
+            OnSelect: =Navigate(Sub_Leave_Application,ScreenTransition.None);
             PaddingBottom: =20
             PaddingLeft: =20
             PaddingRight: =20
@@ -1329,7 +1329,7 @@
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.OfficeBuilding
-            OnSelect: =Navigate(Business_Visit,ScreenTransition.None);
+            OnSelect: =Navigate(Sub_Business_Visit,ScreenTransition.None);
             PaddingBottom: =20
             PaddingLeft: =20
             PaddingRight: =20

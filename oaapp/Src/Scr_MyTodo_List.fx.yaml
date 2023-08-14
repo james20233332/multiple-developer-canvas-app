@@ -277,7 +277,7 @@
                         Set(ResourceGroup,LookUp(AsureApplicationInfo,Title=Trim(ThisItem.ApplicationCode)).ResourceGroup);
                         )*/
                         
-                        Switch(Gallery6_5.Selected.ApprovalType.Value, "Business Visit Approval Process", Navigate(Sub_Business_Visit, ScreenTransition.None ), "Leave Application Approval Process", Navigate(Sub_Leave_Application, ScreenTransition.None ), "Travel Reimbursement Approval Process", Navigate(Application_Travel, ScreenTransition.None ),"Project Proposal Process",Navigate('App_Project Proposal',ScreenTransition.None),"Purchase Execution Process",Navigate('APP_Purchase Execution',ScreenTransition.None),Navigate(Application_Detail, ScreenTransition.None ) );
+                        Switch(Gallery6_5.Selected.ApprovalType.Value, "Business Visit Approval Process", Navigate(App_Business_Visit, ScreenTransition.None ), "Leave Application Approval Process", Navigate(App_Leave_Application, ScreenTransition.None ), "Travel Reimbursement Approval Process", Navigate(Application_Travel, ScreenTransition.None ),"Project Proposal Process",Navigate('App_Project Proposal',ScreenTransition.None),"Purchase Execution Process",Navigate('APP_Purchase Execution',ScreenTransition.None),Navigate(Application_Detail, ScreenTransition.None ) );
                         
                         
                         Set(CType,Gallery6_5.Selected.ApprovalType.Value);

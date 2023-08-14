@@ -2306,21 +2306,21 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnTimerEnd: |-
-            =If(!IsBlank(pcf_Payer.Selected.Name_Party_A) && !IsBlank(Currency_Host.Selected.Currency) && !IsBlank(Currency_Home.Text),
+            =If(!IsBlank(pcf_Payer.Selected.Name_Party_A) && !IsBlank(pcf_Currency_Host.Selected.Currency) && !IsBlank(pcf_Currency_Home.Text),
             Set(ExchangeRate,LookUp(
                         Public_Exchange_Rates,
-                        'Name (Title)' = Currency_Host.Selected.Currency & "-" & Currency_Home.Text&&
-                        Year.Value=Text(Year(Application_Date))&&Month.Value=Text(DateTimeValue(Application_Date),"mm")
+                        'Name (Title)' = pcf_Currency_Host.Selected.Currency & "-" & pcf_Currency_Home.Text&&
+                        Year.Value=Text(Year(pcf_Application_Date))&&Month.Value=Text(DateTimeValue(pcf_Application_Date),"mm")
                     ).Rate);
-            Set(homeAmountTimer,ExchangeRate*Amountt_Host.Text);
+            Set(homeAmountTimer,ExchangeRate*pcf_Amountt_Host.Text);
             );
-            If(!IsBlank(Currency_Home.Text) && !IsBlank(Amount_Home),
+            If(!IsBlank(pcf_Currency_Home.Text) && !IsBlank(pcf_Amount_Home),
             Set(ExchangeRateUsTimer,LookUp(
                         Public_Exchange_Rates,
-                        'Name (Title)' = Currency_Home.Text & "-USD"&&
-                        Year.Value=Text(Year(Application_Date))&&Month.Value=Text(DateTimeValue(Application_Date),"mm")
+                        'Name (Title)' = pcf_Currency_Home.Text & "-USD"&&
+                        Year.Value=Text(Year(pcf_Application_Date))&&Month.Value=Text(DateTimeValue(pcf_Application_Date),"mm")
                     ).Rate);
-            Set(amountUSTimer,Amount_Home.Text*ExchangeRateUsTimer);
+            Set(amountUSTimer,pcf_Amount_Home.Text*ExchangeRateUsTimer);
             );
         OnTimerStart: =true
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
